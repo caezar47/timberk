@@ -22,11 +22,11 @@
 		"map_point_heading":"Большая Татарская улица, 35 строение 7-9"
 	},
 	"soc":{
-		"yb":"https://www.youtube.com/channel/UC1cnObAoKV_l9dI1qrGGOGw",
-		"inst":"https://www.instagram.com/2sharp_agency",
-		"fb":"https://www.facebook.com/2sharp.creative",
-		"bh":"https://www.behance.net/teams/2sharp",
-		"vi":"https://vimeo.com/twosharp"
+		"vk":"https://vk.com/club_timberk",
+		"fb":"https://www.facebook.com/timberk.official",
+		"tw":"https://twitter.com/ru_timberk",
+		"g":"#",
+		"yb":"https://www.youtube.com/user/timberkOfficial"
 	},
 
 	"page":{
@@ -39,17 +39,14 @@
 		"contacts":"./contacts.html"
 	},
 	"prefix":{
-		"content":"content-block__",
-		"heading":"page-header__",
+		"section":"section__",
+		"header":"page-header__",
 		"form":"form__",
-		"card":"card__",
-		"table":"table__",
-		"btn":"btn__",
 		"tabs":"tabs__",
-		"map":"map__",
+		"btn":"btn__",
 		"link":"link__",
 		"breadcrumb":"breadcrumb__",
-		"pagination":"pagination__",
+		"card":"card__",
 		"btn-icon":"btn-icon__"
 	},
 	"path":{		                  

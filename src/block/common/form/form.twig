@@ -1,3 +1,11 @@
+{% if view=="subs" %}
+	<form action="#" class="{{prefix}}panel  {{mod}}">
+		<div class="{{prefix}}item  {{mod}}">
+			<input class="{{prefix}}control  {{mod}}" type="email" placeholder="Ваш e-mail">
+			<button type="button" class="{{prefix}}btn  {{mod}}"></button>
+		</div>
+	</form>
+{% endif %}
 {% if view=="order" %}
 	<form action="#" class="{{prefix}}panel  {{mod}}"  data-form-validation>
 		<div class="{{prefix}}row  grid__row  {{mod}}">				

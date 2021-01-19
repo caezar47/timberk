@@ -4520,3 +4520,115 @@ body a[id^="sirvCR"] img{
 	display: none !important;
 	opacity:0;
 }
+
+
+.product-card__360-btn{
+    position: absolute;
+    top: 0;
+    right: 70px;
+    z-index: 10;
+    padding: 15px;
+}
+.product-card__360-btn a{
+    cursor: pointer;
+}
+.product-card__360-btn img{
+    width: 33px;
+    opacity: .35;
+}
+.product-card__360-btn:hover img{
+    opacity: 1;
+}
+
+.fancybox-slide{
+    overflow: hidden!important;
+}
+.fancybox-slide:before{
+    display: none!important;
+}
+
+.photoViewIcon{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+}
+#photoView360Container{
+    display: none;
+    padding: 0!important;
+    margin: 0!important;
+}
+#photoView360Container .fancybox-close-small{
+    display: none;
+}
+.product-card__360-wrapper{
+    width: 100vw!important;
+    height: 100vh!important;
+}
+#photoView360 canvas{
+    cursor: move;
+    width: auto!important;
+    height: 100%!important;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 450px){
+    #photoView360 canvas{
+        width: 100%!important;
+        height: auto!important;
+    }
+}
+.product-card__360-btns{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding: 0;
+    display: flex;
+}
+.product-card__360-btns-item{
+    background: #fff;
+    display: block;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    background: rgba(30,30,30,.6);
+}
+.product-card__360-btns-item img{
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.product-card__360-btns-item.close img{
+    height: 10px;
+}
+
+#photoView360ContainerShare{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 700px;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.25);
+}
+#photoView360ContainerShare p{
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 768px){
+    .product-card__360-btns-item.gif{
+        display: none;
+    }
+    .product-card__360-btns-item.get{
+        display: none;
+    }
+    .product-card__360-btns-item.share{
+        display: none;
+    }
+}
+
+.fancybox-slide--html{
+    padding: 0;
+}

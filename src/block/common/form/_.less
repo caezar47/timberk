@@ -1,5 +1,14 @@
 .form__{
 	&panel{
+		&.is--block{
+			&-subs{
+				margin: 0 auto 40px;
+				max-width: 432px;
+				.media-breakpoint-up(@lg; {
+					margin: 0 auto 90px;
+				});
+			}
+		}
    		&.is--modal-sale{
 			max-width: 335px;
 			text-align: center;  
@@ -7,64 +16,138 @@
    		}
 	}
 	&item{
+		position: relative;
+		&.is--block{
+			&-subs{
+				
+			}
+		}
 		&.is--modal-sale{
 			margin-bottom: 22px;			
 		}
 	}
 	&control{
-		border: 2px solid #00afab;
-		text-align: center;
+		box-shadow: none;
 		width: 100%;
-		box-sizing: border-box;
-		background-color: @white;
-		color: #374250;
-		height: 38px;
-   	 	font-family: 'RoadRadio';
-    	box-shadow: none;
-    	padding: 6.5px 10px;
-		font-size: 14px;
-		line-height: 17px;
-    	border-radius: 0;
-    	transition: @trs-site;
+		background: @input_bg;
+		border-width: @input_border_width;   
+		border-style: solid;   
+		border-color: @input_border_color;
+		border-radius: @input_radius;	   
+		height: @input_height;
+		padding: 10px;
+		color: @input_color;
+		transition: @trs-site;
+		&[type="text"]{
+			-webkit-appearance: none;
+		}
+		&[type=number]{ -moz-appearance: textfield; }
+		&[type=number]::-webkit-inner-spin-button,
+		&[type=number]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
 		&::-moz-placeholder{
-	   	 	font-family: 'RoadRadio';
-			color: #ababab;
-			font-weight: 300;
+			transition: @trs-site;
+			color: @input_plh_color;
 		}
 		&::-webkit-input-placeholder {
-	   	 	font-family: 'RoadRadio';
-			color: #ababab;
-			font-weight: 300;
+			transition: @trs-site;
+			color: @input_plh_color;
 		}
-		&:focus{
-			background-color: #00afab;
-			color: #fff;
+		&.is--focus,
+		&:focus{ 
+			outline:none;
+			border-color: @input_focus_border_color;
+		}
+		&[disabled]{
+			background-color: @input_disabled_bg;
+			cursor: not-allowed;
+			border-color: @input_disabled_border_color;
+			color: @input_disabled_color;
 			&::-moz-placeholder{
-				color: #fff;
+				color: @input_disabled_color;
 			}
 			&::-webkit-input-placeholder {
-				color: #fff;
+				color: @input_disabled_color;
 			}
 		}
-		&:focus{
-			outline: none;
+		&.is--block{
+			&-subs{
+				padding-right: @input_height - 5;
+			}
+		}
+		&.is--modal-sale{
+			border: 2px solid #00afab;
+			text-align: center;
+			box-sizing: border-box;
+			background-color: @white;
+			color: #374250;
+			height: 38px;
+	   	 	font-family: 'RoadRadio';
+	    	box-shadow: none;
+	    	padding: 6.5px 10px;
+			font-size: 14px;
+			line-height: 17px;
+	    	border-radius: 0;
+	    	transition: @trs-site;
+			&::-moz-placeholder{
+		   	 	font-family: 'RoadRadio';
+				color: #ababab;
+				font-weight: 300;
+			}
+			&::-webkit-input-placeholder {
+		   	 	font-family: 'RoadRadio';
+				color: #ababab;
+				font-weight: 300;
+			}
+			&:focus{
+				background-color: #00afab;
+				color: #fff;
+				&::-moz-placeholder{
+					color: #fff;
+				}
+				&::-webkit-input-placeholder {
+					color: #fff;
+				}
+			}
+			&:focus{
+				outline: none;
+			}
+		}
+	}
+	&btn{
+		.btn-clearfix();
+		&.is--block{
+			&-subs{
+				position: absolute;
+				.icon-submit();
+				width: @input_height;
+				height: @input_height;
+				background-position: center;
+				right: 0;
+				top: 0;
+
+			}
 		}
 	}
 	&submit{
-		.btn-clearfix();
-		color: @white;
-		font-size: 20px;
-		line-height: 20px;
-		color: #feffff;
-		font-weight: bold;
-   	 	font-family: 'RoadRadio';
-		background-color: #00afab;
-		border: 2px solid #00afab;
-		text-align: center;
-		padding: 7px;
-		&:hover{
-			background-color: @white;
-			color: #00afab;
+		&.is--modal-sale{
+			.btn-clearfix();
+			color: @white;
+			font-size: 20px;
+			line-height: 20px;
+			color: #feffff;
+			font-weight: bold;
+	   	 	font-family: 'RoadRadio';
+			background-color: #00afab;
+			border: 2px solid #00afab;
+			text-align: center;
+			padding: 7px;
+			&:hover{
+				background-color: @white;
+				color: #00afab;
+			}
 		}
 	}
 }

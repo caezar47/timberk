@@ -1,44 +1,43 @@
-/*body {
-	font-family: @site_ff;	
-	font-size: @site_fs_xs;
-	line-height: @site_lh_xs;
-	.media-breakpoint-up(@md; {
+html {	
+	//font-size: @site_fs_xs;
+	line-height: @site_lh;
+	//.media-breakpoint-up(@md; {
 		font-size: @site_fs;
-		line-height: @site_lh;
-	});
+	//});
+}
+body{
+	font-family: @site_ff;
+
 }
 h1, h2, h3, h4, h5, h6{
-	margin: 0px;
-	font-weight: 400;
+	font-weight: 700;
+	margin: 0;
 }
 //p{margin: 0 0 10px;}
 i, em{font-style: italic;}
-b, strong{font-weight: 700;}
-.is--hXL{
-	.heading();	
-}
-.is--hLG{
-	.heading-lg();	
-}
-.is--hMD{
-	.heading-md();	
-}
-h1, .is--h1{
+b, strong{font-weight: 700}
+h1,
+.is--h1{
 	.heading1();	
 }
-h2, .is--h2{
+h2,
+.is--h2{
 	.heading2();
 }
-h3, .is--h3{	
+h3,
+.is--h3{
 	.heading3();
 }
-h4, .is--h4{
+h4,
+.is--h4{
 	.heading4();
 }
-h5, .is--h5{
+h5,
+.is--h5{
 	.heading5();
 }
-h6, .is--h6{
+h6,
+.is--h6{
 	.heading6();
 }
 ol{
@@ -54,31 +53,23 @@ ul{
 		}
 	}
 }
-.font-family--custom{
-	font-family: @site_ff_custom;
+.fw--{
+	&300{
+		font-weight: 300;
+	}
+	&400{
+		font-weight: 400;
+	}
+	&500{
+		font-weight: 500;
+	}
+	&700{
+		font-weight: 700;
+	}
+	&800{
+		font-weight: 800;
+	}
+	&900{
+		font-weight: 900;
+	}
 }
-.align--{
-	&left{
-		text-align: left;
-	}
-	&right{
-		text-align: right;
-	}
-	&center{
-		text-align: center;
-	}
-}
-.justify--{
-	&start{
-		justify-content: flex-start;
-	}
-	&end{
-		justify-content: flex-end;
-	}
-	&center{
-		justify-content: center;
-	}
-	&between{
-		justify-content: space-between;
-	}
-}*/

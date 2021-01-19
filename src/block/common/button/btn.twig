@@ -1,0 +1,94 @@
+{% if view == "tpl" %}
+<{{tag}} {% if tag == "button" %}type="{{type}}"{% endif %} {% if tag == "a" %}href="{{link}}"{% endif %} class="{{prefix}}item  {{mod}}" {{attr}} {% if target %}target="{{target}}"{% endif %}>
+	{% if icon %}
+		{% include "../svg-sprite/svg.twig" with {icon:icon} %}
+	{% endif %}
+	{% if name %}
+		<span>{{name}}</span>
+	{% endif %}	
+</{{tag}}>  
+{% endif %}
+
+
+{% if view == "btn" %}
+<button type="{{type}}" class="{{prefix}}item  {{mod}}" {{attr}}>
+	<span>{{name}}</span>
+	{% if icon %}
+		{% include "../svg-sprite/svg.twig" with {icon:icon} %}
+	{% endif %}
+</button>
+{% endif %}
+
+
+
+{% if view == "link" %}
+<a href="{{link}}" class="{{prefix}}item  {{mod}}">
+	<span>{{name}}</span>
+	{% if icon %}
+		{% include "../svg-sprite/svg.twig" with {icon:icon} %}
+	{% endif %}
+</a>  
+{% endif %}
+
+{% if view == "modal" %}
+<button type="button" class="{{prefix}}item  {{mod}}" data-toggle="modal" data-target="#{{target}}" data-modal-heading="{{m_heading}}" data-modal-heading-small="{{m_heading_sm}}" data-btn-heading="{{m_btn}}">
+	<span>{{name}}</span>
+	{% if icon %}
+		{% include "../svg-sprite/svg.twig" with {icon:icon} %}
+	{% endif %}
+</button>
+{% endif %}
+
+{% if view == "icon" %}
+<a href="{{link}}" {{attr}} class="{{prefix}}icon  {{mod}}">
+	{% include "../svg-sprite/svg.twig" with {icon:icon} %}
+</a>  
+{% endif %}
+{% if view == "next" %}
+<a href="{{link}}" class="{{prefix}}next  {{mod}}">
+	{% include "../svg-sprite/svg.twig" with {icon:"icon-next"} %}
+</a>  
+{% endif %}
+{% if view == "link_back" %}
+<a href="{{link}}" class="{{prefix}}link-back  {{mod}}">
+	{% include "../svg-sprite/svg.twig" with {icon:"icon-back"} %}
+	<span>{{name}}</span>
+</a>  
+{% endif %}
+{% if view == "more" %}
+<div class="{{prefix}}more-dropdown  dropdown">
+	<a class="{{prefix}}more" data-toggle="dropdown" href="#">
+		{% include "../svg-sprite/svg.twig" with {icon:"icon-more"} %}
+	</a>
+	<ul class="{{prefix}}more-menu  dropdown-menu  {{mod}}">
+		{% for value in list %}
+		<li>
+			<{{value.tag}} {% if value.link %}href="{{value.link}}"{% endif %} {{value.attr}} class="{{value.class}}">{{value.name}}</{{value.tag}}>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endif %}
+{% if view == "view" %}
+<ul class="{{prefix}}view-list  {{mod}}">
+	{% for value in list %}
+	<li class="{{prefix}}view-item  {{mod}}  {{value.status}}">
+		<a href="{{value.link}}" class="{{prefix}}view  {% if value.link == catalog_view %}is--active{% endif %}" {% if value.type == "tabs" %}data-toggle="tab"{% endif %}>{{value.name}}</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endif %}
+{% if view == "view_pane" %}
+{% for value in list %}
+<div class="{{prefix}}pane  {{value.status}}  {{group}}" id="{{value.id}}">
+	{% if value.type == "table" %}
+		{% include "../table/tpl.twig" with {
+			prefix:"table",
+			mod: "",
+			head:value.table_head,
+			body:value.table_body,
+		} %}
+	{% endif %}
+</div>
+{% endfor %}
+{% endif %}

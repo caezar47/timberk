@@ -1,0 +1,88 @@
+.tabs__{ 
+	&panel{
+		margin-bottom: 30px;
+		.media-breakpoint-up(@md; {
+			margin-bottom: 55px;
+		});
+	}
+	&nav{ 
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		justify-content: center;
+		//background-color: @tabs_panel_bg;
+		//border-radius: @tabs_panel_radius;
+		.media-breakpoint-up(@lg; {
+			flex-wrap: nowrap;
+		});
+	}
+	&item{
+		position: relative;
+		z-index: 1;
+		padding: 5px 10px;
+		.media-breakpoint-up(@lg; {
+			padding: 0 28px;
+		});
+	}
+	&link{
+		.btn-clearfix();
+		.heading6();
+		position: relative;
+		display: block;
+		text-align: center;
+		color: @tabs_color;
+		padding: 1px 0;
+		border-bottom: 2px solid @tabs_border;
+		.media-breakpoint-up(@md; {
+			.heading5();
+		});
+		span{
+			position: relative;
+			z-index: 2;			
+		}
+		&:hover{
+			color: @tabs_hover_color;			
+		}
+		&.active{
+			border-bottom-color: @tabs_active_border;
+			color: @tabs_active_color;
+			//box-shadow: @tabs_active_shadow;
+			//background-color: @tabs_active_bg;
+		}
+		&.active{
+			cursor: default;
+		}
+	}
+	/*
+	&count{
+		color: @white;
+		transition: @trs-site;
+		&-group{
+			display: flex;
+			align-items: center;
+		}
+		&-next{
+			.btn-clearfix();
+			color: @white;
+			width: 27px;
+			height: 11px;
+			transition: @trs-site;
+			margin-left: 15px;
+			svg{
+				display: block;
+			}
+			&:hover{
+				color: @primary;
+			}
+		}
+	}
+	&pane{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}*/
+}

@@ -1,0 +1,105 @@
+<footer class="{{prefix}}block">	
+	<div class="{{prefix}}container container">
+		<div class="{{prefix}}row  grid__row">
+			<div class="{{prefix}}cols  is--logotip">
+				<a href="{{page.index}}" class="{{prefix}}logotip">
+					{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
+				</a>
+			</div>
+			<div class="{{prefix}}cols  is--nav">
+				<ul class="{{prefix}}nav">
+					<li class="{{prefix}}nav-item  is--title">Каталог</li>		
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Водонагревательное оборудование
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Тепловое оборудование
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Климатическое<br> оборудование
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Промышленное климатическое оборудование
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Крупная бытовая техника
+						</a>					
+					</li>					
+				</ul> 
+			</div> 
+			<div class="{{prefix}}cols  is--nav">
+				<ul class="{{prefix}}nav">
+					<li class="{{prefix}}nav-item  is--title">Меню</li>		
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Интернет-магазин
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Компания
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Сервис
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Реклама
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Где купить
+						</a>					
+					</li>
+					<li class="{{prefix}}nav-item">
+						<a href="#" class="{{prefix}}nav-link">
+							Контакты
+						</a>					
+					</li>					
+				</ul> 
+			</div> 
+			<div class="{{prefix}}cols  is--confident">
+				<p class="{{prefix}}confident">
+					Все права на материалы, находящиеся на сайте, охраняются в соответствии с законодательством РФ, в том числе, об авторском праве и смежных правах. При любом использовании материалов сайта и сателлитных проектов, гиперссылка (hyperlink) на сайт обязательна.
+				</p>
+				{% include "../social/tpl.twig" with {
+					prefix:"social__", 
+					attr:"", 
+					mod:"", 
+					group:mod, 
+					list: [
+						{"name":"soc-vk", "link":soc.vk},
+						{"name":"soc-fb", "link":soc.fb},
+						{"name":"soc-yb", "link":soc.yb},
+						{"name":"soc-g", "link":soc.g},
+					]
+				} %}
+			</div>
+			<hr>
+			<div class="{{prefix}}cols  is--design">
+				<p class="{{prefix}}design">
+					{% include "../svg-sprite/svg.twig" with {icon:'design'} %}
+				</p>
+			</div>
+			<div class="{{prefix}}cols  is--copyright">
+				<p class="{{prefix}}copyright">2001 - 2021 © Timberk</p>
+			</div>
+			<div class="{{prefix}}cols  is--conf">
+				<a href="#" class="{{prefix}}conf">Политика конфиденциальности</a>
+			</div>
+		</div>
+	</div>
+</footer>

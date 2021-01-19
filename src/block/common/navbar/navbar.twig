@@ -1,0 +1,115 @@
+<header class="{{prefix}}block  {{mod}}" >
+	{% if header %}
+	<div class="{{prefix}}header">
+		<div class="{{prefix}}header-container container">
+			<div class="{{prefix}}header-row row">
+				<div class="{{prefix}}header-cols cols  is--logotip">
+					<a href="{{page.index}}" class="{{prefix}}header-logotip">
+						{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
+					</a>
+				</div>
+				<div class="{{prefix}}header-cols cols  is--hamburger">
+					<button class="{{prefix}}header-hamburger" data-hamburger data-scrollto-humb>
+						<span class="{{prefix}}header-hamburger-inner">
+							<span class="{{prefix}}header-hamburger-line  is--left"></span>
+							<span class="{{prefix}}header-hamburger-line  is--center"></span>
+							<span class="{{prefix}}header-hamburger-line  is--right"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+	{% endif %}
+	<div class="{{prefix}}aside">
+		<div class="{{prefix}}aside-inner">
+			<div class="container">
+				<div class="{{prefix}}aside-row flex__row">
+					<div class="{{prefix}}aside-cols flex__cols  is--left">
+						<div class="flex__row">
+							<div class="flex__cols  is--cat">
+								{% include "../button/btn.twig" with {
+									view:'tpl',
+									tag:'button',
+									type:'button',
+									attr:'data-btn-catalog',
+									prefix:'link__',
+									mod:'',
+									icon:'icon-catalog',
+									name: 'Каталог',
+								} %}
+							</div>
+							<div class="flex__cols  is--shop">
+								{% include "../button/btn.twig" with {
+									view:'tpl',
+									tag:'a',
+									link:'https://www.shop.timberk.ru/',
+									prefix:'btn__',
+									target:'_blank',
+									mod:'is--lg  is--second',
+									name: 'Интернет-магазин',
+								} %}
+							</div>
+						</div>
+					</div>
+					<div class="{{prefix}}aside-cols flex__cols  is--logotip">
+						<a href="{{page.index}}" class="{{prefix}}logotip">
+							{% include "../svg-sprite/svg.twig" with {icon:'logotip'} %}
+						</a>
+					</div>
+					<div class="{{prefix}}aside-cols flex__cols  is--right">
+						<div class="flex__row">
+							<div class="flex__cols  is--search">
+								{% include "../button/btn.twig" with {
+									view:'tpl',
+									tag:'button',
+									type:'button',
+									attr:'data-btn-search',
+									prefix:'link__',
+									mod:'',
+									icon:'icon-search',
+								} %}
+							</div>
+							<div class="flex__cols  is--humb">
+								{% include "../button/btn.twig" with {
+									view:'tpl',
+									tag:'button',
+									type:'button',
+									attr:'data-btn-humb',
+									prefix:'link__',
+									mod:'',
+									icon:'icon-humb',
+									name: 'Меню',
+								} %}
+							</div>
+						</div>
+					</div>
+
+
+					{% if navbar %}
+					<div class="{{prefix}}aside-cols cols  is--nav" {{nav_aos}}>
+						<ul class="{{prefix}}aside-nav"  >
+							{% for n in nav %}
+							<li class="{{prefix}}aside-nav-item">
+								<a href="{{n.link}}" class="{{prefix}}aside-nav-link  {{n.active}}">{{n.name}}</a>
+							</li>
+							{% endfor %}
+						</ul> 	
+					</div>
+					{% endif %}
+					{% if lang %}
+					<div class="{{prefix}}aside-cols cols  is--lang" {{lang_aos}}>
+						<ul class="{{prefix}}aside-lang">
+							{% for l in lang %}
+							<li class="{{prefix}}aside-lang-item">
+								<a href="{{l.link}}" class="{{prefix}}aside-lang-link  {{l.active}}">{{l.name}}</a>
+							</li>
+							{% endfor %}
+						</ul> 	
+					</div>					
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,183 @@
+{% if view == "header" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div data-slick-index>
+				{% for s in slider %}
+				<div class="{{content_prefix}}slick-slide  {{content_mod}}">
+					<img src="{{s.img}}" class="img-responsive" alt="">
+					{% include "../button/btn.twig" with {
+						view:'tpl',
+						tag:'a',
+						href:s.href,
+						prefix:'btn__',
+						mod:'is--lg  is--white',
+						name: 'Узнать подробнее',
+					} %}
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if view == "catalog" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if view == "new" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			
+			<div data-slick-new>
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if view == "subs" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			{% include "../common/form/form.twig" with {
+				view: form_view,
+				prefix:"form__", 
+				mod:  form_mod,
+			} %}			
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "articles" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}inner  {{content_mod}}">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				
+				{% include "../common/tabs/tpl.twig" with {
+					view:tabs_view, 
+					prefix:tabs_prefix, 
+					mod:tabs_mod,
+					group:tabs_group,
+					list: tabs_list,				
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+{# 
+{% if view == "about" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}line-group  {{content_mod}}"></div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+					<div>
+						<div class="text__block  {{content_mod}}  hidden--md">
+							{{note}}
+						</div>
+						<div class="text__block  {{content_mod}}  visible--md">
+							{{note2}}
+						</div>
+						{% include "../common/button/btn.twig" with {
+							prefix:"btn__", 
+							view:btn_view,
+							mod:btn_mod,  
+							icon:btn_icon,
+							link:btn_link,
+							name:btn_name,
+						} %}
+					</div>
+					<picture class="{{content_prefix}}img  {{content_mod}}">
+						<img src="{{img}}" class="img-responsive" alt="">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "team" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}line-group  {{content_mod}}"></div>
+			<div class="{{content_prefix}}inner  is--page-index">
+				<div class="{{content_prefix}}slick  {{content_mod}}" data-slick-team>
+					{% include "../common/card/card.twig" with {
+						view: card_view,
+						prefix:"card__", 
+						mod:  card_mod, 
+						list: card_list
+					} %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "contacts" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
+			} %}
+			{% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:note_mod,
+				level:note_level, 
+				heading:note
+			} %}
+		</div>
+	</section>
+{% endif %} #}

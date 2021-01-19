@@ -1,0 +1,132 @@
+.footer__{
+	&block{ 
+		position: relative;
+		@media print{display: none;}
+		background: @footer_bg;
+		color: @footer_color;
+		a{
+			color: @footer_color;
+			&:hover{
+				color: @footer_color_hover;
+			}
+		}
+	}
+	&container{
+		&.container{
+			padding-top: 30px;
+			padding-bottom: 30px;
+			.media-breakpoint-up(@xl; {
+				padding-top: 53px;
+				padding-bottom: 43px;			
+			});		
+		}
+	}
+	&row{
+		grid-template-columns: 100%;
+		& > hr{
+			margin: 0 0 10px;
+			padding: 0;
+			border: 0;
+			height: 1px;
+			background-color: #636569;
+		}
+		.media-breakpoint-up(@md; {
+			grid-template-columns: 1fr 1fr 1fr;
+			& > hr{
+				grid-column: span 3;
+			}
+		});
+		.media-breakpoint-up(@lg; {
+			grid-template-columns: .82fr .92fr .74fr .4fr 1.12fr;
+			& > hr{
+				grid-column: span 5;
+			}
+		});
+		
+	}
+	&cols{
+		&.is--logotip{
+		}
+		&.is--copyright{
+			text-align: center;
+			align-self: center;
+			.text16();
+		}
+		&.is--conf{
+			text-align: center;
+			align-self: center;
+			.text16();
+		}
+		.media-breakpoint-up(@md; {
+			&.is--confident{
+				grid-column: span 3;
+			}
+			&.is--nav{
+				margin-top: 10px;
+			}
+			&.is--confident{
+				margin-top: 10px;
+			}
+			&.is--conf{
+				text-align: right;
+			}
+		});
+		.media-breakpoint-up(@lg; {
+			&.is--confident{
+				grid-column: span 2;
+			}
+			&.is--copyright{
+				grid-column: span 3;
+				.text16();
+			}
+		});
+	}
+	&logotip{
+		display: block;
+		width: 155px;
+		height: 54px;
+		margin: 0 auto;
+		color: @footer_color!important;
+		.media-breakpoint-up(@md; {
+			margin: 0;
+		});
+	}
+	&design{
+		width: 144px;
+		height: 40px;
+		margin: 0 auto;
+		.media-breakpoint-up(@md; {
+			margin: 0;
+		});
+	}
+	&nav{
+		&{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			.media-breakpoint-up(@md; {
+				max-width: 230px;	
+			});
+		}
+		&-item{
+			margin-bottom: 16px;
+			&.is--title{
+				font-weight: 700;
+				margin-bottom: 20px;
+			}
+		}
+		&-link{
+			display: block;
+			.heading6();
+			&:hover{
+				color: @primary;
+			}
+		}
+	}
+	&confident{
+		.heading7();
+		line-height: 167%;
+		margin-bottom: 38px;
+
+	}
+}

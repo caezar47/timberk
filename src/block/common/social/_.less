@@ -1,0 +1,29 @@
+.social__{  
+	&block{
+		list-style: none;
+		display: flex;
+		align-items: center;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: -(@soc_gutter);
+		margin-right: -(@soc_gutter);
+		&.is--block-sub{
+			margin-top: 20px;
+		}
+	}
+	&item{
+		padding-left: @soc_gutter;
+		padding-right: @soc_gutter;
+	}
+	&link{
+		display: block;
+		width: @soc_size;
+		height: @soc_height;
+		&, &:focus{color: @soc_color;}		
+		&:hover{
+			color: @soc_color_hover;
+		} 
+		svg{display: block;}
+	}
+}

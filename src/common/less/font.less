@@ -1,6 +1,6 @@
 .include-custom-font(
-	@family: @roboto, 
-	@src-name: @roboto, 
+	@family: @montserrat, 
+	@src-name: @montserrat, 
 	@weight: normal, 
 	@style: normal
 	){
@@ -13,26 +13,27 @@
 }
 .include-custom-icon(@family: @icon, @weight: normal, @style: normal){
 	@font-face{			
-		font-family: "@{family}";			
-		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-family: "@{family}";
+  		src: url('@{url-path-fonts}/@{family}.eot');
+  		src: 
+  			url('@{url-path-fonts}/@{family}.eot?#iefix') format('embedded-opentype'),
+  			url('@{url-path-fonts}/@{family}.svg#@{family}') format('svg'),
+  			url('@{url-path-fonts}/@{family}.ttf') format('truetype'),
+  			url('@{url-path-fonts}/@{family}.woff') format('woff'),
+  			url('@{url-path-fonts}/@{family}.woff2') format('woff2');	
 		font-weight: @weight;
 		font-style: @style;		
 	}
 }
-
 .include-custom-font(
-	@family: @site_ff_b300,
-	@src-name: 'MuseoSansCyrl-300',
+	@family: @montserrat,
+	@src-name: @montserrat,
+	@weight: 400, 
+	@style: normal
 );
 .include-custom-font(
-	@family: @site_ff_300,
-	@src-name: 'TTProstoSans-Light',
-);
-.include-custom-font(
-	@family: @site_ff_400,
-	@src-name: 'TTProstoSans-Regular',
-);
-.include-custom-font(
-	@family: @site_ff_700,
-	@src-name: 'TTProstoSans-Bold',
+	@family: @montserrat,
+	@src-name: @montserrat-600,
+	@weight: 700, 
+	@style: normal
 );

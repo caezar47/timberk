@@ -1,0 +1,48 @@
+{% if view == "base" %}
+<div class="{{prefix}}panel  {{mod}}">
+	<ul class="nav  {{prefix}}nav  {{mod}}">
+		{% for value in list %}
+			<li class="{{prefix}}item">
+				<a class="{{prefix}}link {{value.status}}  {{mod}}" id="nav-{{value.id}}" href="#{{value.id}}" data-toggle="tab">{{value.name}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<div class="tab-content">
+	{% for value in list %}
+	<div class="tab-pane {{value.status}}" id="{{value.id}}">
+		{% if value.type == "text" %}
+			<div class="text__block  {{card_mod}}">
+				{{value.text}} 
+			</div>
+		{% endif %}
+		{% if value.type == "card_slider" %}
+			{% include "../card/card.twig" with {
+				view: value.view,
+				prefix:"card__", 
+				mod:  value.mod, 
+				list: value.list
+			} %}
+			<div data-slick-articles>
+				{% include "../card/card.twig" with {
+					view: value.view,
+					prefix:"card__", 
+					mod:  value.mod, 
+					list: value.slider
+				} %}
+			</div>
+		{% endif %}
+		{% if value.type == "card" %}
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+			{% include "../card/card.twig" with {
+				view: value.view,
+				prefix:"card__", 
+				mod:  value.mod, 
+				list: value.list
+			} %}
+			</div>
+		{% endif %}
+	</div>
+	{% endfor %}
+</div>
+{% endif %}
