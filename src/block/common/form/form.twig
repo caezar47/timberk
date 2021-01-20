@@ -6,6 +6,16 @@
 		</div>
 	</form>
 {% endif %}
+{% if view=="search" %}
+	<form action="#" class="{{prefix}}panel  {{mod}}">
+		<div class="{{prefix}}item  {{mod}}">
+			<button type="button" class="{{prefix}}btn  {{mod}}">
+				{% include "../svg-sprite/svg.twig" with {icon:'icon-search'} %}
+			</button>
+			<input class="{{prefix}}control  {{mod}}" id="title-search-input" type="text" name="q" size="40" maxlength="50" placeholder="Поиск по каталогу" autocomplete="off">
+		</div>
+	</form>
+{% endif %}
 {% if view=="order" %}
 	<form action="#" class="{{prefix}}panel  {{mod}}"  data-form-validation>
 		<div class="{{prefix}}row  grid__row  {{mod}}">				

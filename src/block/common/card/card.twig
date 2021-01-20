@@ -3,9 +3,28 @@
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}">
 		<p class="{{prefix}}heading  {{mod}}" {% if value.color %}style="color: {{value.color}}"{% endif %}>{{value.name}}</p>
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-responsive" alt="">
+			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>
 	</a>
+	{% endfor %}
+{% endif %}
+{% if view == "catalog-cat" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}">
+		<ul class="{{prefix}}nav  {{mod}}">
+			<li class="{{prefix}}nav-item  is--title  {{mod}}">
+				<a class="{{prefix}}nav-link  {{mod}}" href="{{value.link}}">{{value.name}}</a>
+			</li>
+			{% for n in value.nav %}
+			<li class="{{prefix}}nav-item  {{mod}}">
+				<a class="{{prefix}}nav-link  {{mod}}" href="{{n.link}}">{{n.name}}</a>
+			</li>				
+			{% endfor %}
+		</ul>
+		<picture class="{{prefix}}preview  {{mod}}">
+			<img src="{{value.img}}" class="img-fluid" alt="">
+		</picture>
+	</div>
 	{% endfor %}
 {% endif %}
 {% if view == "catalog-card" %}
@@ -20,7 +39,7 @@
 			{% endif %}
 			<a href="{{value.link}}">
 				<picture class="{{prefix}}preview  {{mod}}">
-					<img src="{{value.img}}" class="img-responsive" alt="">
+					<img src="{{value.img}}" class="img-fluid" alt="">
 				</picture>
 			</a>
 			<div class="{{prefix}}group  {{mod}}">
@@ -43,7 +62,7 @@
 	{% for value in list %}	
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}  {{value.group}}">
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-responsive" alt="">
+			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>
 		<div class="{{prefix}}group  {{mod}}">
 			<h5 class="{{prefix}}heading  {{mod}}">{{value.name}}</h5>
@@ -62,6 +81,11 @@
 	</a>
 	{% endfor %}
 {% endif %}
+{% if view == "banner" %}
+	<picture class="{{prefix}}item  {{mod}}">
+		<img src="{{img}}" class="img-fluid" alt="">
+	</picture>
+{% endif %}
 
 
 {# old #}
@@ -69,7 +93,7 @@
 	{% for value in list %}	
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}">
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-responsive" alt="">
+			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>
 		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
 	</a>
@@ -80,7 +104,7 @@
 	<div class="{{prefix}}item  {{mod}}">
 		<picture class="{{prefix}}preview  {{mod}}">
 			<source media="(max-width: 575px)" srcset="{{value.img_xs}}">
-			<img src="{{value.img}}" class="img-responsive" alt="">
+			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>
 		<div>
 			<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
@@ -107,7 +131,7 @@
 		<div class="{{prefix}}item  {{mod}}">
 			<picture class="{{prefix}}preview  {{mod}}">
 				<source media="(max-width: 575px)" srcset="{{value.img_xs}}">
-				<img src="{{value.img}}" class="img-responsive" alt="">
+				<img src="{{value.img}}" class="img-fluid" alt="">
 			</picture>
 			<div class="{{prefix}}group  {{mod}}">
 				<p class="{{prefix}}heading  {{mod}}">{{value.heading}}</p>
@@ -117,7 +141,7 @@
 					<p class="{{prefix}}heading  {{mod}}-name">{{value.name}}</p>
 					<p class="{{prefix}}position  {{mod}}">{{value.position}}</p>
 					<picture class="{{prefix}}preview  {{mod}}-sign">
-						<img src="{{value.sign}}" class="img-responsive" alt="">
+						<img src="{{value.sign}}" class="img-fluid" alt="">
 					</picture>
 					<p class="{{prefix}}btn  {{mod}}">
 						{% include "../button/btn.twig" with {
@@ -140,7 +164,7 @@
 	{% for value in list %}	
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}">
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-responsive" alt="">
+			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>
 		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
 	</a>
@@ -150,7 +174,7 @@
 	{% for value in list %}	
 	<div class="{{prefix}}item  {{mod}}">
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-responsive" alt="">
+			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>
 		<div>			
 			<p class="{{prefix}}heading  {{mod}}">{{value.heading}}</p>
@@ -220,7 +244,7 @@
 			<td class="{{prefix}}wrap  is--prev  {{mod}}">
 				<a href="{{value.link}}">
 				<picture class="{{prefix}}preview  {{mod}}">
-					<img src="{{value.img}}" class="img-responsive" alt="">
+					<img src="{{value.img}}" class="img-fluid" alt="">
 				</picture>
 				</a>
 			</td>
@@ -420,7 +444,7 @@
 		<tr>			
 			<td class="{{prefix}}wrap  is--prev  {{mod}}">
 				<picture class="{{prefix}}preview  {{mod}}">
-					<img src="{{value.img}}" class="img-responsive" alt="">
+					<img src="{{value.img}}" class="img-fluid" alt="">
 				</picture>
 			</td>
 			<td class="{{prefix}}wrap  is--heading  {{mod}}">

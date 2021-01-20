@@ -1,5 +1,5 @@
 {% if view == "tpl" %}
-<{{tag}} {% if tag == "button" %}type="{{type}}"{% endif %} {% if tag == "a" %}href="{{link}}"{% endif %} class="{{prefix}}item  {{mod}}" {{attr}} {% if target %}target="{{target}}"{% endif %}>
+<{{tag}} {% if tag == "button" %}type="{{type}}"{% endif %} {% if tag == "a" %}href="{{link}}"{% endif %} {% if title %}title="{{title}}"{% endif %} class="{{prefix}}item  {{mod}}" {{attr}} {% if target %}target="{{target}}"{% endif %} {% if count %}data-count="{{count}}"{% endif %}>
 	{% if icon %}
 		{% include "../svg-sprite/svg.twig" with {icon:icon} %}
 	{% endif %}

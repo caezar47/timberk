@@ -31,11 +31,7 @@
 
 	"page":{
 		"index":"./",
-		"works":"./works.html",
-		"works_card":"./works-card.html",
-		"agency":"./agency.html",
-		"agency_en":"./agency-en.html",
-		"agency_en":"#",
+		"catalog":"./catalog.html",
 		"contacts":"./contacts.html"
 	},
 	"prefix":{

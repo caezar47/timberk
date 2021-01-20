@@ -1,5 +1,6 @@
 
 
+
 $("img").addClass("img-responsive");
 var catalog_btn=$("[data-btn-catalog]"),menu_btn=$("[data-btn-humb]"),humb=$("[data-hamburger]"),collapse=$(".navbar__aside"),html=$("html");menu_btn.on("click",function(a){return a.preventDefault(),alert(1),$(".catalogmenu__block").removeClass("show"),$(".sitemenu__block").addClass("show"),!1}),humb.on("click",function(){$(this).toggleClass("is--active"),$(collapse).toggleClass("is--open"),$(html).toggleClass("is--open-navbar")}),$(document.body).on("click",function(a){0==$(a.target).closest(".navbar__aside-container").length&&0==$(a.target).closest("[data-hamburger]").length&&(humb.removeClass("is--active"),$(html).removeClass("is--open-navbar"),$(collapse).removeClass("is--open"))});
 

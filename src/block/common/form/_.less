@@ -8,6 +8,10 @@
 					margin: 0 auto 90px;
 				});
 			}
+			&-search{
+				max-width: 656px;
+				margin-bottom: 40px;
+			}
 		}
    		&.is--modal-sale{
 			max-width: 335px;
@@ -27,6 +31,7 @@
 		}
 	}
 	&control{
+		font-family: @site_ff;
 		box-shadow: none;
 		width: 100%;
 		background: @input_bg;
@@ -76,6 +81,21 @@
 			&-subs{
 				padding-right: @input_height - 5;
 			}
+			&-search{
+				height: @input_height - 2;
+				color: @black;
+				background-color: @white;
+				border-color: fadeout(@black, 80%);
+				padding-left: 50px;
+				.heading7();
+				font-weight: 600;
+				&::-moz-placeholder{
+					color: fadeout(@black, 40%);
+				}
+				&::-webkit-input-placeholder {
+					color: fadeout(@black, 40%);
+				}
+			}
 		}
 		&.is--modal-sale{
 			border: 2px solid #00afab;
@@ -118,6 +138,7 @@
 	}
 	&btn{
 		.btn-clearfix();
+		cursor: pointer;
 		&.is--block{
 			&-subs{
 				position: absolute;
@@ -127,7 +148,14 @@
 				background-position: center;
 				right: 0;
 				top: 0;
-
+			}
+			&-search{
+				position: absolute;
+				width: 24px;
+				height: 24px;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
 			}
 		}
 	}

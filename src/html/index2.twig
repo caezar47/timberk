@@ -25,8 +25,8 @@
             {% include "../block/page/index.twig" with {
                 view:"catalog", 
                 content_prefix:prefix.section, 
+                content_group:"is--v2",  
                 content_mod:"is--page-index-catalog",  
-                content_group:"is--v1",  
                 heading_group:"", 
                 heading_attr:'',
                 heading_mod:"is--h1  is--page-index-catalog  text-align--center", 
@@ -38,24 +38,24 @@
                 card_list: [
                     {
                         "link":page.catalog_cat, 
-                        "name":"Конвекторы", 
-                        "img": [path.img,"/default/catalog-banner-item5.jpg"].join(""),
+                        "name":"Увлажнители", 
+                        "img": [path.img,"/default/catalog-banner-item1.jpg"].join(""),
                         "color": '#fff',
                     }, 
                     {
                         "link":page.catalog_cat, 
-                        "name":"Воздухоочистители", 
-                        "img": [path.img,"/default/catalog-banner-item6.jpg"].join(""),
-                    }, 
-                    {
-                        "link":page.catalog_cat, 
-                        "name":"Сплит-системы", 
-                        "img": [path.img,"/default/catalog-banner-item7.png"].join(""),
+                        "name":"Тепловые завесы", 
+                        "img": [path.img,"/default/catalog-banner-item2.png"].join(""),
                     }, 
                     {
                         "link":page.catalog_cat, 
                         "name":"Водонагреватели", 
-                        "img": [path.img,"/default/catalog-banner-item8.png"].join(""),
+                        "img": [path.img,"/default/catalog-banner-item3.png"].join(""),
+                    }, 
+                    {
+                        "link":page.catalog_cat, 
+                        "name":"Тепловые пушки", 
+                        "img": [path.img,"/default/catalog-banner-item4.jpg"].join(""),
                     }, 
                 ],   
             } %} 

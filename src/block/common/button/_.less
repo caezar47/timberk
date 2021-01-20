@@ -87,3 +87,38 @@
 		});
 	}
 }
+.icon__{
+	&item{	
+		.btn-clearfix();
+		min-width: 24px;
+		width: 24px;
+		height: 24px;
+		display: inline-flex;		
+		position: relative;
+		&.is--compare{
+			min-width: 32px;
+			width: 32px;
+			height: 32px;
+			color: @black;
+			margin-right: -5px;
+			&::after{
+				content: attr(data-count);
+				position: absolute;
+				top: -1px;
+				right: -4px;
+				color: @primary;
+				background-color: @primary;
+				color: @white;
+				display: inline-flex;
+				font-size: 0.75rem;
+				padding: 0 2px;
+				min-width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
