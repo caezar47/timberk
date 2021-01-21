@@ -253,8 +253,8 @@ $(document).ready(function(){
         var _this = this;
         var ID = $(this).attr("data-id");
         var IBID = $(this).attr("data-ibid");
-         $.ajax({
-            url: ajaxpath + 'cityshops.php',
+         /*$.ajax({
+            //url: ajaxpath + 'cityshops.php',
             data: {
                 ID: ID,
                 IBID: IBID
@@ -263,15 +263,15 @@ $(document).ready(function(){
                 $(".buy__shops").html(data);
                 body.stop().animate({scrollTop:$(_this).parents(".content__tabs__content").find(".active .buy__shops").offset().top}, 500, 'swing');
             }
-         });
+         });*/
     });
 	
     $(".service__list__item__content a").click(function(){
         var _this = this;
         var ID = $(this).attr("data-id");
         var IBID = $(this).attr("data-ibid");
-         $.ajax({
-            url: ajaxpath + 'cityservice.php',
+         /*$.ajax({
+            //url: ajaxpath + 'cityservice.php',
             data: {
                 ID: ID,
                 IBID: IBID
@@ -280,7 +280,7 @@ $(document).ready(function(){
                 $(".buy__shops").html(data);
                 body.stop().animate({scrollTop:$(_this).parents(".content__tabs__content").find(".active .buy__shops").offset().top}, 500, 'swing');
             }
-         });
+         });*/
     });
 
     $(".catalog__filter__hidden__btn").click(function(){
@@ -429,8 +429,8 @@ $(document).ready(function(){
 
     $(".filtermail__form").submit(function(e){
         e.preventDefault();
-        $.ajax({
-            url: ajaxpath + 'mailfilter.php',
+        /*$.ajax({
+            //url: ajaxpath + 'mailfilter.php',
             data: {
                 USEREMAIL: $(e.target).find("input[name=USEREMAIL]").val(),
                 FILTER_LINK: FilterLink,
@@ -445,14 +445,14 @@ $(document).ready(function(){
                     $(e.target).find("input").val("");
                 },4000);
             }
-        });
+        });*/
         return false;
     });
 
     $(".productmail__form").submit(function(e){
         e.preventDefault();
-        $.ajax({
-            url: ajaxpath + 'mailproduct.php',
+        /*$.ajax({
+            //url: ajaxpath + 'mailproduct.php',
             data: {
                 USEREMAIL: $(e.target).find("input[name=USEREMAIL]").val(),
                 PID: $(e.target).find("input[name=PID]").val()
@@ -465,7 +465,7 @@ $(document).ready(function(){
                     $(e.target).find("input").val("");
                 },4000);
             }
-        });
+        });*/
         return false;
     });
 
@@ -578,8 +578,8 @@ function format(state) {
 }
 
 function setLang(LANG){
-    $.ajax({
-        url: ajaxpath + "setlang.php",
+    /*$.ajax({
+        //url: ajaxpath + "setlang.php",
         data: {
             LANG: LANG,
             PATH: window.location.pathname
@@ -587,7 +587,7 @@ function setLang(LANG){
         success: function(data){
             window.location.href = data;
         }
-    });
+    });*/
 }
 
 function ToTopBtn(){
@@ -806,7 +806,7 @@ var CompareCore = {
                 $(this).find(".compare__row__item").eq(index).remove();
             });
             e.preventDefault();
-            $.ajax({
+            /*$.ajax({
                 url: $(this).attr("data-path"),
                 type: 'POST',
                 success: function(data){
@@ -814,7 +814,7 @@ var CompareCore = {
                     if(!$(".compare__row__item").length)
                         window.location.reload();
                 }
-            });
+            });*/
             return false;
         });
 
@@ -833,25 +833,25 @@ var CompareCore = {
                 CompareCore.InitSelect(select);
             });
         });
-
+    /*
         $(window).resize(function(){
             if(_this)
                 _this.CompareView();
-        });
+        });*/
 
         $(window).scroll(function(){
            _this.FixCompareHeader();
         });
     },
     LoadCount: function(){
-        $.ajax({
-            url: ajaxpath + 'getcmpcount.php',
+        /*$.ajax({
+            //url: ajaxpath + 'getcmpcount.php',
             success: function(data){
                 if(parseInt(data))
                     $(".compare__count").attr("data-count",data);
 
             }
-        });
+        });*/
     },
     MarkElements: function(){
 
@@ -881,8 +881,8 @@ var CompareCore = {
         $(select).find("option").each(function(){
             $list.push($(this).val());
         });
-        $.ajax({
-            url: ajaxpath + 'comparestatus.php',
+        /*$.ajax({
+            //url: ajaxpath + 'comparestatus.php',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -897,12 +897,12 @@ var CompareCore = {
                 _this.InitSelect(select);
                 _this.LoadCount();
             }
-        });
+        });*/
     },
     AddToList: function(ID,ACTION,select){
         var _this = this;
-        $.ajax({
-            url: ajaxpath + 'compare.php',
+        /*$.ajax({
+            //url: ajaxpath + 'compare.php',
             type: 'GET',
             dataType: 'html',
             data: {
@@ -922,7 +922,7 @@ var CompareCore = {
 
                 _this.GetCompareStatus(select);
             }
-        });
+        });*/
     },
     FixCompareHeader: function(){
         if(!$(".compare__block").length)
@@ -935,15 +935,15 @@ var CompareCore = {
 }
 
 function GetArchive(ID){
-    $.ajax({
-        url: ajaxpath + 'photozip.php',
+    /*$.ajax({
+        //url: ajaxpath + 'photozip.php',
         data: {
             ID: ID
         },
         success: function(data){
             window.location.href = data;
         }
-    });
+    });*/
 }
 
 $(function () {

@@ -30,9 +30,19 @@
 					padding-bottom: 40px;
 				}
 			}
+			&-catalog{
+				&-cat{
+					padding-top: 23px;
+					padding-bottom: 30px;
+				}
+			}
 		}
 		&.is--block{
 			&-subs{
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+			&-seo{
 				padding-top: 30px;
 				padding-bottom: 30px;
 			}
@@ -49,15 +59,25 @@
 						padding-bottom: 66px;
 					}
 				}
+				&-catalog{
+					&-cat{
+						padding-bottom: 55px;
+					}
+				}
 			}
 			&.is--block{
 				&-subs{
 					padding-top: 95px;
 					padding-bottom: 95px;
 				}
+				&-seo{
+					padding-top: 52px;
+					padding-bottom: 30px;
+					padding-left: 30px;
+					padding-right: 30px;
+				}
 			}
 		});
-
 	}
 	&bg{
 	}
@@ -238,6 +258,16 @@
 					}
 				});
 			}
+			&-catalog-cat{
+				grid-template-columns: 3.45fr 8.55fr;
+				grid-gap: 20px;
+				margin-left: -55px;
+				& >*{
+					&:nth-child(1){
+						//background-color: @info;
+					}
+				}
+			}
 		}
 		&.is--block{
 			&-subs{
@@ -251,12 +281,44 @@
 		}
 	}
 	&row{
+		&.is--page{
+			&-catalog-cat{
+				margin-left: -14px;
+				margin-right: -14px;
+				& > *{
+					padding-left: 14px;
+					padding-right: 14px;
+					padding-bottom: 33px;
+				}
+			}
+		}
 	}
 	&slick{
 		&{}
 		&-slide{}
 	}
+	&aside{
+		background-color: @info;
+		padding: 24px 24px 24px 55px;
+	}
 	&card{
+	}
+	&text{
+		&.is--block{
+			&-seo{
+				color: @success;
+				//.heading7();
+				font-size: 14px;
+				line-height: 14px;
+				p,div{
+					margin-bottom: 25px;
+				}
+				h2, h3, h4, h5{
+					.text16();
+					margin-bottom: 15px;
+				}
+			}
+		}
 	}
 	&img{
 	}

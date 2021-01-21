@@ -32,6 +32,7 @@
 	"page":{
 		"index":"./",
 		"catalog":"./catalog.html",
+		"catalog_cat":"./catalog-category.html",
 		"contacts":"./contacts.html"
 	},
 	"prefix":{

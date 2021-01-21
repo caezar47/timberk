@@ -8,6 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"/>
 <link href="./css/style.css" rel="stylesheet">
 <link href="./css/style_new.css" rel="stylesheet">    </head>
     <body>
@@ -132,13 +135,13 @@
 
 			</div>
 
-				<form action="#" class="form__panel  is--block-search">
-		<div class="form__item  is--block-search">
-			<button type="button" class="form__btn  is--block-search">
+				<form action="#" class="form__panel  is--search  is--block-search">
+		<div class="form__item  is--search">
+			<button type="button" class="form__btn  is--search">
 				<svg class="icon-svg icon-icon-search" role="img">
 	<use xlink:href="./img/svg/sprite.svg#icon-search"></use>
 </svg>			</button>
-			<input class="form__control  is--block-search" id="title-search-input" type="text" name="q" size="40" maxlength="50" placeholder="Поиск по каталогу" autocomplete="off">
+			<input class="form__control  is--search" id="title-search-input" type="text" name="q" size="40" maxlength="50" placeholder="Поиск по каталогу" autocomplete="off">
 		</div>
 	</form>
 
@@ -148,28 +151,28 @@
 	<div class="card__item  is--catalog-cat">
 		<ul class="card__nav  is--catalog-cat">
 			<li class="card__nav-item  is--title  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Климатическое оборудование</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Климатическое оборудование</a>
 			</li>
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Кондиционеры и сплит-системы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Кондиционеры и сплит-системы</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Осушители</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Осушители</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Воздухоочистители</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Воздухоочистители</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Ультразвуковые увлажнители воздуха</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Ультразвуковые увлажнители воздуха</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Мойки воздуха</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Мойки воздуха</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Электрические вентиляторы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Электрические вентиляторы</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href=""></a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html"></a>
 			</li>				
 					</ul>
 		<picture class="card__preview  is--catalog-cat">
@@ -180,13 +183,13 @@
 	<div class="card__item  is--catalog-cat">
 		<ul class="card__nav  is--catalog-cat">
 			<li class="card__nav-item  is--title  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Водонагревательное оборудование</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Водонагревательное оборудование</a>
 			</li>
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Водонагреватели проточные</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Водонагреватели проточные</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Водонагреватели накопительные</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Водонагреватели накопительные</a>
 			</li>				
 					</ul>
 		<picture class="card__preview  is--catalog-cat">
@@ -197,28 +200,28 @@
 	<div class="card__item  is--catalog-cat">
 		<ul class="card__nav  is--catalog-cat">
 			<li class="card__nav-item  is--title  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Тепловое оборудование</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Тепловое оборудование</a>
 			</li>
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Радиаторы масляные</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Радиаторы масляные</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Тепловентиляторы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Тепловентиляторы</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Электрические конвекторы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Электрические конвекторы</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Газовые обогреватели</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Газовые обогреватели</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Инфракрасные обогреватели</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Инфракрасные обогреватели</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Тепловые пушки</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Тепловые пушки</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Тепловые завесы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Тепловые завесы</a>
 			</li>				
 					</ul>
 		<picture class="card__preview  is--catalog-cat">
@@ -229,13 +232,13 @@
 	<div class="card__item  is--catalog-cat">
 		<ul class="card__nav  is--catalog-cat">
 			<li class="card__nav-item  is--title  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Промышленное климатическое оборудование</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Промышленное климатическое оборудование</a>
 			</li>
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Мультизональные системы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Мультизональные системы</a>
 			</li>				
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Чиллеры-фанкойлы</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Чиллеры-фанкойлы</a>
 			</li>				
 					</ul>
 		<picture class="card__preview  is--catalog-cat">
@@ -246,10 +249,10 @@
 	<div class="card__item  is--catalog-cat">
 		<ul class="card__nav  is--catalog-cat">
 			<li class="card__nav-item  is--title  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Крупная бытовая техника</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Крупная бытовая техника</a>
 			</li>
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Холодильники</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Холодильники</a>
 			</li>				
 					</ul>
 		<picture class="card__preview  is--catalog-cat">
@@ -260,10 +263,10 @@
 	<div class="card__item  is--catalog-cat">
 		<ul class="card__nav  is--catalog-cat">
 			<li class="card__nav-item  is--title  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Бытовая техника</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Бытовая техника</a>
 			</li>
 						<li class="card__nav-item  is--catalog-cat">
-				<a class="card__nav-link  is--catalog-cat" href="">Санитайзеры</a>
+				<a class="card__nav-link  is--catalog-cat" href="./catalog-category.html">Санитайзеры</a>
 			</li>				
 					</ul>
 		<picture class="card__preview  is--catalog-cat">
@@ -493,9 +496,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
 
 
 
+<script src="./js/jquery.imagezoom.js?v=3687" ></script>
+<script src="./js/jquery.magnify.js?v=3687" ></script>
+<script src="./js/jquery.magnific-popup.min.js?v=3687" ></script>
+<script src="./js/script.js" ></script>
 <script src="./js/document-ready.js" ></script>
 
     </body>

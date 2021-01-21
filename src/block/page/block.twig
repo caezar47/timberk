@@ -1,0 +1,32 @@
+{% if view == "articles" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}inner  {{content_mod}}">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				
+				{% include "../common/tabs/tpl.twig" with {
+					view:tabs_view, 
+					prefix:tabs_prefix, 
+					mod:tabs_mod,
+					group:tabs_group,
+					list: tabs_list,				
+				} %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "seo" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}text  {{content_mod}}">
+				{{note}}
+			</div>
+		</div>
+	</section>
+{% endif %}

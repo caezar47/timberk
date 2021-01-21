@@ -29,13 +29,34 @@
 {% endif %}
 {% if view == "catalog-card" %}
 	{% for value in list %}	
-	<div class="{{group}}">
+	<div class="{{value.group}}">
 		<div class="{{prefix}}item  {{mod}}">
 			<div class="{{prefix}}bg  {{mod}}" style="background-image: url({{value.bg}})"></div>
 			{% if value.label %}
 			<p class="{{prefix}}label  {{mod}}" style="background-color: {{value.label_color}}">
 				{{value.label}}
 			</p>
+			{% endif %}
+			{% if value.compare %}
+				<div class="{{prefix}}compare  dropdown">
+					<button type="button" class="{{prefix}}compare-btn  {{mod}} dropdown-toggle" data-toggle="dropdown">
+						{% include "../svg-sprite/svg.twig" with {icon:'icon-compare'} %}
+					</button>
+					<div class="{{prefix}}compare-menu  dropdown-menu">
+						<p class="{{prefix}}compare-title">Выберите модель</p>
+						<form class="{{prefix}}compare-form  ">
+							<div class="{{prefix}}compare-select">
+								<select data-select  data-drop-class="{{prefix}}compare-drop">
+									<option>WHEL-3 OC</option>
+									<option>WHEL-3 OC</option>
+									<option>WHEL-3 OC</option>
+								</select>
+							</div>
+							<button class="btn__item">Добавить</button>
+						</form>
+          				<a class="{{prefix}}compare-link" href="">Список cравнения</a>
+       				</div>
+				</div>
 			{% endif %}
 			<a href="{{value.link}}">
 				<picture class="{{prefix}}preview  {{mod}}">
@@ -44,7 +65,9 @@
 			</a>
 			<div class="{{prefix}}group  {{mod}}">
 				<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+				{% if value.note %}
 				<p class="{{prefix}}note  {{mod}}">{{value.note}}</p>
+				{% endif %}
 				{% include "../button/btn.twig" with {
 					view:'tpl',
 					tag:'a',
@@ -55,6 +78,22 @@
 				} %}
 			</div>
 		</div>
+	</div>
+	{% endfor %}
+{% endif %}
+{% if view == "catalog-nav" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}">
+		<ul class="{{prefix}}nav  {{mod}}">
+			<li class="{{prefix}}nav-item  is--title  {{mod}}">
+				{{value.name}}
+			</li>
+			{% for n in value.nav %}
+			<li class="{{prefix}}nav-item  {{mod}}">
+				<a class="{{prefix}}nav-link  {{mod}}" href="{{n.link}}">{{n.name}}</a>
+			</li>				
+			{% endfor %}
+		</ul>
 	</div>
 	{% endfor %}
 {% endif %}
