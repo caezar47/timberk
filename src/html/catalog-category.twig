@@ -75,12 +75,151 @@
                     }
                 ], 
 
+                filter_view:    'filter',
+                filter_mod:     'is--aside-filter',
+                filter_list: [
+                    {
+                        id:'aside-filter-1',
+                        name:'Тип ТЭНа',
+                        visible:'show',
+                        type:'checkbox',
+                        list:[
+                            {
+                                type:"checkbox",
+                                form_id:"",
+                                id:"",
+                                status:"",
+                                name:"Текст про тип ТЭНа"
+                            }
+                        ],
+                    },
+                    {
+                        id:'aside-filter-2',
+                        name:'Объём, л',
+                        visible:'show',
+                        type:'range',
+                        list:[
+                            {
+                                min:"10",
+                                max:"100",
+                            }
+                        ],
+                    },
+                    {
+                        id:'aside-filter-3',
+                        name:'Номинальная потребляемая мощность, Вт',
+                        visible:'show',
+                        type:'range',
+                        list:[
+                            {
+                                min:"1500",
+                                max:"6000",
+                            }
+                        ],
+                    },
+                    {
+                        id:'aside-filter-4',
+                        name:'Мощность по ступеням, Вт',
+                        visible:'show',
+                        type:'checkbox',
+                        list:[
+                            { 
+                                type:'radio',
+                                form_id:"radio-group1",
+                                id:"radio1",
+                                status:"",
+                                mod:"",
+                                name:"1000/1500/2500",
+                            },
+                            { 
+                                type:'radio',
+                                form_id:"radio-group1",
+                                id:"radio2",
+                                status:"",
+                                mod:"",
+                                name:"1000/2500",
+                            }
+                        ],
+                    },
+                    {
+                        id:'aside-filter-5',
+                        name:'Расположение',
+                        visible:'show',
+                        type:'checkbox',
+                        list:[
+                            {
+                                type:"checkbox",
+                                form_id:"",
+                                id:"",
+                                status:"",
+                                name:"Горизонтально"
+                            },
+                            {
+                                type:"checkbox",
+                                form_id:"",
+                                id:"",
+                                status:"",
+                                name:"Вертикально"
+                            }
+                        ],
+                    },
+                    {
+                        id:'aside-filter-6',
+                        name:'Панель управления',
+                        visible:'show',
+                        type:'checkbox',
+                        list:[
+                            {
+                                type:"checkbox",
+                                form_id:"",
+                                id:"",
+                                status:"",
+                                name:"Механическая"
+                            },
+                            {
+                                type:"checkbox",
+                                form_id:"",
+                                id:"",
+                                status:"",
+                                name:"Сенсорная"
+                            }
+                        ],
+                    },
+                ], 
+
+                link_view: 'catalog-nav',
+                link_mod: 'is--aside-link',
+                link_list: [
+                    {
+                        name:"Справочная информация",
+                        nav: [
+                            {
+                                name:'Технологии',
+                                link:"#",
+                            },
+                            {
+                                name:'Вопросы и ответы',
+                                link:"#",
+                            }
+                        ]
+                    },
+                    {
+                        name:"СКАЧАТЬ PDF-каталог",
+                        nav: [
+                            {
+                                name:'Лифлет «Водонагревательное оборудование Timberk», сезон 2018',
+                                link:"#",
+                            }
+                        ]
+                    }
+                ], 
+
                 card_view: 'catalog-card',
                 card_mod: 'is--catalog-card',
                 card_list: [                    
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Steamy: UL 37E", 
                         "compare":"check", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
@@ -88,7 +227,7 @@
                     },                   
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Nordvind: DH30", 
                         "compare":"true", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
@@ -96,7 +235,7 @@
                     },              
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Dry Expert: DH30", 
                         "compare":"true", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
@@ -106,7 +245,7 @@
                     },                   
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Gra: N27C", 
                         "compare":"true", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
@@ -114,7 +253,7 @@
                     },                   
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Daisy: UL 42E", 
                         "compare":"true", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
@@ -122,7 +261,7 @@
                     },              
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Natt: T-AC-S29", 
                         "compare":"check", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
@@ -132,42 +271,42 @@
                     },                   
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Modern: N23C", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
                         "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
                     },                   
                     {
                         "link":page.catalog_card,
-                        "group":"col-lg-3",  
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Gra: N27C", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
                         "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
                     },              
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Daisy: UL 42E", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
                         "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
                     },                   
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Natt: T-AC-S29", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
                         "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
                     },                  
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Modern: N23C", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
                         "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
                     },                
                     {
                         "link":page.catalog_card, 
-                        "group":"col-lg-3", 
+                        "group":"col-sm-6 col-md-4 col-lg-3", 
                         "name":"Серия Beauty: UL 16", 
                         "img": [path.img,"/default/catalog-new-item1.png"].join(""),
                         "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
@@ -281,9 +420,43 @@
             view: "modal"
         }%}
         <script>
+            var filter_btn      = $("[data-filter-btn]");
+            var filter_block    = $("[data-filter-block]");
+            var filter_close    = $("[data-filter-close]");
+            filter_btn.on('click',function() {       
+                filter_block.toggleClass("is--show");
+                $('html').toggleClass("is--show");
+            });
+            filter_close.on('click',function() {       
+                filter_block.removeClass("is--show");
+                $('html').removeClass("is--show");
+            });
+            $(document.body).on('click', function(event) {
+                if($(event.target).closest('[data-filter-block]').length == 0 && $(event.target).closest('[data-filter-btn]').length == 0){ 
+                    filter_block.removeClass("is--show");
+                    $('html').removeClass("is--show");
+                }       
+            }); 
+
             $("[data-select]").select2({
                 minimumResultsForSearch: -1,
                 //dropdownCssClass: $(this).attr('data-drop-class'),
+            });
+            $("[data-filter-slider-ul]").each(function(){
+                var _this = this;
+                $(this).slider({
+                    range: true,
+                    min: parseInt($(_this).attr("data-from")),
+                    max: parseInt($(_this).attr("data-to")),
+                    values: [parseInt($(_this).attr("data-minval")), parseInt($(_this).attr("data-maxval"))],
+                    step: parseFloat($(_this).attr("data-step")),
+                    slide: function( event, ui ) {
+                        $(_this).parents("[data-filter-slider]").find("input[data-input-from]").val(ui.values[0]);
+                        $(_this).parents("[data-filter-slider]").find("input[data-input-to]").val(ui.values[1]);
+                        //smartFilter.keyup($(_this).parents(".filter__slider").find("input#from")[0]);
+                        //smartFilter.keyup($(_this).parents(".filter__slider").find("input#to")[0]);
+                    }
+                });
             });
         </script>
     </body>

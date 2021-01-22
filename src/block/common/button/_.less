@@ -38,6 +38,15 @@
 				color: @white;
 			}
 		}
+		&.is--opacity{
+			background-color: fadeout(@primary, 100%);
+			border-color: fadeout(@primary, 100%);
+			color: @success2;
+			&:hover{
+				color: fadeout(@white, 0%);
+				background-color: @primary;
+			}
+		}
 		&.is--disabled,
 		&[disabled]{		
 			opacity: 0.1;

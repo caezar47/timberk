@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"/>
 <link href="./css/style.css" rel="stylesheet">
+<link href="./css/jqui.css" rel="stylesheet">
 <link href="./css/style_new.css" rel="stylesheet">    </head>
     <body>
 
@@ -112,7 +113,6 @@
 
 
 
-
             <ul class="breadcrumb__list  ">
 		
 				<li class="breadcrumb__item">
@@ -144,7 +144,19 @@
 			</div>
 			<div class="section__grid  grid__row  is--page-catalog-cat">
 				<div>
-					<div class="section__aside  is--page-catalog-cat">
+					<div class="section__aside  is--page-catalog-cat" data-filter-block>
+						<button type="button"  title="Закрыть фильтр" class="icon__item  is--filter-close" data-filter-close  >
+			<svg class="icon-svg icon-icon-close" role="img">
+	<use xlink:href="./img/svg/sprite.svg#icon-close"></use>
+</svg>			
+</button>  
+
+
+
+
+
+
+
 							<form action="#" class="form__panel  is--search  is--aside-search">
 		<div class="form__item  is--search">
 			<button type="button" class="form__btn  is--search">
@@ -188,12 +200,212 @@
 
 
 
+							<div class="form__panel  is--aside-filter">
+			
+			<div class="panel  form__collapse  is--aside-filter  ">
+				<p class="form__collapse-name  is--aside-filter">
+					<a data-toggle="collapse" href="#aside-filter-1" aria-expanded="true">Тип ТЭНа</a>
+				</p>
+				<div id="aside-filter-1" class="collapse  show">
+					<div class="form__collapse-note  is--aside-filter">
+													
 
-					</div>
+
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="checkbox"   id="" name="">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">Текст про тип ТЭНа</span>
+					</label>
+	
+																							</div>
 				</div>
-				<div class="section__row  is--page-catalog-cat  row">
+			</div>	
+			
+			<div class="panel  form__collapse  is--aside-filter  ">
+				<p class="form__collapse-name  is--aside-filter">
+					<a data-toggle="collapse" href="#aside-filter-2" aria-expanded="true">Объём, л</a>
+				</p>
+				<div id="aside-filter-2" class="collapse  show">
+					<div class="form__collapse-note  is--aside-filter">
+																			
+
+
+
+		<div class="form__range  "  data-filter-slider>
+		<div class="form__range-group  ">
+			<input class="form__control"
+					data-input-from
+				   	name=""
+				   	value="10"
+				  	onchange="smartFilter.keyup(this)"/>
+			<span></span>
+			<input class="form__control  " 
+					data-input-to
+				   	name=""
+				   	value="100"
+				   	onchange="smartFilter.keyup(this)"/>
+		</div>
+		<div class="form__range-ui  "
+			data-filter-slider-ul
+			data-step="1"
+			data-minval="10"
+			data-maxval="100"
+			data-from="10"
+			data-to="100"></div>
+	</div>
+																		</div>
+				</div>
+			</div>	
+			
+			<div class="panel  form__collapse  is--aside-filter  ">
+				<p class="form__collapse-name  is--aside-filter">
+					<a data-toggle="collapse" href="#aside-filter-3" aria-expanded="true">Номинальная потребляемая мощность, Вт</a>
+				</p>
+				<div id="aside-filter-3" class="collapse  show">
+					<div class="form__collapse-note  is--aside-filter">
+																			
+
+
+
+		<div class="form__range  "  data-filter-slider>
+		<div class="form__range-group  ">
+			<input class="form__control"
+					data-input-from
+				   	name=""
+				   	value="1500"
+				  	onchange="smartFilter.keyup(this)"/>
+			<span></span>
+			<input class="form__control  " 
+					data-input-to
+				   	name=""
+				   	value="6000"
+				   	onchange="smartFilter.keyup(this)"/>
+		</div>
+		<div class="form__range-ui  "
+			data-filter-slider-ul
+			data-step="1"
+			data-minval="1500"
+			data-maxval="6000"
+			data-from="1500"
+			data-to="6000"></div>
+	</div>
+																		</div>
+				</div>
+			</div>	
+			
+			<div class="panel  form__collapse  is--aside-filter  ">
+				<p class="form__collapse-name  is--aside-filter">
+					<a data-toggle="collapse" href="#aside-filter-4" aria-expanded="true">Мощность по ступеням, Вт</a>
+				</p>
+				<div id="aside-filter-4" class="collapse  show">
+					<div class="form__collapse-note  is--aside-filter">
+													
+
+
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="radio"   id="radio1" name="radio-group1">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">1000/1500/2500</span>
+					</label>
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="radio"   id="radio2" name="radio-group1">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">1000/2500</span>
+					</label>
+	
+																							</div>
+				</div>
+			</div>	
+			
+			<div class="panel  form__collapse  is--aside-filter  ">
+				<p class="form__collapse-name  is--aside-filter">
+					<a data-toggle="collapse" href="#aside-filter-5" aria-expanded="true">Расположение</a>
+				</p>
+				<div id="aside-filter-5" class="collapse  show">
+					<div class="form__collapse-note  is--aside-filter">
+													
+
+
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="checkbox"   id="" name="">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">Горизонтально</span>
+					</label>
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="checkbox"   id="" name="">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">Вертикально</span>
+					</label>
+	
+																							</div>
+				</div>
+			</div>	
+			
+			<div class="panel  form__collapse  is--aside-filter  ">
+				<p class="form__collapse-name  is--aside-filter">
+					<a data-toggle="collapse" href="#aside-filter-6" aria-expanded="true">Панель управления</a>
+				</p>
+				<div id="aside-filter-6" class="collapse  show">
+					<div class="form__collapse-note  is--aside-filter">
+													
+
+
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="checkbox"   id="" name="">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">Механическая</span>
+					</label>
+			<label class="form__checkbox  ">
+			<input class="form__checkbox-input  " type="checkbox"   id="" name="">
+			<span class="form__checkbox-icon  "></span>
+						<span class="form__checkbox-name  ">Сенсорная</span>
+					</label>
+	
+																							</div>
+				</div>
+			</div>	
+				<button type="button" class="btn__item  is--aside-filter">Показать</button>
+		<button type="button" class="btn__item is--aside-filter  is--opacity">Сбросить</button>
+	</div>
+					</div>
 							
-	<div class="col-lg-3">
+	<div class="card__item  is--aside-link">
+		<ul class="card__nav  is--aside-link">
+			<li class="card__nav-item  is--title  is--aside-link">
+				Справочная информация
+			</li>
+						<li class="card__nav-item  is--aside-link">
+				<a class="card__nav-link  is--aside-link" href="#">Технологии</a>
+			</li>				
+						<li class="card__nav-item  is--aside-link">
+				<a class="card__nav-link  is--aside-link" href="#">Вопросы и ответы</a>
+			</li>				
+					</ul>
+	</div>
+		
+	<div class="card__item  is--aside-link">
+		<ul class="card__nav  is--aside-link">
+			<li class="card__nav-item  is--title  is--aside-link">
+				СКАЧАТЬ PDF-каталог
+			</li>
+						<li class="card__nav-item  is--aside-link">
+				<a class="card__nav-link  is--aside-link" href="#">Лифлет «Водонагревательное оборудование Timberk», сезон 2018</a>
+			</li>				
+					</ul>
+	</div>
+	
+
+
+
+
+
+
+
+				</div>
+				<div>
+					<div class="section__row  is--page-catalog-cat  row">
+								
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 										<div class="card__compare  dropdown">
@@ -238,7 +450,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 										<div class="card__compare  dropdown">
@@ -283,7 +495,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 						<p class="card__label  is--catalog-card" style="background-color: #942FD1">
@@ -331,7 +543,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 										<div class="card__compare  dropdown">
@@ -376,7 +588,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 										<div class="card__compare  dropdown">
@@ -421,7 +633,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 						<p class="card__label  is--catalog-card" style="background-color: #DF707E">
@@ -469,7 +681,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 									<a href="">
@@ -494,7 +706,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 									<a href="">
@@ -519,7 +731,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 									<a href="">
@@ -544,7 +756,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 									<a href="">
@@ -569,7 +781,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 									<a href="">
@@ -594,7 +806,7 @@
 		</div>
 	</div>
 		
-	<div class="col-lg-3">
+	<div class="col-sm-6 col-md-4 col-lg-3">
 		<div class="card__item  is--catalog-card">
 			<div class="card__bg  is--catalog-card" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
 									<a href="">
@@ -626,7 +838,21 @@
 
 
 
+					</div>
+				</div>
+				<div>
+					<button type="button"   class="btn__item  " data-filter-btn  >
+				<span>Фильтр товаров</span>
+		
+</button>  
 
+
+
+
+
+
+
+					
 				</div>
 			</div>
 		</div>
@@ -671,7 +897,6 @@
 		</div>
 	</a>
 	
-
 
 
 
@@ -731,7 +956,6 @@
 		</div>
 	</a>
 	
-
 
 
 
@@ -915,6 +1139,7 @@
 <![endif]-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
@@ -926,13 +1151,47 @@
 <script src="./js/jquery.imagezoom.js?v=3687" ></script>
 <script src="./js/jquery.magnify.js?v=3687" ></script>
 <script src="./js/jquery.magnific-popup.min.js?v=3687" ></script>
-<script src="./js/script.js" ></script>
+
 <script src="./js/document-ready.js" ></script>
 
         <script>
+            var filter_btn      = $("[data-filter-btn]");
+            var filter_block    = $("[data-filter-block]");
+            var filter_close    = $("[data-filter-close]");
+            filter_btn.on('click',function() {       
+                filter_block.toggleClass("is--show");
+                $('html').toggleClass("is--show");
+            });
+            filter_close.on('click',function() {       
+                filter_block.removeClass("is--show");
+                $('html').removeClass("is--show");
+            });
+            $(document.body).on('click', function(event) {
+                if($(event.target).closest('[data-filter-block]').length == 0 && $(event.target).closest('[data-filter-btn]').length == 0){ 
+                    filter_block.removeClass("is--show");
+                    $('html').removeClass("is--show");
+                }       
+            }); 
+
             $("[data-select]").select2({
                 minimumResultsForSearch: -1,
                 //dropdownCssClass: $(this).attr('data-drop-class'),
+            });
+            $("[data-filter-slider-ul]").each(function(){
+                var _this = this;
+                $(this).slider({
+                    range: true,
+                    min: parseInt($(_this).attr("data-from")),
+                    max: parseInt($(_this).attr("data-to")),
+                    values: [parseInt($(_this).attr("data-minval")), parseInt($(_this).attr("data-maxval"))],
+                    step: parseFloat($(_this).attr("data-step")),
+                    slide: function( event, ui ) {
+                        $(_this).parents("[data-filter-slider]").find("input[data-input-from]").val(ui.values[0]);
+                        $(_this).parents("[data-filter-slider]").find("input[data-input-to]").val(ui.values[1]);
+                        //smartFilter.keyup($(_this).parents(".filter__slider").find("input#from")[0]);
+                        //smartFilter.keyup($(_this).parents(".filter__slider").find("input#to")[0]);
+                    }
+                });
             });
         </script>
     </body>

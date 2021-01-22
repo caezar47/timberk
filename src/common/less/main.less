@@ -1,6 +1,8 @@
 *::selection{background: darken(@white, 20%);}
 html{	
-	
+	&.is--show{
+		overflow-y: hidden;
+	}
 }
 body {
 	margin: 0;
@@ -11,7 +13,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	//padding-top: @header_size;
-	html.is--open-navbar &{
+	html.is--show &{
 		overflow-y: hidden;
 		&::before{
 			opacity: 1;

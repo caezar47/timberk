@@ -1628,6 +1628,7 @@ h1 + .content__search{
     padding: 0;
     margin: 10px 0 0;
 }
+/*
 .filter__slider{
 
 }
@@ -1651,13 +1652,6 @@ h1 + .content__search{
     vertical-align: top;
     line-height: 30px;
 }
-/*.filter__slider__inputs span:before{
-    content:"";
-    display: inline-block;
-    width: 10px;
-    height: 2px;
-    background: #374250;
-}*/
 .filter__slider .ui-slider-handle{
     border-radius: 50%;
     outline: none;
@@ -1675,10 +1669,7 @@ h1 + .content__search{
 .filter__slider .ui-slider-horizontal .ui-slider-range{
     background: #374250;
 }
-/*.catalog__wrapper{
-    padding: 0 100px 0 0;
-}*/
-
+*/
 .catalog__filter__mobile{
     display: none;
 }

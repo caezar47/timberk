@@ -1,4 +1,4 @@
-{% if view=="subs" %}
+{% if view == "subs" %}
 	<form action="#" class="{{prefix}}panel  {{mod}}">
 		<div class="{{prefix}}item  {{mod}}">
 			<input class="{{prefix}}control  {{mod}}" type="email" placeholder="Ваш e-mail">
@@ -6,7 +6,7 @@
 		</div>
 	</form>
 {% endif %}
-{% if view=="search" %}
+{% if view == "search" %}
 	<form action="#" class="{{prefix}}panel  {{mod}}  {{group}}">
 		<div class="{{prefix}}item  {{mod}}">
 			<button type="button" class="{{prefix}}btn  {{mod}}">
@@ -15,4 +15,48 @@
 			<input class="{{prefix}}control  {{mod}}" id="title-search-input" type="text" name="q" size="40" maxlength="50" placeholder="Поиск по каталогу" autocomplete="off">
 		</div>
 	</form>
+{% endif %}
+{% if view == "filter" %}
+	<div class="{{prefix}}panel  {{mod}}">
+		{% for value in list %}	
+			<div class="panel  {{prefix}}collapse  {{mod}}  ">
+				<p class="{{prefix}}collapse-name  {{mod}}">
+					<a data-toggle="collapse" href="#{{value.id}}" aria-expanded="{% if value.visible %}true{% else %}false{% endif %}">{{value.name}}</a>
+				</p>
+				<div id="{{value.id}}" class="collapse  {{value.visible}}">
+					<div class="{{prefix}}collapse-note  {{mod}}">
+						{% if value.type == "checkbox" %}
+							{% include "elem-tpl.twig" with {
+								view: "checkbox", 
+								prefix:'form__', 
+								mod:'', 
+								color:'', 
+								list: value.list
+							} %}
+						{% endif %}
+						{% if value.type == "range" %}
+							{% include "elem-tpl.twig" with {
+								view: "range", 
+								prefix:'form__', 
+								mod:'', 
+								color:'', 
+								list: value.list
+							} %}
+						{% endif %}
+						{% if value.type == "radio" %}
+							{% include "elem-tpl.twig" with {
+								view: "radio", 
+								prefix:'form__', 
+								mod:'', 
+								color:'', 
+								list: value.list
+							} %}
+						{% endif %}
+					</div>
+				</div>
+			</div>	
+		{% endfor %}
+		<button type="button" class="btn__item  {{mod}}">Показать</button>
+		<button type="button" class="btn__item {{mod}}  is--opacity">Сбросить</button>
+	</div>
 {% endif %}

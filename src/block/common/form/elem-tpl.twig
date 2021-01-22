@@ -22,3 +22,42 @@
 		</label>
 	</div>
 {% endif %}
+
+{% if view == "checkbox" %}
+	{% for value in list %}
+		<label class="{{prefix}}checkbox  {{mod}}">
+			<input class="{{prefix}}checkbox-input  {{mod}}" type="{{value.type}}" {{value.status}}  id="{{value.id}}" name="{{value.form_id}}">
+			<span class="{{prefix}}checkbox-icon  {{mod}}"></span>
+			{% if value.name %}
+			<span class="{{prefix}}checkbox-name  {{mod}}">{{value.name}}</span>
+			{% endif %}
+		</label>
+	{% endfor %}
+{% endif %}
+
+{% if view == "range" %}
+	{% for value in list %}
+	<div class="{{prefix}}range  {{mod}}"  data-filter-slider>
+		<div class="{{prefix}}range-group  {{mod}}">
+			<input class="{{prefix}}control"
+					data-input-from
+				   	name=""
+				   	value="{{value.min}}"
+				  	onchange="smartFilter.keyup(this)"/>
+			<span></span>
+			<input class="{{prefix}}control  {{mod}}" 
+					data-input-to
+				   	name=""
+				   	value="{{value.max}}"
+				   	onchange="smartFilter.keyup(this)"/>
+		</div>
+		<div class="{{prefix}}range-ui  {{mod}}"
+			data-filter-slider-ul
+			data-step="1"
+			data-minval="{{value.min}}"
+			data-maxval="{{value.max}}"
+			data-from="{{value.min}}"
+			data-to="{{value.max}}"></div>
+	</div>
+	{% endfor %}
+{% endif %}

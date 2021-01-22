@@ -5,13 +5,6 @@ var humb = $("[data-hamburger]");
 var collapse = $(".navbar__aside");
 var html = $("html");
 
-menu_btn.on('click',function(e) {
-	e.preventDefault();	
-	alert(1);
-    $(".catalogmenu__block").removeClass("show");
-    $(".sitemenu__block").addClass("show");
-    return false;
-});
 humb.on('click',function() {	
 	$(this).toggleClass("is--active");			
 	$(collapse).toggleClass("is--open");

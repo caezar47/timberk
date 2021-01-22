@@ -86,28 +86,64 @@
 			</div>
 			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 				<div>
-					<div class="{{content_prefix}}aside  {{content_mod}}">
+					<div class="{{content_prefix}}aside  {{content_mod}}" data-filter-block>
+						{% include "../common/button/btn.twig" with {
+							view:'tpl',
+							tag:	'button',
+							type:	'button',
+							prefix:	'icon__',
+							mod:	'is--filter-close',
+							icon:	'icon-close',
+							title: 	'Закрыть фильтр',
+							attr:	'data-filter-close',
+						} %}
 						{% include "../common/form/form.twig" with {
-							view: search_view,
-							prefix:"form__", 
+							view: 	search_view,
+							prefix:	"form__", 
 							group:  search_group,
-							mod:  search_mod,
+							mod:  	search_mod,
 						} %}
 						{% include "../common/card/card.twig" with {
-							view: nav_view,
+							view: 	nav_view,
+							prefix:	"card__", 
+							mod:  	nav_mod, 
+							list: 	nav_list
+						} %}
+						{% include "../common/form/form.twig" with {
+							view: 	filter_view,
+							prefix:	"form__", 
+							mod:  	filter_mod,
+							list:  	filter_list,
+						} %}
+					</div>
+					{% include "../common/card/card.twig" with {
+						view: 	link_view,
+						prefix:	"card__", 
+						mod:  	link_mod, 
+						list: 	link_list
+					} %}
+				</div>
+				<div>
+					<div class="{{content_prefix}}row  {{content_mod}}  row">
+						{% include "../common/card/card.twig" with {
+							view: card_view,
 							prefix:"card__", 
-							mod:  nav_mod, 
-							list: nav_list
+							mod:  card_mod, 
+							list: card_list
 						} %}
 					</div>
 				</div>
-				<div class="{{content_prefix}}row  {{content_mod}}  row">
-					{% include "../common/card/card.twig" with {
-						view: card_view,
-						prefix:"card__", 
-						mod:  card_mod, 
-						list: card_list
-					} %}
+				<div>
+					{% include "../common/button/btn.twig" with {
+						view:'tpl',
+						tag:'button',
+						type:'button',
+						href:'#',
+						prefix:'btn__',
+						mod:'',
+						attr:'data-filter-btn',
+						name: 'Фильтр товаров',
+					} %}					
 				</div>
 			</div>
 		</div>

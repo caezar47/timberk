@@ -211,14 +211,14 @@
 
 
 //===== input =====//	
-@input_bg					:	rgba(4, 27, 38, 0.05);
-@input_height				:	48px;
+@input_bg					:	@white;
+@input_height				:	46px;
 @input_height_textarea		:	95px;
 @input_radius				:	@site_br+2;
-@input_border_color			:	@danger;
+@input_border_color			:	fadeout(@black, 80%);
 @input_border_width			:	1px;
-@input_color				:	@default;
-@input_plh_color			:	@success;
+@input_color				:	@success2;
+@input_plh_color			:	fadeout(@black, 40%);
 
 @input_focus_border_color	:	@primary;
 
@@ -233,30 +233,18 @@
 //===== checkbox =====//
 @check_fs					:	@site_fs;
 @check_lh					:	@site_lh;
-@check_size					:	26px;
-@check_color				:	@default;
+@check_size					:	18px;
+@check_color				:	@success2;
 @check_border_width			:	2px;
-@check_border_color			:	@info;
-@check_bg					:	@white;
-@check_radius				:	@site_br;
+@check_border_color			:	@black;
+@check_bg					:	fadeout(@white, 100%);
+@check_radius				:	@site_br - 2;
 
 @check_focus_shadow 		: 	0px 2px 4px fadeout(@black, 75%);
 
 @check_active_border_color	:	@primary;
 @check_active_bg			:	@primary;
 //===== end's checkbox =====//	
-
-//===== radio panel =====//	
-@radio_panel_radius 				: 		@site_br;
-@radio_panel_border_color 			: 		@info;
-@radio_panel_border_width 			: 		2px;
-@radio_panel_bg 					: 		@white;
-
-@radio_panel_hover_shadow 			: 		10px 10px 30px fadeout(@default, 90%);
-@radio_panel_hover_border_color 	: 		@white;
-
-@radio_panel_checked_border_color 	: 		@primary;
-//===== end's radio panel =====//
 
 //===== qty =====//
 @qty_radius 						: 		@site_br;
