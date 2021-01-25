@@ -13,6 +13,10 @@
 				margin-bottom: ~"calc(@{slider_dots_bottom} + (@{slider_dots_width} * 2) + 15px)";
 			}
 		}*/ 
+		&[data-slick-index]{
+			*{visibility: hidden;}
+			&.slick-initialized *{ visibility: visible; }
+		}
 		&[data-slick-catalog-card-nav]{
 			padding: 0 26px;
 			&::before,
@@ -53,6 +57,10 @@
 		}
 		[data-slick-articles] &{
 			margin: 0 -8px;
+		}
+		[data-slick-index] &{
+			overflow: hidden;
+			border-radius: @site_br*2;
 		}
 		&.dragging {
 			cursor: pointer;
@@ -207,10 +215,52 @@
 		});
 		.media-breakpoint-up(@xl; {
 			width: 48px;
-			height: 48px;	
+			height: 48px;
+			[data-slick-index] &{
+				&.is--prev{
+					transform: translate(115%,-50%);
+				}
+				&.is--next{
+					right: 0;
+					transform: translate(-115%,-50%);
+				}
+			}	
 		});
 	}
-	/*
+	&-dots {
+		position: absolute;
+		z-index: 5;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		bottom: 63px;
+		li {
+			position: relative;
+			margin-left: 8px;
+			margin-right: 8px;
+			padding: 0;
+			button {
+				.btn-clearfix();
+				font-size: 0;
+				line-height: 0;
+				display: block;
+				width: 12px;
+				height: 12px;
+				background: @white;
+				border-radius: 50%;
+				border: 1px solid @primary;
+				transition: @trs-site;
+			}
+			&.slick-active button{
+				background: @primary;
+				//transform: scale(2);
+			}
+		}
+	}
+	/*	
 	&-dots{
 		margin: 10px -2.5px 0;
 		padding: 0 ;
@@ -236,44 +286,7 @@
 		[data-slick-catalog] &{
 			display: none!important;
 		}
-	}
-	&-dots {
-		position: absolute;
-		z-index: 5;
-		list-style: none;
-		display: block;
-		text-align: center;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		bottom: -@slider_dots_width - 15px;
-		@media @media-point-notsmart { 	
-			bottom: ~"calc(-@{slider_dots_bottom} - (@{slider_dots_width}) - 15px)";
-		}
-		li {
-			position: relative;
-			display: inline-block;
-			margin-left: @slider_dots_gutter;
-			margin-right: @slider_dots_gutter;
-			padding: 0;
-			button {
-				.btn-clearfix();
-				font-size: 0;
-				line-height: 0;
-				display: block;
-				width: @slider_dots_width;
-				height: @slider_dots_width;
-				background: @slider_dots_bg;
-				border-radius: @slider_dots_radius;
-				transition: @trs-site;
-			}
-			&.slick-active button{
-				background: @slider_dots_bg_active;
-				transform: scale(2);
-			}
-		}
-	}
-	*/
+	}*/
 }
 .slick-arrow.slick-hidden {
 	display: none;

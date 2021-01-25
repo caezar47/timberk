@@ -73,6 +73,12 @@
 					level:heading_level, 
 					heading:heading
 				} %}
+				<div class="form__item  is--filter-sort">
+					<select data-select-filter>
+						<option>сначала новые</option>
+						<option>сначала популярные</option>
+					</select>
+				</div>
 				{% include "../common/button/btn.twig" with {
 					view:'tpl',
 					tag:'a',

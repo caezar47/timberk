@@ -389,11 +389,12 @@
         {% include "../block/common/footer/footer.twig" with {
             prefix:"footer__",
         } %}
+        {% include "../block/common/navbar/menu.twig" %} 
          
-        {% include "../block/common/modals/include.twig" %}   
-  
+        {% include "../block/common/modals/include.twig" %}
         {% include "../block/common/script/script.twig" with {
-            view: "modal"
+            view: "modal",
+            custom: "true" 
         }%}
     </body>
 </html> 

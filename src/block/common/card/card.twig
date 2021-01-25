@@ -1,3 +1,30 @@
+{% if view == "index-slider" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}" style="background-image: url({{value.bg}})">
+		<div class="{{prefix}}preview-wrap  {{mod}}">
+			<div class="{{prefix}}preview  {{mod}}">
+				<img src="{{value.img}}" class="img-fluid" alt="">
+			</div>
+		</div>
+		<div class="{{prefix}}bg  {{mod}}" style="background-image: url({{value.bg_card}})"></div>
+		<div class="{{prefix}}desc  {{mod}}">
+			{% for t in value.text %}
+				<p>{{t.name}}</p>
+			{% endfor %}
+		</div>
+		<div class="{{prefix}}btn  {{mod}}">
+			{% include "../button/btn.twig" with {
+				view:'tpl',
+				tag:'a',
+				href:value.link,
+				prefix:'btn__',
+				mod:'is--white  is--lg',
+				name: 'Узнать подробнее',
+			} %}
+		</div>
+	</div>
+	{% endfor %}
+{% endif %}
 {% if view == "catalog-banner" %}
 	{% for value in list %}	
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}">
@@ -46,7 +73,7 @@
 						<p class="{{prefix}}compare-title">Выберите модель</p>
 						<form class="{{prefix}}compare-form  ">
 							<div class="{{prefix}}compare-select">
-								<select data-select  data-drop-class="{{prefix}}compare-drop">
+								<select data-select>
 									<option>WHEL-3 OC</option>
 									<option>WHEL-3 OC</option>
 									<option>WHEL-3 OC</option>

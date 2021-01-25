@@ -12,6 +12,14 @@
 			}
 			&-catalog-cat{
 				margin-bottom: 33px;
+				.media-breakpoint-down(@md; {
+					flex-wrap: wrap;
+					.page-header__heading{
+						padding-right: 0px;
+						padding-bottom: 10px;
+						flex: 1 1 auto;
+					}	
+				});
 			}
 		}
 	}

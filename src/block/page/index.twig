@@ -1,20 +1,13 @@
-{% if view == "header" %}
+{% if view == "slider" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" >
 		<div class="{{content_prefix}}container container  {{content_mod}}">
 			<div data-slick-index>
-				{% for s in slider %}
-				<div class="{{content_prefix}}slick-slide  {{content_mod}}">
-					<img src="{{s.img}}" class="img-responsive" alt="">
-					{% include "../button/btn.twig" with {
-						view:'tpl',
-						tag:'a',
-						href:s.href,
-						prefix:'btn__',
-						mod:'is--lg  is--white',
-						name: 'Узнать подробнее',
-					} %}
-				</div>
-				{% endfor %}
+				{% include "../common/card/card.twig" with {
+					view: card_view,
+					prefix:"card__", 
+					mod:  card_mod, 
+					list: card_list
+				} %}
 			</div>
 		</div>
 	</section>

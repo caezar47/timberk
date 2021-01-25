@@ -1,15 +1,32 @@
 var prevArrow = '<button type="button" class="slick-btn  is--prev"><span class="sr-only">Предыдущий слайд</span></button>';
 var nextArrow = '<button type="button" class="slick-btn  is--next"><span class="sr-only">Следующий слайд</span></button>';
 
+var index  		= $('[data-slick-index]');
 var snew  		= $('[data-slick-new]');
 var articles  	= $('[data-slick-articles]');
 
 
-var banner  	= $('[data-slick-banner]');
 var team  		= $('[data-slick-team]');
 var team_full  	= $('[data-slick-team-full]');
 var adv 		= $('[data-slick-adv]');
 
+index.slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: true,	
+	prevArrow: prevArrow,
+	nextArrow: nextArrow,
+	draggable: false,
+	pauseOnFocus: false,
+	pauseOnHover: false,
+	swipe: false,
+	touchMove: false,
+	fade: true, 	
+	//infinite: false, 
+	autoplay: true,
+	speed: 1000,
+	autoplaySpeed: 7000,
+});
 snew.slick({
 	slidesToShow: 6,
 	slidesToScroll: 1,
@@ -61,21 +78,10 @@ articles.slick({
 	    }
 	]
 });
-banner.slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dots: false,
-	arrows: false,
-	draggable: false,
-	pauseOnFocus: false,
-	pauseOnHover: false,
-	swipe: false,
-	touchMove: false,
-	fade: true, 	
-	infinite: true, 
-	autoplay: true,
-	autoplaySpeed: 7000,
-});
+
+
+
+
 team.slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,

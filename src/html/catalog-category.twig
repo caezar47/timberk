@@ -413,51 +413,12 @@
         {% include "../block/common/footer/footer.twig" with {
             prefix:"footer__",
         } %}
+        {% include "../block/common/navbar/menu.twig" %} 
          
-        {% include "../block/common/modals/include.twig" %}   
-  
+        {% include "../block/common/modals/include.twig" %}
         {% include "../block/common/script/script.twig" with {
-            view: "modal"
+            view: "modal",
+            custom: "true" 
         }%}
-        <script>
-            var filter_btn      = $("[data-filter-btn]");
-            var filter_block    = $("[data-filter-block]");
-            var filter_close    = $("[data-filter-close]");
-            filter_btn.on('click',function() {       
-                filter_block.toggleClass("is--show");
-                $('html').toggleClass("is--show");
-            });
-            filter_close.on('click',function() {       
-                filter_block.removeClass("is--show");
-                $('html').removeClass("is--show");
-            });
-            $(document.body).on('click', function(event) {
-                if($(event.target).closest('[data-filter-block]').length == 0 && $(event.target).closest('[data-filter-btn]').length == 0){ 
-                    filter_block.removeClass("is--show");
-                    $('html').removeClass("is--show");
-                }       
-            }); 
-
-            $("[data-select]").select2({
-                minimumResultsForSearch: -1,
-                //dropdownCssClass: $(this).attr('data-drop-class'),
-            });
-            $("[data-filter-slider-ul]").each(function(){
-                var _this = this;
-                $(this).slider({
-                    range: true,
-                    min: parseInt($(_this).attr("data-from")),
-                    max: parseInt($(_this).attr("data-to")),
-                    values: [parseInt($(_this).attr("data-minval")), parseInt($(_this).attr("data-maxval"))],
-                    step: parseFloat($(_this).attr("data-step")),
-                    slide: function( event, ui ) {
-                        $(_this).parents("[data-filter-slider]").find("input[data-input-from]").val(ui.values[0]);
-                        $(_this).parents("[data-filter-slider]").find("input[data-input-to]").val(ui.values[1]);
-                        //smartFilter.keyup($(_this).parents(".filter__slider").find("input#from")[0]);
-                        //smartFilter.keyup($(_this).parents(".filter__slider").find("input#to")[0]);
-                    }
-                });
-            });
-        </script>
     </body>
 </html> 
