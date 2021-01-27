@@ -124,6 +124,32 @@
 	</div>
 	{% endfor %}
 {% endif %}
+{% if view == "catalog-item-note" %}
+	<div class="{{prefix}}item  {{mod}}">
+		{% for value in desc %}	
+			<div class="{{prefix}}note  {{mod}}">
+				<h3>{{value.name}}</h3>
+				<ul>
+					{% for li in value.ul %}
+					<li>{{li.name}}</li>				
+					{% endfor %}
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}
+{% if view == "catalog-slider" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}">
+		<picture class="{{prefix}}preview  {{mod}}">
+			<img src="{{value.img}}" class="img-fluid" alt="">
+		</picture>
+		{% if value.name %}
+		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+		{% endif %}
+	</div>
+	{% endfor %}
+{% endif %}
 {% if view == "articles" %}
 	{% for value in list %}	
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}  {{value.group}}">

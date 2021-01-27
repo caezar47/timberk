@@ -1,0 +1,51 @@
+.popover__{
+	&panel{
+		border: 0;
+		font-family: @site_ff;
+		color: @success2;
+		border-radius: @site_br;
+		box-shadow: @site_shadow;
+	    padding: 6px;
+	    font-size: 0.889rem;
+	    line-height: 100%;
+	    //padding: 12px;
+	    max-width: 440px;
+	    cursor: default;
+		p{
+			.heading6();
+			color: @black;
+			//margin-bottom: 10px;
+			padding: 6px 6px 4px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		a{
+			color: @primary;
+		}
+		&::before{
+	    	border: 0;
+	    	width: 10px;
+	    	height: 6px;
+	    	.icon-popover();
+	    }
+	    [data-placement="top"] &{
+			margin-bottom: 10px;
+	    	&::before{
+		    	content: '';
+	    	    bottom: 0;
+				left: 50%;
+				transform: translate(-50%,80%);
+		    }
+	    }
+	    [data-placement="bottom"]  &{
+			margin-top: 10px;
+	    	&::before{
+		    	content: '';
+	    	    top: 0;
+				left: 50%;
+				transform: translate(-50%,-80%) rotate(180deg);
+		    }
+	    }
+	}
+}

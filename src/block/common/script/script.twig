@@ -28,6 +28,21 @@ document.createElement("picture");
 </script>  #}
 {% if custom == "true" %}
 <script>
+	$('[data-toggle="popover"]').popover({
+		template:	'<div class="popover  popover__panel" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+	});
+	$('[data-toggle="popover"]').on('show.bs.popover', function () {
+	        $('[data-toggle="popover"]').popover('hide');
+	        $('[data-toggle="popover"]').removeClass('is--show');
+	 		$(this).addClass('is--show');
+	}); 
+	$(document.body).on('click', function(event) {
+		if($(event.target).closest('[data-toggle="popover"]').length == 0 && $(event.target).closest('.popover__panel').length == 0){
+	        $('[data-toggle="popover"]').popover('hide');
+	 		$('[data-toggle="popover"]').removeClass('is--show');
+	        
+		}		
+	});	
     var catalog_btn     = $("[data-btn-catalog]");
     var catalog_block   = $("[data-catalog-block]");
     var catalog_lay    	= $(".catalogmenu__lay");

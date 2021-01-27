@@ -281,7 +281,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -307,7 +307,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -336,7 +336,7 @@
 						<p class="card__label  is--catalog-card  is--new" style="background-color: #942FD1">
 				Флагман
 			</p>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -362,7 +362,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -388,7 +388,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -417,7 +417,7 @@
 						<p class="card__label  is--catalog-card  is--new" style="background-color: #DF707E">
 				Новинка
 			</p>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -443,7 +443,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -469,7 +469,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -495,7 +495,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -521,7 +521,7 @@
 	<div class="">
 		<div class="card__item  is--catalog-card  is--new">
 			<div class="card__bg  is--catalog-card  is--new" style="background-image: url(./img/default/catalog-new-bg-item1.jpg)"></div>
-									<a href="">
+									<a href="./catalog-card.html">
 				<picture class="card__preview  is--catalog-card  is--new">
 					<img src="./img/default/catalog-new-item1.png" class="img-fluid" alt="">
 				</picture>
@@ -578,9 +578,9 @@
 			</li>
 			</ul>
 </div>
-<div class="tab-content">
+<div class="tab-content  tabs__content  is--block-articles">
 		<div class="tab-pane " id="tabs-articles1">
-							</div>
+											</div>
 		<div class="tab-pane active" id="tabs-articles2">
 									
 	<a href="" class="card__item  is--articles  is--horizontal">
@@ -660,11 +660,11 @@
 
 
 			</div>
-					</div>
+									</div>
 		<div class="tab-pane " id="tabs-articles3">
-							</div>
+											</div>
 		<div class="tab-pane " id="tabs-articles4">
-							</div>
+											</div>
 	</div>
 			</div>
 		</div>
@@ -1148,6 +1148,21 @@
 
 
 <script>
+	$('[data-toggle="popover"]').popover({
+		template:	'<div class="popover  popover__panel" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+	});
+	$('[data-toggle="popover"]').on('show.bs.popover', function () {
+	        $('[data-toggle="popover"]').popover('hide');
+	        $('[data-toggle="popover"]').removeClass('is--show');
+	 		$(this).addClass('is--show');
+	}); 
+	$(document.body).on('click', function(event) {
+		if($(event.target).closest('[data-toggle="popover"]').length == 0 && $(event.target).closest('.popover__panel').length == 0){
+	        $('[data-toggle="popover"]').popover('hide');
+	 		$('[data-toggle="popover"]').removeClass('is--show');
+	        
+		}		
+	});	
     var catalog_btn     = $("[data-btn-catalog]");
     var catalog_block   = $("[data-catalog-block]");
     var catalog_lay    	= $(".catalogmenu__lay");

@@ -67,14 +67,53 @@
 				font-size: 1rem;
 				line-height: @site_lh;
 				padding: 10px 25px;
+				&.is--bay{
+					padding-left: 52px;
+					padding-right: 52px;
+				}
 			}
 		});
 	}
 }
 .link__{
+	&group{
+		&.is--catalog{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding-top: 10px;
+			margin-top: -5px;
+			margin-left: -15px;
+			margin-right: -15px;
+			& > *{
+				margin: 5px 15px;
+			}
+			.media-breakpoint-up(@xl; {
+				margin-left: -35px;
+				margin-right: -35px;
+				& > *{
+					margin: 5px 35px;
+				}
+
+			});
+		}
+		&.is--catalog-item-note{
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: -5px;
+			margin-left: -15px;
+			margin-right: -15px;
+			margin-bottom: 28px;
+			& > *{
+				margin: 5px 15px;
+			}
+			.media-breakpoint-up(@xl; {
+				padding-top: 54px;
+			});
+		}
+	}		
 	&item{		
 		.btn-clearfix();
-		color: @default;
 		display: inline-flex;
 		align-items: center;
 		font-size: 0.889rem;
@@ -91,6 +130,31 @@
 		}
 		&:hover{
 			color: @primary;
+		}
+		&.is--catalog{
+			color: @default;
+			&:hover{
+				color: @primary;
+			}
+			svg{
+				width: 38px;
+				min-width: 38px;
+				height: 38px;
+				margin-right: 5px;
+				margin-bottom: 0;
+			}
+		}
+		&.is--catalog-item-note{
+			//position: relative;
+			svg{
+				width: 60px;
+				min-width: 60px;
+				height: 72px;
+				margin: 0;				
+			}
+			&.is--show{
+				color: @primary;
+			}
 		}
 		.media-breakpoint-down(@xl; {
 			.navbar__block &{
@@ -113,14 +177,20 @@
 		min-width: 24px;
 		width: 24px;
 		height: 24px;
-		display: inline-flex;		
-		position: relative;
-		&.is--compare{
+		display: inline-flex;	
+		color: @black;
+		&:hover{
+			color: @primary;
+		}
+		&.is--compare{	
+			position: relative;
 			min-width: 32px;
 			width: 32px;
 			height: 32px;
-			color: @black;
 			margin-right: -5px;
+			&,&:hover{
+				color: @black;
+			}
 			&::after{
 				content: attr(data-count);
 				position: absolute;
@@ -139,6 +209,14 @@
 				justify-content: center;
 				align-items: center;
 			}
+		}
+		&.is--360{
+			width: 40px;
+			height: 50px;
+		}
+		&.is--play{
+			width: 40px;
+			height: 40px;
 		}
 	}
 }

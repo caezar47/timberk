@@ -155,3 +155,180 @@
 		</div>
 	</section>
 {% endif %}
+{% if view == "card" %}
+	<section class="{{content_prefix}}content  {{content_group}}" >
+		<div class="{{content_prefix}}container container  {{content_group}}">
+            {% include "../common/breadcrumb/tpl.twig" with {
+				prefix:prefix.breadcrumb, 
+				mod:bread_mod, 
+				bread:bread
+			} %}
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+				<div>
+					<div class="card__group  {{slider_nav_mod}}">
+						<div data-slick-catalog-nav>
+							{% include "../common/card/card.twig" with {
+								view: slider_nav_view,
+								prefix:"card__", 
+								mod:  slider_nav_mod, 
+								list: slider_nav
+							} %}
+						</div>
+						<button type="button" class="icon__item  is--360" >
+							{% include "../common/svg-sprite/svg.twig" with {icon:'icon-360'} %}
+						</button>
+						<button type="button" class="icon__item  is--play" >
+							{% include "../common/svg-sprite/svg.twig" with {icon:'icon-play'} %}
+						</button>
+					</div>
+					<div class="{{card_prefix}}group  {{card_mod}}">
+						{% if label %}
+						<p class="{{card_prefix}}label  {{card_mod}}" style="background-color: {{label_color}}">
+							{{label}}
+						</p>
+						{% endif %}
+						{% if color %}
+						<div class="{{card_prefix}}color-group  {{card_mod}}">
+							<p class="{{card_prefix}}color-name  {{card_mod}}">Цвет</p>
+							{% for c in color %}
+								<button type="button" class="{{card_prefix}}color-btn  {{card_mod}}" style="background-color: {{c.color}}; border-color: {{c.color}}"></button>
+							{% endfor %}
+						</div>
+						{% endif %}
+						<div data-slick-catalog>
+							{% include "../common/card/card.twig" with {
+								view: slider_view,
+								prefix:"card__", 
+								mod:  slider_mod, 
+								list: slider
+							} %}
+						</div>
+					</div>
+
+				</div>
+				<div>
+					{% include "../common/page-header/elem.twig" with {
+						prefix:"page-header__", 
+						mod:heading_mod,
+						attr:heading_attr, 
+						level:heading_level, 
+						heading:heading
+					} %}
+					<p class="{{card_prefix}}heading  {{card_mod}}">{{card_heading}}</p>
+					<div class="{{card_prefix}}btn  {{card_mod}}  is--soc">
+						{% for s in soc %}
+							<button type="button" class="{{soc_prefix}}item  {{soc_mod}}  {{s.id}}" data-toggle="popover" data-placement="bottom" data-container=".icon__item.{{s.id}}" data-content='{{s.note}}'>
+								{% include "../common/svg-sprite/svg.twig" with {icon:s.icon} %}
+							</button>	
+						{% endfor %}						
+					</div>
+					{% if card_decs %}
+					<dl class="{{card_prefix}}desc  {{card_mod}}">
+						{% for d in card_decs %}
+							<div>
+								<dt>{{d.name}}</dt>
+								<dd>{{d.value}}</dd>
+							</div>
+						{% endfor %}
+					</dl>
+					{% endif %}
+					{% if card_note %}
+					<div class="{{card_prefix}}note  {{card_mod}}">
+						{{card_note}}
+					</div>
+					{% endif %}
+					<div class="{{card_prefix}}btn  {{card_mod}}  is--bay">
+						{% include "../common/button/btn.twig" with {
+							view:'tpl',
+							tag:'a',
+							href:'',
+							prefix:'btn__',
+							mod:'is--lg  is--bay',
+							name: 'Купить',
+						} %}
+						{% include "../common/button/btn.twig" with {
+							view:'tpl',
+							tag:'a',
+							href:'',
+							prefix:'btn__',
+							mod:'is--lg  is--second',
+							name: 'Узнать подробнее',
+						} %}
+					</div>
+					{% if card_confirm %}
+					<p class="{{card_prefix}}confirm  {{card_mod}}">
+						{% include "../common/svg-sprite/svg.twig" with {icon:'icon-confirm'} %}
+						Подтверждено лабораторией качества
+					</p>
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+{% if view == "card-about" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+			<div class="{{content_prefix}}inner  {{content_mod}}">
+				{% include "../common/page-header/elem.twig" with {
+					prefix:"page-header__", 
+					mod:heading_mod,
+					attr:heading_attr, 
+					level:heading_level, 
+					heading:heading
+				} %}
+				
+				{% include "../common/tabs/tpl.twig" with {
+					view:tabs_view, 
+					prefix:tabs_prefix, 
+					mod:tabs_mod,
+					group:tabs_group,
+					list: tabs_list,				
+				} %}
+				<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-note">
+					{% if links %}
+					<div class="is--full">
+						<div class="link__group  is--catalog">
+							{% for l in links %}
+								{% include "../common/button/btn.twig" with {
+									view:'tpl',
+									tag:'a',
+									href:l.link,
+									icon: l.icon,
+									prefix:'link__',
+									mod:'is--catalog',
+									name: l.name,
+								} %}
+							{% endfor %}
+						</div>
+					</div>
+					{% endif %}
+					{% if note %}
+						{% for n in note %}
+						<div class="is--full  card__item  {{note_mod}}">
+							<h3 class="card__heading  {{note_mod}}">{{n.name}}</h3>
+							<div class="row  card__row  {{note_mod}}">
+								{% for cols in n.cols %}
+								<div class="col-sm-6  card__note  {{note_mod}}">{{cols.name}}</div>
+								{% endfor %}
+							</div>
+						</div>
+						{% endfor %}
+					{% endif %}
+					<div class="is--full  is--articles">
+						<h2 class="page-header__heading  is--h1  is--block-articles  text-align--center  ">{{articles_heading}}</h2>
+						<div data-slick-articles-lg>
+							{% include "../common/card/card.twig" with {
+								view: articles_view,
+								prefix:"card__", 
+								mod:  articles_mod, 
+								list: articles
+							} %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}

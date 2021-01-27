@@ -8,7 +8,7 @@
 		{% endfor %}
 	</ul>
 </div>
-<div class="tab-content">
+<div class="tab-content  tabs__content  {{content_mod}}">
 	{% for value in list %}
 	<div class="tab-pane {{value.status}}" id="{{value.id}}">
 		{% if value.type == "text" %}
@@ -40,6 +40,157 @@
 				mod:  value.mod, 
 				list: value.list
 			} %}
+			</div>
+		{% endif %}
+		{% if value.type == "catalog-item-note" %}
+			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-note">
+				<div>
+					<div data-slick-catalog-note>
+						{% include "../card/card.twig" with {
+							view: value.slider_view,
+							prefix:"card__", 
+							mod:  value.slider_mod, 
+							list: value.slider
+						} %}
+					</div>
+				</div>
+				<div>					
+					{% if value.adv %}
+						<div class="link__group  {{value.mod}}">
+						{% for adv in value.adv %}
+							<button type="button" class="link__item  {{value.mod}}" data-toggle="popover" data-placement="top" data-container=".link__item" data-html="true" data-content='{{adv.note}}'>
+								{% include "../svg-sprite/svg.twig" with {icon:adv.icon} %}
+							</button>	
+						{% endfor %}
+						</div>
+					{% endif %}
+					{% include "../card/card.twig" with {
+						view: value.view,
+						prefix:"card__", 
+						mod:  value.mod, 
+						desc: value.desc,
+						list: value.list
+					} %}
+				</div>
+			</div>
+		{% endif %}
+		{% if value.type == "catalog-item-table" %}
+			<div class="product__characteristic">
+			<div class="row head justify-content-between flex-nowrap">
+			<div class="col-md-3 col-12">Модель</div>
+			<div class="content__col col-md-auto">TAP FL600 MF (BL)</div>
+			<div class="content__col col-md-auto">TAP FL600 MF (W)</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Цвет								</div>
+			<div class="content__col col-md-auto">
+			<span title="Чёрный">Чёрный</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="Белый">Белый</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Номинальная потребляемая мощность, Вт								</div>
+			<div class="content__col col-md-auto">
+			<span title="14">14</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="14">14</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Номинальная сила тока, А								</div>
+			<div class="content__col col-md-auto">
+			<span title="0.09">0.09</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="0.09">0.09</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Номинальное напряжение питания, В/Гц								</div>
+			<div class="content__col col-md-auto">
+			<span title="220-240~/50">220-240~/50</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="220-240~/50">220-240~/50</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Класс влагозащиты								</div>
+			<div class="content__col col-md-auto">
+			<span title="IPX0">IPX0</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="IPX0">IPX0</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Класс электрозащиты								</div>
+			<div class="content__col col-md-auto">
+			<span title="II class">II class</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="II class">II class</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Таймер								</div>
+			<div class="content__col col-md-auto">
+			<span title="Есть">Есть</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="Есть">Есть</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Расход воздуха, м³/ч								</div>
+			<div class="content__col col-md-auto">
+			<span title="120">120</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="120">120</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Панель управления								</div>
+			<div class="content__col col-md-auto">
+			<span title="Электронная">Электронная</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="Электронная">Электронная</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Вес (нетто), кг								</div>
+			<div class="content__col col-md-auto">
+			<span title="3.5">3.5</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="3.5">3.5</span>
+			</div>
+			</div>
+			<div class="row justify-content-between flex-nowrap col-md-auto">
+			<div class="col-md-3 col-12">
+			Размеры прибора, мм								</div>
+			<div class="content__col col-md-auto">
+			<span title="375х278х165">375х278х165</span>
+			</div>
+			<div class="content__col col-md-auto">
+			<span title="375х278х165">375х278х165</span>
+			</div>
+			</div>
 			</div>
 		{% endif %}
 	</div>
