@@ -142,7 +142,7 @@
 	{% for value in list %}	
 	<div class="{{prefix}}item  {{mod}}">
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-fluid" alt="">
+			<img src="{{value.img}}" {% if value.zoom %} data-magnify-src="{{value.img}}"{% endif %} class="img-fluid" alt="">
 		</picture>
 		{% if value.name %}
 		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>

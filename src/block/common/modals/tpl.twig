@@ -1,8 +1,44 @@
-{% if ID == "modal-timberk" %}
-<div class="{{prefix}}block modals  fade  {{mod}}" id="{{ID}}" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="{{prefix}}dialog  {{mod}}">
+<div class="modal  fade  {{prefix}}block  {{mod}}" id="{{ID}}" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="{{prefix}}dialog  {{mod}}  modal-dialog">
 		<div class="{{prefix}}body  {{mod}}" >
-			<button type="button" class="{{prefix}}btn-close  modal-close  {{mod}}" data-dismiss="modal" aria-hidden="true"></button>
+			<button type="button" class="{{prefix}}btn-close  {{mod}}" data-dismiss="modal"></button>
+			{% if ID == "modal-360" %}
+				<div class="{{card_prefix}}group  {{card_mod}}" data-slick-wrap>
+					<div data-slick-modal>
+						{% include "../card/card.twig" with {
+							view: slider_view,
+							prefix:"card__", 
+							mod:  card_mod, 
+							list: slider
+						} %}
+					</div>
+					<div data-slick-modal-nav>
+						{% include "../card/card.twig" with {
+							view: slider_nav_view,
+							prefix:"card__", 
+							mod:  slider_nav_mod, 
+							list: slider_nav
+						} %}
+					</div>
+					<div class="{{card_prefix}}btn  {{card_mod}}">
+						<button type="button" class="link__item  {{card_mod}}  is--modal-360">
+							{% include "../svg-sprite/svg.twig" with {icon:'icon-360'} %}
+							<p class="link__name  {{card_mod}}  is--modal-play">Съемка 360<sup>&deg;</sup></p>
+						</button>
+
+						<button type="button" class="link__item  {{card_mod}}  is--play">
+							{% include "../svg-sprite/svg.twig" with {icon:'icon-play'} %}
+							<p class="link__name  {{card_mod}}">Видео</p>
+						</button>
+
+						<button type="button" class="link__item  {{card_mod}}  is--download">
+							{% include "../svg-sprite/svg.twig" with {icon:'icon-download-photo'} %}
+							<p class="link__name  {{card_mod}}">Скачать фото</p>
+						</button>
+					</div>
+				</div>
+			{% endif %}
+			{% if ID == "modal-timberk" %}
 			<div class="{{prefix}}preview  {{mod}}">
 				<img src="{{path.img}}/default/modal-sale-50.png" class="img-responsive" alt="">	
 			</div>	
@@ -17,7 +53,7 @@
 					<button class="form__submit  {{mod}}">получить скидку</button>
 				</form>
 			</div> 
+			{% endif %}
 		</div>
 	</div>
 </div>
-{% endif %}

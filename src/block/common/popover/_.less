@@ -47,5 +47,14 @@
 				transform: translate(-50%,-80%) rotate(180deg);
 		    }
 	    }
+	    [data-placement="right"]  &{
+			margin-left: 10px;
+	    	&::before{
+		    	content: '';
+	    	    top: 50%;
+				left: 0%;
+				transform: translate(-80%,-50%) rotate(90deg);
+		    }
+	    }
 	}
 }

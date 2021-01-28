@@ -165,22 +165,6 @@
 			} %}
 			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 				<div>
-					<div class="card__group  {{slider_nav_mod}}">
-						<div data-slick-catalog-nav>
-							{% include "../common/card/card.twig" with {
-								view: slider_nav_view,
-								prefix:"card__", 
-								mod:  slider_nav_mod, 
-								list: slider_nav
-							} %}
-						</div>
-						<button type="button" class="icon__item  is--360" >
-							{% include "../common/svg-sprite/svg.twig" with {icon:'icon-360'} %}
-						</button>
-						<button type="button" class="icon__item  is--play" >
-							{% include "../common/svg-sprite/svg.twig" with {icon:'icon-play'} %}
-						</button>
-					</div>
 					<div class="{{card_prefix}}group  {{card_mod}}">
 						{% if label %}
 						<p class="{{card_prefix}}label  {{card_mod}}" style="background-color: {{label_color}}">
@@ -204,7 +188,27 @@
 							} %}
 						</div>
 					</div>
+					<div class="card__group  {{slider_nav_mod}}">
+						<div data-slick-catalog-nav>
+							{% include "../common/card/card.twig" with {
+								view: slider_nav_view,
+								prefix:"card__", 
+								mod:  slider_nav_mod, 
+								list: slider_nav
+							} %}
+						</div>
+						<button type="button" class="icon__item  is--360" data-toggle="modal" data-target="#modal-360">
+							<span data-toggle="popover" data-placement="right" data-container=".icon__item.is--360 span" data-content='Съемка&nbsp;360' data-trigger="hover">
+								{% include "../common/svg-sprite/svg.twig" with {icon:'icon-360'} %}
+							</span>
+						</button>
 
+						<button type="button" class="icon__item  is--play" data-toggle="modal" data-target="#exampleModal">
+							<span data-toggle="popover" data-placement="right" data-container=".icon__item.is--play span" data-content='Смотреть&nbsp;видео' data-trigger="hover">
+							{% include "../common/svg-sprite/svg.twig" with {icon:'icon-play'} %}
+							</span>
+						</button>
+					</div>
 				</div>
 				<div>
 					{% include "../common/page-header/elem.twig" with {
@@ -217,7 +221,7 @@
 					<p class="{{card_prefix}}heading  {{card_mod}}">{{card_heading}}</p>
 					<div class="{{card_prefix}}btn  {{card_mod}}  is--soc">
 						{% for s in soc %}
-							<button type="button" class="{{soc_prefix}}item  {{soc_mod}}  {{s.id}}" data-toggle="popover" data-placement="bottom" data-container=".icon__item.{{s.id}}" data-content='{{s.note}}'>
+							<button type="button" class="{{soc_prefix}}item  {{soc_mod}}  {{s.id}}" data-toggle="popover" data-placement="bottom" data-container=".icon__item.{{s.id}}" data-content='{{s.note}}' data-trigger="hover">
 								{% include "../common/svg-sprite/svg.twig" with {icon:s.icon} %}
 							</button>	
 						{% endfor %}						

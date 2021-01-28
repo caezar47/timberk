@@ -1,1 +1,1 @@
-$('img').addClass('img-responsive');
+$('img').addClass('img-fluid');

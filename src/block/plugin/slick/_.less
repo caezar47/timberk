@@ -20,11 +20,9 @@
 			*{visibility: hidden;}
 			&.slick-initialized *{ visibility: visible; }
 		}
-		&[data-slick-catalog-nav]{
-			height: 445px;
-			padding-top: 79px;
-			padding-bottom: 79px;
-			margin-bottom: 28px;
+		&[data-slick-modal]{
+			*{visibility: hidden;}
+			&.slick-initialized *{ visibility: visible; }
 		}
 		/*
 		&[data-slick-catalog-card-nav]{
@@ -250,7 +248,15 @@
 					left: 50%;					
 					transform: translate(-50%, -100%) rotate(90deg);
 				}
-
+			}
+			[data-slick-modal-nav] &{
+				box-shadow: @site_shadow;
+				&.is--prev{				
+					transform: translate(-180%, -50%);
+				}
+				&.is--next{	
+					transform: translate(180%, -50%);
+				}
 			}
 		});
 	}

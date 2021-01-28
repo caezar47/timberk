@@ -9,8 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+
 {# {% if view == "modal" %} #}
 {# <script src="{{path.js}}/modals.js" ></script> #}
 {# {% else %} #}
@@ -28,6 +27,7 @@ document.createElement("picture");
 </script>  #}
 {% if custom == "true" %}
 <script>
+    $('[data-magnify-src]').magnify();
 	$('[data-toggle="popover"]').popover({
 		template:	'<div class="popover  popover__panel" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
 	});

@@ -7,6 +7,8 @@ var articles  		= $('[data-slick-articles]');
 var articles_lg  	= $('[data-slick-articles-lg]');
 var catalog 		= $('[data-slick-catalog]');
 var catalog_nav 	= $('[data-slick-catalog-nav]');
+var catalog_m 		= $('[data-slick-modal]');
+var catalog_m_nav 	= $('[data-slick-modal-nav]');
 var catalog_note 	= $('[data-slick-catalog-note]');
 
 
@@ -80,13 +82,13 @@ articles.slick({
 	    }
 	]
 });
-
 catalog.slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	arrows: false,		
 	infinite: true, 
 	fade: true, 
+	draggable: false,
   	asNavFor: catalog_nav,
 	//autoplay: true,
 	//autoplaySpeed: 4000,
@@ -111,7 +113,52 @@ catalog_nav.slick({
 	//variableWidth: true,
 	prevArrow: prevArrow,
 	nextArrow: nextArrow,
-	focusOnSelect: true
+	focusOnSelect: true,
+	responsive: [	
+	    {
+			breakpoint: 768,
+			settings: {
+				vertical: false,
+			}
+	    }
+	]
+});
+catalog_m.slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,		
+	infinite: true, 
+	fade: true, 
+	draggable: false,
+  	asNavFor: catalog_m_nav,
+	//autoplay: true,
+	//autoplaySpeed: 4000,
+	//prevArrow: prevArrow,
+	//nextArrow: nextArrow,
+  	/*responsive: [	
+	    {
+			breakpoint: 768,
+			settings: {
+				dots: true,
+			}
+	    }
+	]*/
+});
+catalog_m_nav.slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	asNavFor: catalog_m,
+	arrows: true,
+	//infinite: false,	
+	variableWidth: true,
+	prevArrow: prevArrow,
+	nextArrow: nextArrow,
+	focusOnSelect: true,
+});
+$('.modal').on('shown.bs.modal', function (e) {
+    catalog_m.slick('setPosition');
+    catalog_m_nav.slick('setPosition');
+    $('[data-slick-wrap]').addClass('show');
 });
 catalog_note.slick({
 	slidesToShow: 1,
