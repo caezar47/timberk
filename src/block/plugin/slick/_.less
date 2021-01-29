@@ -218,12 +218,17 @@
 		.media-breakpoint-down(@xl; {
 			background-size: 6px auto!important;
 		});
-		.media-breakpoint-up(@xl; {
-			width: 48px;
-			height: 48px;
+		.media-breakpoint-up(@lg; {
+			[data-slick-articles-lg] &{
+				top: 38.5%;
+			}
 			[data-slick-catalog-note] &{
 				top: 43.5%;
 			}
+		});
+		.media-breakpoint-up(@xl; {
+			width: 48px;
+			height: 48px;
 			[data-slick-articles-lg] &{
 				top: 38.5%;
 			}

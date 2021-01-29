@@ -329,7 +329,7 @@
 						position: relative;
 					}
 				}
-				.media-breakpoint-down(@xl; {
+				.media-breakpoint-down(@lg; {
 					& > *{
 						&:nth-child(1){
 							grid-row: 2;
@@ -339,10 +339,17 @@
 						}
 					}
 				});
-				.media-breakpoint-up(@xl; {
+				.media-breakpoint-up(@lg; {
 					grid-template-columns: minmax(0,1.03fr) .97fr;
 					grid-gap: 54px;
 					padding-top: 30px;
+					& > *{
+						&:nth-child(1){
+							padding-left: 120px;
+						}
+					}
+				});
+				.media-breakpoint-up(@xl; {
 					& > *{
 						&:nth-child(1){
 							margin-left: -42px;
@@ -364,13 +371,10 @@
 			&-catalog{
 				&-note{
 					grid-template-columns: 100%;
-					.media-breakpoint-up(@xl; {
-						grid-gap: 44px 54px;
+					.media-breakpoint-up(@md; {
+						grid-gap: 44px 30px;
 						grid-template-columns: minmax(0,1.02fr) minmax(0,.98fr);
 						& > *{
-							&:nth-child(2){
-								//padding-top: 54px;
-							}
 							&.is--full{
 								grid-column: span 2;
 							}
@@ -378,6 +382,9 @@
 								padding-top: 12px;
 							}
 						}
+					});
+					.media-breakpoint-up(@lg; {
+						grid-gap: 44px 54px;
 					});					
 				}
 			}

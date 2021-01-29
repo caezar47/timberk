@@ -36,6 +36,9 @@ document.createElement("picture");
 	        $('[data-toggle="popover"]').removeClass('is--show');
 	 		$(this).addClass('is--show');
 	}); 
+	$('.modal').on('show.bs.modal', function (e) {
+	    $('[data-toggle="popover"]').popover('hide');		
+	});
 	$(document.body).on('click', function(event) {
 		if($(event.target).closest('[data-toggle="popover"]').length == 0 && $(event.target).closest('.popover__panel').length == 0){
 	        $('[data-toggle="popover"]').popover('hide');

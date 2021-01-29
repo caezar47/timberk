@@ -54,10 +54,6 @@
 		&.is--modal-sale{
 			max-width: 600px;
 		}
-		&.is--default{
-			background-color: @white;
-		}
-
 		/*#modal-360 &{
 			top: 0;
 			left: 0;
@@ -73,11 +69,13 @@
 	&body {
 		position: relative;		
 		padding: 20px;
+		background-color: @modal_bg;
 		.media-breakpoint-up(@lg; {			
 			padding: 60px 80px;
 		});
 		&.is--modal-sale{
 			padding: 0px;
+			background: none;
 		}
 	}
 	&content{

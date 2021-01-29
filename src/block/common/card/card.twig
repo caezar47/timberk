@@ -57,6 +57,7 @@
 {% if view == "catalog-card" %}
 	{% for value in list %}	
 	<div class="{{value.group}}">
+		{% if value.view != "banner" %}
 		<div class="{{prefix}}item  {{mod}}">
 			<div class="{{prefix}}bg  {{mod}}" style="background-image: url({{value.bg}})"></div>
 			{% if value.label %}
@@ -105,6 +106,15 @@
 				} %}
 			</div>
 		</div>
+		{% else %}
+			<div class="{{prefix}}item  {{value.mod}}" style="background-image: url({{value.bg}})">
+				<p class="{{prefix}}heading  {{value.mod}}">{{value.name}}</p>
+				<p class="{{prefix}}note  {{value.mod}}">{{value.note}}</p>
+				<picture class="{{prefix}}preview  {{value.mod}}">
+					<img src="{{value.img}}" class="img-fluid" alt="">
+				</picture>
+			</div>
+		{% endif %}
 	</div>
 	{% endfor %}
 {% endif %}

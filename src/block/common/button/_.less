@@ -29,6 +29,10 @@
 		}
 		&.is--lg{
 			border-radius: @btn_radius*2;
+			&.is--bay{
+				padding-left: 52px;
+				padding-right: 52px;
+			}
 		}
 		&.is--second{
 			background-color: @white;
@@ -67,10 +71,6 @@
 				font-size: 1rem;
 				line-height: @site_lh;
 				padding: 10px 25px;
-				&.is--bay{
-					padding-left: 52px;
-					padding-right: 52px;
-				}
 			}
 		});
 	}
@@ -211,10 +211,9 @@
 		}
 		&.is--compare{	
 			position: relative;
-			min-width: 32px;
-			width: 32px;
-			height: 32px;
-			margin-right: -5px;
+			min-width: 24px;
+			width: 24px;
+			height: 24px;
 			&,&:hover{
 				color: @black;
 			}

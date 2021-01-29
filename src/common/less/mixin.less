@@ -9,6 +9,11 @@
 		@rules();
 	}
 }
+.media-breakpoint-between(@min; @max; @rules){
+	@media (min-width: @min) and (max-width: @max - 0.02){
+		@rules(); 
+	}
+}
 
 //===== heading =====//
 .heading1(){
