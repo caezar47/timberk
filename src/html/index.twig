@@ -271,37 +271,42 @@
 					},
 				]  
 			} %}
-			{% include "../block/page/index.twig" with {
-				view:"subs", 
-				content_prefix:prefix.section, 
-				content_mod:"is--block-subs",  
-				heading_group:"", 
-				heading_attr:'',
-				heading_mod:"is--h1  is--block-subs  text-align--center", 
-				heading_level:"h2", 
-				heading:"Узнайте первым о новинках и акциях",
-				form_view:"subs",
-				form_mod:"is--block-subs",
-				card_view: 'links',
-				card_mod: 'is--links',
-				card_list: [                    
-					{
-						"link":"#", 
-						"name":"Почему timberk", 
-						"icon": "icon-why",
-					},                    
-					{
-						"link":"#", 
-						"name":"Сервис", 
-						"icon": "icon-services",
-					},                    
-					{
-						"link":"#", 
-						"name":"Где купить", 
-						"icon": "icon-bay",
-					},   
-				],   
-			} %}
+
+			<section class="section__content  is--block-subs">
+				<div class="section__container container  is--block-subs">
+					{% include "../block/page/index.twig" with {
+						view:"subs", 
+						content_prefix:prefix.section, 
+						content_mod:"is--block-subs",  
+						heading_group:"", 
+						heading_attr:'',
+						heading_mod:"is--h1  is--block-subs  text-align--center", 
+						heading_level:"h2", 
+						heading:"Узнайте первым о новинках и акциях",
+						form_view:"subs",
+						form_mod:"is--block-subs",
+						card_view: 'links',
+						card_mod: 'is--links',
+						card_list: [                    
+							{
+								"link":"#", 
+								"name":"Почему timberk", 
+								"icon": "icon-why",
+							},                    
+							{
+								"link":"#", 
+								"name":"Сервис", 
+								"icon": "icon-services",
+							},                    
+							{
+								"link":"#", 
+								"name":"Где купить", 
+								"icon": "icon-bay",
+							},   
+						],   
+					} %}
+				</div>
+			</section>
 		</main>
 		{% include "../block/common/footer/footer.twig" with {
 			prefix:"footer__",

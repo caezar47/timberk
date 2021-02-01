@@ -103,6 +103,13 @@ catalog.slick({
 	    }
 	]*/
 });
+
+// $("[data-product-color] form label").click(function(e){
+//     var Val = $(this).find("input").val();
+//     console.log(Val);
+//     catalog.slickGoTo(Val);
+//     e.stopPropagation();
+// });
 catalog_nav.slick({
 	slidesToShow: 3,
 	slidesToScroll: 1,

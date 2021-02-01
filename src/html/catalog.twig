@@ -8,383 +8,201 @@
         {% include "../block/common/navbar/navbar.twig" with {
             prefix:"navbar__",
         } %} 
-        <main class="{{prefix.section}}wrap">            
-            {% include "../block/page/catalog.twig" with {
-                view:"catalog",
+        <main class="{{prefix.section}}wrap">     
+            <section class="section__content  is--page-catalog" >
+                <div class="section__container container  is--page-catalog">        
+                    {% include "../block/page/catalog.twig" with {
+                        view:"catalog",
 
-                content_prefix: prefix.section, 
-                content_mod:    "is--page-catalog",  
-                content_group:  "is--page-default", 
+                        content_prefix: prefix.section, 
+                        content_mod:    "is--page-catalog",  
+                        content_group:  "is--page-default", 
 
-                banner_view:    'banner',
-                banner_mod:     'is--block-banner', 
-                banner_img:     [path.img,"/default/banner-second.png"].join(""),
+                        banner_view:    'banner',
+                        banner_mod:     'is--block-banner', 
+                        banner_img:     [path.img,"/default/banner-second.png"].join(""),
 
-                bread_attr:     "",
-                bread_mod:      "",
-                bread:[
-                    {name:"Главная", link: page.index},
-                    {name:"Каталог"}
-                ],
+                        bread_attr:     "",
+                        bread_mod:      "",
+                        bread:[
+                            {name:"Главная", link: page.index},
+                            {name:"Каталог"}
+                        ],
 
-                heading_group:  'is--page-catalog', 
-                heading_attr:   '',
-                heading_mod:    "is--h1", 
-                heading_level:  "h1", 
-                heading:        "Каталог климатической техники для дома и офиса",
-                
-                search_view:    'search',
-                search_group:   'is--block-search',
-                search_mod:     'is--search',
- 
+                        heading_group:  'is--page-catalog', 
+                        heading_attr:   '',
+                        heading_mod:    "is--h1", 
+                        heading_level:  "h1", 
+                        heading:        "Каталог климатической техники для дома и офиса",
+                        
+                        search_view:    'search',
+                        search_group:   'is--block-search',
+                        search_mod:     'is--search',
+         
 
-                card_view: 'catalog-cat',
-                card_mod: 'is--catalog-cat',
-                card_list: [
-                    {
-                        link:page.catalog_cat, 
-                        name:"Климатическое оборудование", 
-                        img: [path.img,"/default/catalog-cat-item1.png"].join(""),
-                        nav: [
+                        card_view: 'catalog-cat',
+                        card_mod: 'is--catalog-cat',
+                        card_list: [
                             {
-                                name:'Кондиционеры и сплит-системы',
-                                link:page.catalog_cat,
+                                link:page.catalog_cat, 
+                                name:"Климатическое оборудование", 
+                                img: [path.img,"/default/catalog-cat-item1.png"].join(""),
+                                nav: [
+                                    {
+                                        name:'Кондиционеры и сплит-системы',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Осушители',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Воздухоочистители',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Ультразвуковые увлажнители воздуха',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Мойки воздуха',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Электрические вентиляторы',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'',
+                                        link:page.catalog_cat,
+                                    },
+                                ]
                             },
                             {
-                                name:'Осушители',
-                                link:page.catalog_cat,
+                                link:page.catalog_cat, 
+                                name:"Водонагревательное оборудование", 
+                                img: [path.img,"/default/catalog-cat-item2.png"].join(""),
+                                nav: [
+                                    {
+                                        name:'Водонагреватели проточные',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Водонагреватели накопительные',
+                                        link:page.catalog_cat,
+                                    },
+                                ]
                             },
                             {
-                                name:'Воздухоочистители',
-                                link:page.catalog_cat,
+                                link:page.catalog_cat, 
+                                name:"Тепловое оборудование", 
+                                img: [path.img,"/default/catalog-cat-item3.png"].join(""),
+                                nav: [
+                                    {
+                                        name:'Радиаторы масляные',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Тепловентиляторы',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Электрические конвекторы',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Газовые обогреватели',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Инфракрасные обогреватели',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Тепловые пушки',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Тепловые завесы',
+                                        link:page.catalog_cat,
+                                    },
+                                ]
                             },
                             {
-                                name:'Ультразвуковые увлажнители воздуха',
-                                link:page.catalog_cat,
+                                link:page.catalog_cat, 
+                                name:"Промышленное климатическое оборудование", 
+                                img: [path.img,"/default/catalog-cat-item4.png"].join(""),
+                                nav: [
+                                    {
+                                        name:'Мультизональные системы',
+                                        link:page.catalog_cat,
+                                    },
+                                    {
+                                        name:'Чиллеры-фанкойлы',
+                                        link:page.catalog_cat,
+                                    },
+                                ]
                             },
                             {
-                                name:'Мойки воздуха',
-                                link:page.catalog_cat,
+                                link:page.catalog_cat, 
+                                name:"Крупная бытовая техника", 
+                                img: [path.img,"/default/catalog-cat-item5.png"].join(""),
+                                nav: [
+                                    {
+                                        name:'Холодильники',
+                                        link:page.catalog_cat,
+                                    },
+                                ]
                             },
                             {
-                                name:'Электрические вентиляторы',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'',
-                                link:page.catalog_cat,
-                            },
-                        ]
-                    },
-                    {
-                        link:page.catalog_cat, 
-                        name:"Водонагревательное оборудование", 
-                        img: [path.img,"/default/catalog-cat-item2.png"].join(""),
-                        nav: [
-                            {
-                                name:'Водонагреватели проточные',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Водонагреватели накопительные',
-                                link:page.catalog_cat,
-                            },
-                        ]
-                    },
-                    {
-                        link:page.catalog_cat, 
-                        name:"Тепловое оборудование", 
-                        img: [path.img,"/default/catalog-cat-item3.png"].join(""),
-                        nav: [
-                            {
-                                name:'Радиаторы масляные',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Тепловентиляторы',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Электрические конвекторы',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Газовые обогреватели',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Инфракрасные обогреватели',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Тепловые пушки',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Тепловые завесы',
-                                link:page.catalog_cat,
-                            },
-                        ]
-                    },
-                    {
-                        link:page.catalog_cat, 
-                        name:"Промышленное климатическое оборудование", 
-                        img: [path.img,"/default/catalog-cat-item4.png"].join(""),
-                        nav: [
-                            {
-                                name:'Мультизональные системы',
-                                link:page.catalog_cat,
-                            },
-                            {
-                                name:'Чиллеры-фанкойлы',
-                                link:page.catalog_cat,
-                            },
-                        ]
-                    },
-                    {
-                        link:page.catalog_cat, 
-                        name:"Крупная бытовая техника", 
-                        img: [path.img,"/default/catalog-cat-item5.png"].join(""),
-                        nav: [
-                            {
-                                name:'Холодильники',
-                                link:page.catalog_cat,
-                            },
-                        ]
-                    },
-                    {
-                        link:page.catalog_cat, 
-                        name:"Бытовая техника", 
-                        img: [path.img,"/default/catalog-cat-item6.png"].join(""),
-                        nav: [
-                            {
-                                name:'Санитайзеры',
-                                link:page.catalog_cat,
-                            },
-                        ]
-                    }
-                ],   
-            } %} 
-
-
-            {% include "../block/page/index.twig" with {
-                view:"subs", 
-                content_prefix:prefix.section, 
-                content_mod:"is--block-subs",  
-                heading_group:"", 
-                heading_attr:'',
-                heading_mod:"is--h1  is--block-subs  text-align--center", 
-                heading_level:"h2", 
-                heading:"Узнайте первым о новинках и акциях",
-                form_view:"subs",
-                form_mod:"is--block-subs",
-                card_view: 'links',
-                card_mod: 'is--links',
-                card_list: [                    
-                    {
-                        "link":"#", 
-                        "name":"Почему timberk", 
-                        "icon": "icon-why",
-                    },                    
-                    {
-                        "link":"#", 
-                        "name":"Сервис", 
-                        "icon": "icon-services",
-                    },                    
-                    {
-                        "link":"#", 
-                        "name":"Где купить", 
-                        "icon": "icon-bay",
-                    },   
-                ],   
-            } %} 
-            {# {% include "../block/page/index.twig" with {
-                view:"slider", 
-                content_prefix:prefix.section, 
-                content_mod:"is--page-index-slider", 
-                slider: [
-                    {
-                       img: [path.img,"/default/index-slider-item1.jpg "].join(""), 
-                    },
-                    {
-                       img: [path.img,"/default/index-slider-item2.jpg "].join(""), 
-                    },
-                ] , 
-            } %} 
-            {% include "../block/page/index.twig" with {
-                view:"new", 
-                content_prefix:prefix.section, 
-                content_mod:"is--page-index-new",  
-                heading_group:"", 
-                heading_attr:'',
-                heading_mod:"is--h1  is--page-index-new  text-align--center", 
-                heading_level:"h2", 
-                heading:"Новинки и флагманы",
-
-                card_view: 'catalog-card',
-                card_mod: 'is--catalog-card  is--new',
-                card_list: [                    
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Воздухоочиститель Steamy", 
-                        "note":"Производительность 300 мл/ч", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },                   
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Сплит-система Natt", 
-                        "note":"Технология IFEEL", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },              
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Водонагреватель Modern", 
-                        "note":"Система защиты 3L SPS", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                        "label": "Флагман",
-                        "label_color": "#942FD1",
-                    },                   
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Водонагреватель Gra", 
-                        "note":"Надежный медный ТЭН", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },                   
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Сплит-система Natt", 
-                        "note":"Технология IFEEL", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },              
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Водонагреватель Modern", 
-                        "note":"Система защиты 3L SPS", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                        "label": "Новинка",
-                        "label_color": "#DF707E",
-                    },                   
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Водонагреватель Gra", 
-                        "note":"Надежный медный ТЭН", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },                   
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Сплит-система Natt", 
-                        "note":"Технология IFEEL", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },              
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Водонагреватель Modern", 
-                        "note":"Система защиты 3L SPS", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    },                   
-                    {
-                        "link":page.catalog_card, 
-                        "name":"Водонагреватель Gra", 
-                        "note":"Надежный медный ТЭН", 
-                        "img": [path.img,"/default/catalog-new-item1.png"].join(""),
-                        "bg": [path.img,"/default/catalog-new-bg-item1.jpg"].join(""),
-                    }, 
-                ],   
-            } %}
-            {% include "../block/page/index.twig" with {
-                view:"articles", 
-                content_prefix:prefix.section, 
-                content_mod:"is--block-articles",  
-                heading_group:"", 
-                heading_attr:'',
-                heading_mod:"is--h1  is--block-articles  text-align--center", 
-                heading_level:"h2", 
-                heading:"Рекомендуем почитать",
-
-
-                tabs_view:'base',
-                tabs_prefix:prefix.tabs,
-                tabs_mod:'',
-                tabs_group:'',
-                tabs_list:[
-                    {
-                        "id":"tabs-articles1",
-                        "name":"Климат",
-                        "status":"",
-                        "text":"Климат",
-                    },
-                    {
-                        "id":"tabs-articles2",
-                        "name":"Очистка воздуха",
-                        "status":"active",
-                        "type":"card_slider",
-                        "view":"articles",
-                        "mod":"is--articles",
-                        "list":[
-                            {
-                                "link":page.articles_card,
-                                "group":'is--horizontal',
-                                "name":"Edelweiss — профессиональная система очистки воздуха",
-                                "note":"Высокоэффективные и эргономичные очистители воздуха с уникальной системой фильтров",
-                                "img": [path.img,"/default/articles-item1.jpg "].join(""),
+                                link:page.catalog_cat, 
+                                name:"Бытовая техника", 
+                                img: [path.img,"/default/catalog-cat-item6.png"].join(""),
+                                nav: [
+                                    {
+                                        name:'Санитайзеры',
+                                        link:page.catalog_cat,
+                                    },
+                                ]
                             }
-                        ] ,
-                        "slider":[
+                        ],   
+                    } %} 
+
+                    {% include "../block/page/index.twig" with {
+                        view:"subs", 
+                        container:"false", 
+                        content_prefix:prefix.section, 
+                        content_group:"is--catalog",  
+                        content_mod:"is--block-subs",  
+                        heading_group:"", 
+                        heading_attr:'',
+                        heading_mod:"is--h1  is--block-subs  text-align--center", 
+                        heading_level:"h2", 
+                        heading:"Узнайте первым о новинках и акциях",
+                        form_view:"subs",
+                        form_mod:"is--block-subs",
+                        card_view: 'links',
+                        card_mod: 'is--links',
+                        card_list: [                    
                             {
-                                "link":page.articles_card,
-                                "name":"Edelweiss — профессиональная система очистки воздуха",
-                                "note":"Высокоэффективные и эргономичные очистители воздуха с уникальной системой фильтров",
-                                "img": [path.img,"/default/articles-item1.jpg "].join(""),
-                            },
+                                "link":"#", 
+                                "name":"Почему timberk", 
+                                "icon": "icon-why",
+                            },                    
                             {
-                                "link":page.articles_card,
-                                "name":"Edelweiss — профессиональная система очистки воздуха",
-                                "note":"Высокоэффективные и эргономичные очистители воздуха с уникальной системой фильтров",
-                                "img": [path.img,"/default/articles-item1.jpg "].join(""),
-                            },
+                                "link":"#", 
+                                "name":"Сервис", 
+                                "icon": "icon-services",
+                            },                    
                             {
-                                "link":page.articles_card,
-                                "name":"Edelweiss — профессиональная система очистки воздуха",
-                                "note":"Высокоэффективные и эргономичные очистители воздуха с уникальной системой фильтров",
-                                "img": [path.img,"/default/articles-item1.jpg "].join(""),
-                            },
-                            {
-                                "link":page.articles_card,
-                                "name":"Edelweiss — профессиональная система очистки воздуха",
-                                "note":"Высокоэффективные и эргономичные очистители воздуха с уникальной системой фильтров",
-                                "img": [path.img,"/default/articles-item1.jpg "].join(""),
-                            },
-                            {
-                                "link":page.articles_card,
-                                "name":"Edelweiss — профессиональная система очистки воздуха",
-                                "note":"Высокоэффективные и эргономичные очистители воздуха с уникальной системой фильтров",
-                                "img": [path.img,"/default/articles-item1.jpg "].join(""),
-                            }
-                        ] 
-                    },
-                    {
-                        "id":"tabs-articles3",
-                        "name":"Тепло",
-                        "status":"",
-                        "text":"Тепло",
-                    },
-                    {
-                        "id":"tabs-articles4",
-                        "name":"Нагрев воды",
-                        "status":"",
-                        "text":"Нагрев воды",
-                    },
-                ]  
-            } %}#}
+                                "link":"#", 
+                                "name":"Где купить", 
+                                "icon": "icon-bay",
+                            },   
+                        ],   
+                    } %} 
+                </div>
+            </section>
         </main>
         {% include "../block/common/footer/footer.twig" with {
             prefix:"footer__",

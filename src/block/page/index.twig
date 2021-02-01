@@ -59,28 +59,26 @@
 {% endif %}
 
 {% if view == "subs" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
-		<div class="{{content_prefix}}container container  {{content_mod}}">
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:heading_mod,
-				attr:heading_attr, 
-				level:heading_level, 
-				heading:heading
+	<section class="{{content_prefix}}section  {{content_mod}}  {{content_group}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		{% include "../common/page-header/elem.twig" with {
+			prefix:"page-header__", 
+			mod:heading_mod,
+			attr:heading_attr, 
+			level:heading_level, 
+			heading:heading
+		} %}
+		{% include "../common/form/form.twig" with {
+			view: form_view,
+			prefix:"form__", 
+			mod:  form_mod,
+		} %}			
+		<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+			{% include "../common/card/card.twig" with {
+				view: card_view,
+				prefix:"card__", 
+				mod:  card_mod, 
+				list: card_list
 			} %}
-			{% include "../common/form/form.twig" with {
-				view: form_view,
-				prefix:"form__", 
-				mod:  form_mod,
-			} %}			
-			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
-				{% include "../common/card/card.twig" with {
-					view: card_view,
-					prefix:"card__", 
-					mod:  card_mod, 
-					list: card_list
-				} %}
-			</div>
 		</div>
 	</section>
 {% endif %}

@@ -14,7 +14,7 @@ $(document).ready(function(){
     });
 
     $(".catalog__sort").select2({
-        dropdownCssClass: "catalog__sort__drop",
+        dropdownCssClass: "form__item is--filter-sort",
         minimumResultsForSearch: -1
     });
 
@@ -238,14 +238,22 @@ $(document).ready(function(){
         navText: ["<",">"],
         smartSpeed: 500
     });
-    ProductSlider = $(".product__slider");
 
     $('.product__slider__item .zoom img').magnify();
 
+    /*ProductSlider = $(".product__slider");
     $(".product__topinfo__colors form label").click(function(e){
         var Val = $(this).find("input").val();
         console.log(ColorPosition[Val]);
         ProductSlider.trigger('to.owl.carousel', [ColorPosition[Val],300,true]);
+        e.stopPropagation();
+    });*/
+
+    ProductSlider = $("[data-slick-catalog]");
+    $("[data-product-color] form label").click(function(e){
+        var Val = $(this).find("input").val();
+        console.log(ColorPosition[Val]);
+        ProductSlider.slick('slickGoTo', ColorPosition[Val]);
         e.stopPropagation();
     });
 

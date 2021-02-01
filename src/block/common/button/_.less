@@ -167,7 +167,8 @@
 				width: 32px;
 				min-width: 32px;
 				height: 38px;
-				margin: 0 0 0;
+				margin: 0 auto;
+				display: block;
 			}
 			&.is--play{
 				svg{
@@ -180,6 +181,9 @@
 					width: 36px;
 					min-width: 36px;
 				}
+			}
+			&.is--show{
+				color: @primary;
 			}
 		}
 		.media-breakpoint-down(@xl; {
@@ -217,7 +221,7 @@
 			&,&:hover{
 				color: @black;
 			}
-			&::after{
+			&[data-count]::after{
 				content: attr(data-count);
 				position: absolute;
 				top: -1px;
