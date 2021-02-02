@@ -186,6 +186,19 @@
 				color: @primary;
 			}
 		}
+		&.is--setting{
+			font-size: 1.111rem;
+			line-height: 140%;
+			svg{
+				width: 19px;
+				min-width: 19px;
+				height: 19px;
+				margin: 0 16px 0 0;
+			}
+			span{
+				text-decoration: underline;
+			}
+		}
 		.media-breakpoint-down(@xl; {
 			.navbar__block &{
 				svg{
@@ -253,8 +266,5 @@
 			width: 100%;
 			height: 100%;
 		}
-	}
-	&{
-
 	}
 }

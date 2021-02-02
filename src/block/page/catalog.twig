@@ -50,105 +50,103 @@
 	</section>
 {% endif %}
 {% if view == "category" %}
-	<section class="{{content_prefix}}content  {{content_group}}" >
-		<div class="{{content_prefix}}container container  {{content_group}}">
-			{% include "../common/card/card.twig" with {
-                view: 	banner_view,
-				prefix:	"card__", 
-				mod:  	banner_mod, 
-                img: 	banner_img, 
-            } %}
-            {% include "../common/breadcrumb/tpl.twig" with {
-				prefix:prefix.breadcrumb, 
-				mod:bread_mod, 
-				bread:bread
+	<section class="{{content_prefix}}section  {{content_group}}" >
+		{% include "../common/card/card.twig" with {
+            view: 	banner_view,
+			prefix:	"card__", 
+			mod:  	banner_mod, 
+            img: 	banner_img, 
+        } %}
+        {% include "../common/breadcrumb/tpl.twig" with {
+			prefix:prefix.breadcrumb, 
+			mod:bread_mod, 
+			bread:bread
+		} %}
+		<div class="page-header__panel  {{heading_group}}">
+            {% include "../common/page-header/elem.twig" with {
+				prefix:"page-header__", 
+				mod:heading_mod,
+				attr:heading_attr, 
+				level:heading_level, 
+				heading:heading
 			} %}
-			<div class="page-header__panel  {{heading_group}}">
-	            {% include "../common/page-header/elem.twig" with {
-					prefix:"page-header__", 
-					mod:heading_mod,
-					attr:heading_attr, 
-					level:heading_level, 
-					heading:heading
-				} %}
-				<div class="form__item  is--filter-sort">
-					<select data-select-filter>
-						<option>сначала новые</option>
-						<option>сначала популярные</option>
-					</select>
-				</div>
-				{% include "../common/button/btn.twig" with {
-					view:'tpl',
-					tag:'a',
-					href:'#',
-					prefix:'icon__',
-					mod:'is--compare',
-					icon:'icon-compare',
-					title: 'Добавить к сравнению',
-					count: '2',
-				} %}
+			<div class="form__item  is--filter-sort">
+				<select data-select-filter>
+					<option>сначала новые</option>
+					<option>сначала популярные</option>
+				</select>
 			</div>
-			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
-				<div>
-					<div class="{{content_prefix}}aside  {{content_mod}}" data-filter-block>
-						{% include "../common/button/btn.twig" with {
-							view:'tpl',
-							tag:	'button',
-							type:	'button',
-							prefix:	'icon__',
-							mod:	'is--filter-close',
-							icon:	'icon-close',
-							title: 	'Закрыть фильтр',
-							attr:	'data-filter-close',
-						} %}
-						{% include "../common/form/form.twig" with {
-							view: 	search_view,
-							prefix:	"form__", 
-							group:  search_group,
-							mod:  	search_mod,
-						} %}
-						{% include "../common/card/card.twig" with {
-							view: 	nav_view,
-							prefix:	"card__", 
-							mod:  	nav_mod, 
-							list: 	nav_list
-						} %}
-						{% include "../common/form/form.twig" with {
-							view: 	filter_view,
-							prefix:	"form__", 
-							mod:  	filter_mod,
-							list:  	filter_list,
-						} %}
-					</div>
-					{% include "../common/card/card.twig" with {
-						view: 	link_view,
-						prefix:	"card__", 
-						mod:  	link_mod, 
-						list: 	link_list
-					} %}
-				</div>
-				<div>
-					<div class="{{content_prefix}}row  {{content_mod}}  row">
-						{% include "../common/card/card.twig" with {
-							view: card_view,
-							prefix:"card__", 
-							mod:  card_mod, 
-							list: card_list
-						} %}
-					</div>
-				</div>
-				<div>
+			{% include "../common/button/btn.twig" with {
+				view:'tpl',
+				tag:'a',
+				href:'#',
+				prefix:'icon__',
+				mod:'is--compare',
+				icon:'icon-compare',
+				title: 'Добавить к сравнению',
+				count: '2',
+			} %}
+		</div>
+		<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
+			<div>
+				<div class="{{content_prefix}}aside  {{content_mod}}" data-filter-block>
 					{% include "../common/button/btn.twig" with {
 						view:'tpl',
-						tag:'button',
-						type:'button',
-						href:'#',
-						prefix:'btn__',
-						mod:'',
-						attr:'data-filter-btn',
-						name: 'Фильтр товаров',
-					} %}					
+						tag:	'button',
+						type:	'button',
+						prefix:	'icon__',
+						mod:	'is--filter-close',
+						icon:	'icon-close',
+						title: 	'Закрыть фильтр',
+						attr:	'data-filter-close',
+					} %}
+					{% include "../common/form/form.twig" with {
+						view: 	search_view,
+						prefix:	"form__", 
+						group:  search_group,
+						mod:  	search_mod,
+					} %}
+					{% include "../common/card/card.twig" with {
+						view: 	nav_view,
+						prefix:	"card__", 
+						mod:  	nav_mod, 
+						list: 	nav_list
+					} %}
+					{% include "../common/form/form.twig" with {
+						view: 	filter_view,
+						prefix:	"form__", 
+						mod:  	filter_mod,
+						list:  	filter_list,
+					} %}
 				</div>
+				{% include "../common/card/card.twig" with {
+					view: 	link_view,
+					prefix:	"card__", 
+					mod:  	link_mod, 
+					list: 	link_list
+				} %}
+			</div>
+			<div>
+				<div class="{{content_prefix}}row  {{content_mod}}  row">
+					{% include "../common/card/card.twig" with {
+						view: card_view,
+						prefix:"card__", 
+						mod:  card_mod, 
+						list: card_list
+					} %}
+				</div>
+			</div>
+			<div>
+				{% include "../common/button/btn.twig" with {
+					view:'tpl',
+					tag:'button',
+					type:'button',
+					href:'#',
+					prefix:'btn__',
+					mod:'',
+					attr:'data-filter-btn',
+					name: 'Фильтр товаров',
+				} %}					
 			</div>
 		</div>
 	</section>

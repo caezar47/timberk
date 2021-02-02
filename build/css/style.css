@@ -1483,6 +1483,7 @@ h1 + .content__search{
 }
 .bx-filter-popup-result{
     position: absolute;
+    z-index: 100;
     top: 0;
     left: 110%;
     background: #00a69d;

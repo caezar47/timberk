@@ -22,11 +22,97 @@
 	</section>
 {% endif %}
 {% if view == "seo" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
-		<div class="{{content_prefix}}container container  {{content_mod}}">
-			<div class="{{content_prefix}}text  {{content_mod}}">
-				{{note}}
-			</div>
+	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		<div class="{{content_prefix}}text  {{content_mod}}">
+			{{note}}
 		</div>
+	</section>
+{% endif %}
+{% if view == "contacts" %}
+	<section class="{{content_prefix}}section  {{content_mod}}" >
+		{% include "../common/card/card.twig" with {
+            view: 	banner_view,
+			prefix:	"card__", 
+			mod:  	banner_mod, 
+            img: 	banner_img, 
+        } %}
+        {% include "../common/breadcrumb/tpl.twig" with {
+			prefix:prefix.breadcrumb, 
+			mod:bread_mod, 
+			bread:bread
+		} %}
+		{% include "../common/page-header/elem.twig" with {
+			prefix:"page-header__", 
+			mod:heading_mod,
+			attr:heading_attr, 
+			level:heading_level, 
+			heading:heading
+		} %}
+
+		<div class="{{content_prefix}}grid  grid__row  {{content_mod}}" >
+			{% include "../common/card/card.twig" with {
+	            view: 	contacts_view,
+				prefix:	"card__", 
+				mod:  	contacts_mod, 
+				list: 	contacts_list, 
+	        } %}
+			{% include "../common/card/card.twig" with {
+	            view: 	shop_view,
+				prefix:	"card__", 
+				mod:  	shop_mod, 
+				list: 	shop_list, 
+	        } %}
+	        <div class="is--full">
+				{% include "../common/button/btn.twig" with {
+					view:'tpl',
+					tag:'a',
+					href:value.link,
+					prefix:'link__',
+					mod:'is--setting',
+					icon:'icon-services-all',
+					name: 'Полный список сервисных центров в России',
+				} %}
+	        </div>
+	    </div>
+	</section>
+{% endif %}
+{% if view == "contacts-form" %}
+	<section class="{{content_prefix}}section  {{content_mod}}" >
+		{% include "../common/page-header/elem.twig" with {
+			prefix:"page-header__", 
+			mod:heading_mod,
+			attr:heading_attr, 
+			level:heading_level, 
+			heading:heading
+		} %}
+		{% include "../common/form/form.twig" with {
+			view: form_view,
+			prefix:"form__", 
+			mod:  form_mod,
+			list:  form_list,
+		} %}	
+	</section>
+{% endif %}
+{% if view == "404" %}
+	<section class="{{content_prefix}}section  {{content_mod}}" >
+		{% include "../common/card/card.twig" with {
+            view: 	banner_view,
+			prefix:	"card__", 
+			mod:  	banner_mod, 
+            img: 	banner_img, 
+        } %}
+        {% include "../common/breadcrumb/tpl.twig" with {
+			prefix:prefix.breadcrumb, 
+			mod:bread_mod, 
+			bread:bread
+		} %}
+		{% include "../common/card/card.twig" with {
+            view: 	page_view,
+			prefix:	"card__", 
+			mod:  	page_mod, 
+			name:  	page_heading, 
+			note:  	page_note, 
+            img: 	page_img, 
+        } %}
 	</section>
 {% endif %}

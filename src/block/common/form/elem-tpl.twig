@@ -1,3 +1,52 @@
+{% if view == "tpl" %}
+	{% for value in list %}	
+		{% if value.view == "input" %}
+		<label class="{{prefix}}item  {{mod}}  {{value.mod}}">
+			<input type="{{value.type}}" class="{{prefix}}control  {{mod}}  {{value.validate}}" {{value.required}} placeholder="{{value.placeholder}}" {% if value.view == "date" %}onfocus="(this.type='date')"{% endif %}>
+		</label>
+		{% endif %}
+		{% if value.view == "select" %}
+		<div class="{{prefix}}item  {{mod}}  {{value.mod}}">
+			<select {{value.type}}>
+				{% for option in value.option %}
+					<option {{option.status}}>{{option.name}}</option>
+				{% endfor %}
+			</select>
+		</div>
+		{% endif %}
+		{% if value.view == "textarea" %}
+		<label class="{{prefix}}item  {{mod}}  {{value.mod}}">
+			<textarea class="{{prefix}}control  {{mod}}  {{value.validate}}  is--textarea" {{value.required}} placeholder="{{value.placeholder}}"></textarea> 
+		</label>
+		{% endif %}
+		{% if value.view == "captcha" %}
+		<div class="{{prefix}}item  {{mod}}  {{value.mod}}">
+			<img src="{{value.img}}"  class="{{prefix}}captcha-img  img-fluid"> 
+		</div>
+		{% endif %}
+		{% if value.view == "checkbox" %}
+			<div class="{{prefix}}item  {{mod}}  {{value.mod}}">
+				{% for value in value.list %}
+					<label class="{{prefix}}checkbox  {{mod}}">
+						<input class="{{prefix}}checkbox-input  {{mod}}" type="{{value.type}}" {{value.status}}  id="{{value.id}}" name="{{value.form_id}}">
+						<span class="{{prefix}}checkbox-icon  {{mod}}"></span>
+						{% if value.name %}
+						<span class="{{prefix}}checkbox-name  {{mod}}">
+							{% if value.link %}
+							<a href="{{value.link}}">{{value.name}}</a>
+							{% else %}
+							{{value.name}}
+							{% endif %}
+						</span>
+						{% endif %}
+					</label>
+				{% endfor %}
+			</div>
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+
 {% if view == "input" %}
 	{% for value in list %}	
 	<label class="{{prefix}}item  {{mod}}">

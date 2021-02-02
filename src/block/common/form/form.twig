@@ -6,6 +6,22 @@
 		</div>
 	</form>
 {% endif %}
+{% if view == "contacts" %}
+	<form action="#" class="{{prefix}}panel  {{mod}}">
+		<div class="{{prefix}}grid  grid__row  {{mod}}">
+			{% include "elem-tpl.twig" with {
+				view: "tpl", 
+				prefix:'form__', 
+				mod:'', 
+				color:'', 
+				list: list
+			} %}
+			<div class="is--btn">
+				<button type="submit" class="btn__item  {{mod}}">Отправить</button>
+			</div>
+		</div>
+	</form>
+{% endif %}
 {% if view == "search" %}
 	<form action="#" class="{{prefix}}panel  {{mod}}  {{group}}">
 		<div class="{{prefix}}item  {{mod}}">

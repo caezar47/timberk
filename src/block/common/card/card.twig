@@ -188,6 +188,47 @@
 		<img src="{{img}}" class="img-fluid" alt="">
 	</picture>
 {% endif %}
+{% if view == "404" %}
+	<div class="{{prefix}}item  {{mod}}">
+		<picture class="{{prefix}}preview  {{mod}}">
+			<img src="{{img}}" class="img-fluid" alt="">
+		</picture>
+		<h1 class="{{prefix}}heading  {{mod}}">{{name}}</h1>
+		<div class="{{prefix}}note  {{mod}}">{{note}}</div>
+	</div>
+{% endif %}
+{% if view == "contacts" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}">
+		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+		<div class="{{prefix}}note  {{mod}}">
+			<p><a href="tel:{{value.tel}}">{{value.tel}}</a></p>
+			<p><a href="//{{value.link}}">{{value.link}}</a></p>
+		</div>
+		<picture class="{{prefix}}preview  {{mod}}">
+			<img src="{{value.img}}" class="img-fluid" alt="">
+		</picture>
+	</div>
+	{% endfor %}
+{% endif %}
+{% if view == "shop" %}
+	{% for value in list %}	
+	<div class="{{prefix}}item  {{mod}}">
+		<p class="{{prefix}}heading  {{mod}}">{{value.name}}</p>
+		<picture class="{{prefix}}preview  {{mod}}">
+			<img src="{{value.img}}" class="img-fluid" alt="">
+		</picture>
+		{% include "../button/btn.twig" with {
+			view:'tpl',
+			tag:'a',
+			href:value.link,
+			prefix:'btn__',
+			mod:'is--second  is--lg',
+			name: 'Интернет-магазин',
+		} %}
+	</div>
+	{% endfor %}
+{% endif %}
 
 {# old #}
 {% if view == "services" %}

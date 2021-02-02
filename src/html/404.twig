@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+    <head>
+        {% include "../block/common/head/head.twig" with {title:"404"}  %}
+    </head>
+    <body>
+
+        {% include "../block/common/navbar/navbar.twig" with {
+            prefix:"navbar__",
+        } %} 
+        <main class="{{prefix.section}}wrap">     
+            <section class="section__content  is--page-404" >
+                <div class="section__container container  is--page-404">
+                    {% include "../block/page/block.twig" with {
+                        view:"404",
+
+                        content_prefix: prefix.section, 
+                        content_mod:    "is--page-catalog",  
+                        content_group:  "is--page-default", 
+
+                        banner_view:    'banner',
+                        banner_mod:     'is--block-banner', 
+                        banner_img:     [path.img,"/default/banner-second.png"].join(""),
+
+                        bread_attr:     "",
+                        bread_mod:      "",
+                        bread:[
+                            {name:"Главная", link: page.index},
+                            {name:"Что-то пошло не так..."}
+                        ],
+
+                        page_view:      '404',
+                        page_mod:       'is--404',
+                        page_heading:    "Что-то пошло не так...",
+                        page_note:       "<p>Данная страница сайта www.timberk.ru на русском языке в данный момент находится в стадии заполнения информацией.</p><p>Приносим свои извинения за временные неудобства. Мы обязательно сообщим Вам о релизе этого раздела в новостях. Тем не менее, если у Вас есть вопросы, то Вы всегда можете обратиться за консультацией к нашим специалистам.</p>",  
+                        page_img:     [path.img,"/default/404-img.png"].join(""),
+                    } %} 
+                    
+
+                    {% include "../block/page/index.twig" with {
+                        view:"subs", 
+                        container:"false", 
+                        content_prefix:prefix.section, 
+                        content_group:"is--404",  
+                        content_mod:"is--block-subs",  
+                        heading_group:"", 
+                        heading_attr:'',
+                        heading_mod:"is--h1  is--block-subs  text-align--center", 
+                        heading_level:"h2", 
+                        heading:"Узнайте первым о новинках и акциях",
+                        form_view:"subs",
+                        form_mod:"is--block-subs",
+                        card_view: 'links',
+                        card_mod: 'is--links',
+                        card_list: [                    
+                            {
+                                "link":"#", 
+                                "name":"Почему timberk", 
+                                "icon": "icon-why",
+                            },                    
+                            {
+                                "link":"#", 
+                                "name":"Сервис", 
+                                "icon": "icon-services",
+                            },                    
+                            {
+                                "link":"#", 
+                                "name":"Где купить", 
+                                "icon": "icon-bay",
+                            },   
+                        ],   
+                    } %} 
+                </div>
+            </section>
+        </main>
+        {% include "../block/common/footer/footer.twig" with {
+            prefix:"footer__",
+        } %}
+        {% include "../block/common/navbar/menu.twig" %} 
+         
+        {% include "../block/common/modals/include.twig" %}
+        {% include "../block/common/script/script.twig" with {
+            view: "modal",
+            custom: "true" 
+        }%}
+    </body>
+</html> 

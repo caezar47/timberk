@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		{% include "../block/common/head/head.twig" with {title:"Контакты"}  %}
+	</head>
+	<body>
+
+		{% include "../block/common/navbar/navbar.twig" with {
+			prefix:"navbar__",
+		} %} 
+		<main class="{{prefix.section}}wrap">     
+			<section class="section__content  is--page-default" >
+				<div class="section__container container  is--page-default">
+					{% include "../block/page/block.twig" with {
+						view:"contacts",
+
+						content_prefix: prefix.section, 
+						content_mod:    "is--page-contacts",  
+
+						banner_view:    'banner',
+						banner_mod:     'is--block-banner', 
+						banner_img:     [path.img,"/default/banner-second.png"].join(""),
+
+						bread_attr:     "",
+						bread_mod:      "",
+						bread:[
+							{name:"Главная", link: page.index},
+							{name:"Контакты"}
+						],
+
+						heading_group:  '', 
+						heading_attr:   '',
+						heading_mod:    "is--h1  is--page-contacts", 
+						heading_level:  "h1", 
+						heading:        "Контакты",
+
+						contacts_view:  'contacts',
+						contacts_mod:   'is--contacts',
+						contacts_list: [
+							{
+								name:"Официальный магазин Timberk в России", 
+								tel:'8 (800) 555-38-26', 
+								link:'shop.timberk.ru', 
+								img: [path.img,"/default/contacts-bg.png"].join(""),
+							},
+						],
+
+						shop_view:  'shop',
+						shop_mod:   'is--shop',
+						shop_list: [
+							{
+								name:"К покупкам", 
+								link:'shop.timberk.ru',  
+								img: [path.img,"/default/contacts-shop.svg"].join(""),
+							},
+						],   
+					} %} 
+					{% include "../block/page/block.twig" with {
+						view:"contacts-form",
+
+						content_prefix: prefix.section, 
+						content_mod:    "is--page-contacts-form",  
+
+						heading_group:  '', 
+						heading_attr:   '',
+						heading_mod:    "is--h1  is--page-contacts-form  text-align--center", 
+						heading_level:  "h2", 
+						heading:        "Свяжитесь с нами", 
+
+
+						form_view:      "contacts",
+						form_mod:       "is--block-contacts",
+						form_list: [                    
+							{
+								"view":"input", 
+								"type":"text", 
+								"placeholder":"Ваше имя", 
+							},                    
+							{
+								"view":"input", 
+								"type":"text", 
+								"placeholder":"Город", 
+							},                      
+							{
+								"view":"input", 
+								"type":"tel", 
+								"placeholder":"Телефон", 
+							},                        
+							{
+								"view":"input", 
+								"type":"email", 
+								"placeholder":"E-mail", 
+							},                      
+							{
+								"view":"select", 
+								"mod":"is--select",
+								"type":"data-select", 
+								"option":[
+									{
+										"status":"selected disabled",
+										"name":"Выберите тему обращения"
+									},
+									{
+										"status":"",
+										"name":"Стать партнером Timberk"
+									},
+									{
+										"status":"",
+										"name":"Консультация по продукции"
+									},
+									{
+										"status":"",
+										"name":"Сервисное обслуживание"
+									},
+									{
+										"status":"",
+										"name":"Оставить отзыв о работе магазина"
+									},
+									{
+										"status":"",
+										"name":"Искусственное занижение цены"
+									},
+								]
+							},                        
+							{
+								"view":"textarea",
+								"mod":"is--full  is--textarea",
+								"placeholder":"Сообщение", 
+							},                        
+							{
+								"view":"captcha",
+								"mod":"",
+								"img":"//www.dev.timberk.ru/bitrix/tools/captcha.php?captcha_sid=03c66df29f37ecf79e7161c4ecee2a32", 
+							},                        
+							{
+								"view":"input", 
+								"type":"text", 
+								"placeholder":"Ввыедите текст с катинки", 
+							},                       
+							{
+								"view":"checkbox", 
+								"mod":"is--full  is--checkbox",
+								"list":[
+                                    {
+                                        type:"checkbox",
+                                        form_id:"",
+                                        id:"",
+                                        status:"",
+                                        name:"Согласен с политикой конфиденциальности",
+                                        link:"#"
+                                    },
+                                    {
+                                        type:"checkbox",
+                                        form_id:"",
+                                        id:"",
+                                        status:"",
+                                        name:"Даю согласие на информирование об акциях и распродажах от Timberk"
+                                    }
+                                ],
+							},   
+						],
+					} %} 
+					
+
+					{% include "../block/page/index.twig" with {
+						view:"subs", 
+						container:"false", 
+						content_prefix:prefix.section, 
+						content_group:"is--default",  
+						content_mod:"is--block-subs",  
+						heading_group:"", 
+						heading_attr:'',
+						heading_mod:"is--h1  is--block-subs  text-align--center", 
+						heading_level:"h2", 
+						heading:"Узнайте первым о новинках и акциях",
+						form_view:"subs",
+						form_mod:"is--block-subs",
+						card_view: 'links',
+						card_mod: 'is--links',
+						card_list: [                    
+							{
+								"link":"#", 
+								"name":"Почему timberk", 
+								"icon": "icon-why",
+							},                    
+							{
+								"link":"#", 
+								"name":"Сервис", 
+								"icon": "icon-services",
+							},                    
+							{
+								"link":"#", 
+								"name":"Где купить", 
+								"icon": "icon-bay",
+							},   
+						],   
+					} %} 
+				</div>
+			</section>
+		</main>
+		{% include "../block/common/footer/footer.twig" with {
+			prefix:"footer__",
+		} %}
+		{% include "../block/common/navbar/menu.twig" %} 
+		 
+		{% include "../block/common/modals/include.twig" %}
+		{% include "../block/common/script/script.twig" with {
+			view: "modal",
+			custom: "true" 
+		}%}
+	</body>
+</html> 
