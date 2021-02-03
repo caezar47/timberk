@@ -66,7 +66,26 @@
 			</p>
 			{% endif %}
 			{% if value.compare %}
-				<div class="{{prefix}}compare  dropdown">
+				<div class="catalog__item__cmp  show  compare__add__btn">
+					<span class="catalog__item__cmp__icon">
+						{% include "../svg-sprite/svg.twig" with {icon:'icon-compare'} %}
+					</span>
+					<div class="catalog__item__cmp__select">
+						<p class="{{prefix}}compare-title">Выберите модель</p>
+						<form class="{{prefix}}compare-form  cmp__form">
+							<div class="{{prefix}}compare-select">
+								<select name="" class="cmp__select">
+									
+								</select>
+							</div>
+							<button class="btn__item">Добавить</button>
+						</form>
+						<a class="{{prefix}}compare-link" href="">Список cравнения</a>
+						<div class="product__cmp__success align-items-center justify-content-center"></div>
+					</div>
+				</div>
+
+				{# <div class="{{prefix}}compare  dropdown">
 					<button type="button" class="{{prefix}}compare-btn  {{mod}} dropdown-toggle" data-toggle="dropdown">
 						{% include "../svg-sprite/svg.twig" with {icon:'icon-compare'} %}
 					</button>
@@ -84,7 +103,7 @@
 						</form>
           				<a class="{{prefix}}compare-link" href="">Список cравнения</a>
        				</div>
-				</div>
+				</div> #}
 			{% endif %}
 			<a href="{{value.link}}">
 				<picture class="{{prefix}}preview  {{mod}}">
