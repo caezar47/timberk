@@ -68,6 +68,7 @@
 						heading:        "Свяжитесь с нами", 
 
 
+						form_bg:     	[path.img,"/default/contacts-bg.svg"].join(""),
 						form_view:      "contacts",
 						form_mod:       "is--block-contacts",
 						form_list: [                    
@@ -160,13 +161,11 @@
 							},   
 						],
 					} %} 
-					
-
 					{% include "../block/page/index.twig" with {
 						view:"subs", 
 						container:"false", 
 						content_prefix:prefix.section, 
-						content_group:"is--default",  
+						content_group:"",  
 						content_mod:"is--block-subs",  
 						heading_group:"", 
 						heading_attr:'',

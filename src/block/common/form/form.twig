@@ -7,7 +7,7 @@
 	</form>
 {% endif %}
 {% if view == "contacts" %}
-	<form action="#" class="{{prefix}}panel  {{mod}}">
+	<form action="#" class="{{prefix}}panel  {{mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 		<div class="{{prefix}}grid  grid__row  {{mod}}">
 			{% include "elem-tpl.twig" with {
 				view: "tpl", 

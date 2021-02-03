@@ -14,8 +14,7 @@
 {% endif %}
 
 {% if view == "catalog" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
-		<div class="{{content_prefix}}container container  {{content_mod}}">
+	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
 			{% include "../common/page-header/elem.twig" with {
 				prefix:"page-header__", 
 				mod:heading_mod,
@@ -31,29 +30,26 @@
 					list: card_list
 				} %}
 			</div>
-		</div>
 	</section>
 {% endif %}
 
 {% if view == "new" %}
-	<section class="{{content_prefix}}content  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
-		<div class="{{content_prefix}}container container  {{content_mod}}">
-			{% include "../common/page-header/elem.twig" with {
-				prefix:"page-header__", 
-				mod:heading_mod,
-				attr:heading_attr, 
-				level:heading_level, 
-				heading:heading
+	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+		{% include "../common/page-header/elem.twig" with {
+			prefix:"page-header__", 
+			mod:heading_mod,
+			attr:heading_attr, 
+			level:heading_level, 
+			heading:heading
+		} %}
+		
+		<div data-slick-new>
+			{% include "../common/card/card.twig" with {
+				view: card_view,
+				prefix:"card__", 
+				mod:  card_mod, 
+				list: card_list
 			} %}
-			
-			<div data-slick-new>
-				{% include "../common/card/card.twig" with {
-					view: card_view,
-					prefix:"card__", 
-					mod:  card_mod, 
-					list: card_list
-				} %}
-			</div>
 		</div>
 	</section>
 {% endif %}

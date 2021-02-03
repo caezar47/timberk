@@ -23,15 +23,18 @@ $(document).ready(function(){
         minimumResultsForSearch: -1
     });
 
-    $(".form__line__input select option").each(function(){
+    $(".form__item select option").each(function(){
         val = $(this).text();
         val = val.replace(/[<>](.*)+/,"");
         $(this).text(val);
         console.log(val);
     });
 
-    $(".form__line__input select").select2({
-        dropdownCssClass: "catalog__sort__drop",
+    $("label.form__item").children().addClass('form__control');
+    $("label.form__item").children('textarea').addClass('is--textarea');
+
+    $(".form__item select").select2({
+        dropdownCssClass: "form__item",
         minimumResultsForSearch: -1
     });
 

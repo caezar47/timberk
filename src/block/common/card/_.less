@@ -877,14 +877,20 @@
 			margin-bottom: 15px;
 		}
 		&.is--contacts{
-			font-size: 1.778rem;
-			line-height: 120%;
 			max-width: 440px;
     		margin-bottom: 20px;
+			font-size: 1.4rem;
+			line-height: 120%;
+			.media-breakpoint-up(@lg; {
+				font-size: 1.778rem;
+			});	
 		}
 		&.is--shop{
-			font-size: 1.778rem;
-			line-height: 120%;			
+			line-height: 120%;	
+			font-size: 1.4rem;
+			.media-breakpoint-up(@lg; {
+				font-size: 1.778rem;
+			});		
 		}
 	}
 	&note{
@@ -996,6 +1002,10 @@
 			font-size: 1.944rem;
 			line-height: 120%;
 			margin-top: auto;
+			font-size: 1.6rem;
+			.media-breakpoint-up(@lg; {
+				font-size: 1.944rem;
+			});	
 			p{
 				margin-bottom: 10px;
 				&:last-child{

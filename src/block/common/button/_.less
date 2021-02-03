@@ -17,8 +17,11 @@
 		padding: 8px 15px;
 		border: 1px solid @btn_border;
 		cursor: pointer;
-		&:hover{	
+		&:focus,	
+		&:hover{
 			color: @btn_hover_color;		
+		}	
+		&:hover{	
 			background-color: @btn_hover_bg; 
 			border-color: @btn_hover_border; 
 		}
@@ -37,17 +40,23 @@
 		&.is--second{
 			background-color: @white;
 			color: @primary;
+			&:focus,	
+			&:hover{
+				color: @white;
+			}
 			&:hover{
 				background-color: @primary;
-				color: @white;
 			}
 		}
 		&.is--opacity{
 			background-color: fadeout(@primary, 100%);
 			border-color: fadeout(@primary, 100%);
 			color: @success2;
+			&:focus,	
 			&:hover{
 				color: fadeout(@white, 0%);
+			}
+			&:hover{
 				background-color: @primary;
 			}
 		}
@@ -55,8 +64,11 @@
 			background-color: @white;
 			border-color: @white;
 			color: @primary;
+			&:focus,	
 			&:hover{
 				color: @white;
+			}
+			&:hover{
 				border-color: @primary;
 				background-color: @primary;
 			}

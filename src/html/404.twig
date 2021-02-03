@@ -8,9 +8,10 @@
         {% include "../block/common/navbar/navbar.twig" with {
             prefix:"navbar__",
         } %} 
+        
         <main class="{{prefix.section}}wrap">     
-            <section class="section__content  is--page-404" >
-                <div class="section__container container  is--page-404">
+            <section class="section__content  is--page-default" >
+                <div class="section__container container  is--page-default">
                     {% include "../block/page/block.twig" with {
                         view:"404",
 
@@ -35,13 +36,10 @@
                         page_note:       "<p>Данная страница сайта www.timberk.ru на русском языке в данный момент находится в стадии заполнения информацией.</p><p>Приносим свои извинения за временные неудобства. Мы обязательно сообщим Вам о релизе этого раздела в новостях. Тем не менее, если у Вас есть вопросы, то Вы всегда можете обратиться за консультацией к нашим специалистам.</p>",  
                         page_img:     [path.img,"/default/404-img.png"].join(""),
                     } %} 
-                    
-
                     {% include "../block/page/index.twig" with {
                         view:"subs", 
-                        container:"false", 
                         content_prefix:prefix.section, 
-                        content_group:"is--404",  
+                        content_group:"",  
                         content_mod:"is--block-subs",  
                         heading_group:"", 
                         heading_attr:'',

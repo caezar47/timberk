@@ -15,7 +15,12 @@
 			&-contacts{
 				background-color: @info;
 				border-radius: @site_br*2;
-				padding: 22px 22px 45px;
+				padding: 21px 22px 45px;
+			    background-position-x: right;
+			    background-repeat: no-repeat;
+			    .media-breakpoint-down(@sm; {
+			    	background: @info!important;
+			    });
 			}
 		}
    		&.is--aside{
@@ -42,13 +47,22 @@
 				max-width: 630px;
 				margin: 0 auto;
 				grid-gap: 11px 19px;
+				grid-template-columns: 100%;
+				& > .is--textarea{
+					padding-bottom: 10px;
+				}
+				& > .is--checkbox{
+					padding-top: 25px;
+				}
 				& > .is--btn{
 					text-align: center;
+    					padding-top: 30px;
 					.btn__item{
 						padding-left: 50px;
 						padding-right: 50px;
 					}
 				}
+				
 				.media-breakpoint-up(@sm; {
 					grid-template-columns: repeat(2, 1fr);
 					& > .is--full{
@@ -59,15 +73,8 @@
 					    padding-top: 25px;
     					padding-bottom: 30px;
 					}
-					& > .is--textarea{
-    					padding-bottom: 10px;
-					}
-					& > .is--checkbox{
-    					padding-top: 25px;
-					}
 					& > .is--btn{
 						grid-column: span 2;
-    					padding-top: 30px;
 					}
 				});
 				
@@ -78,7 +85,6 @@
 		position: relative;
 		display: block;
 		margin: 0;
-
 		.select2-container{
 			width: 100%!important;
 			.heading6();
@@ -90,6 +96,7 @@
 			.select2-selection--single{
 				.select2-selection__rendered{
 					padding: 10px 50px 10px 16px;
+					line-height: 24px;
 				}
 				.select2-selection__arrow {
 					width: @input_height;
@@ -155,6 +162,24 @@
 					background-color: @primary;
 				}
 			}
+		}
+		.is--block-contacts &{
+			.select2-container{
+				.heading7();
+			}
+
+			.select2-container--default{
+				.select2-selection--single{
+					.select2-selection__rendered{
+						color: fadeout(@black, 40%);
+					}
+				}
+			}
+		}
+		&.is--error{
+			text-align: center;
+			.heading7();
+			color: red;
 		}
 	}
 	&collapse{
@@ -256,6 +281,15 @@
 				&::-webkit-input-placeholder {
 					color: @success;
 				}
+			}
+		}
+		.is--block-contacts &{
+			.heading7();
+			&::-moz-placeholder{
+				color: fadeout(@black, 40%);
+			}
+			&::-webkit-input-placeholder {
+				color: fadeout(@black, 40%);
 			}
 		}
 		&.is--modal-sale{
@@ -411,6 +445,9 @@
 		}
 		&-name{
 			margin-left: 12px;
+			a{
+				text-decoration: underline;
+			}
 		}
 	}
 	&range{
