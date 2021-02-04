@@ -4,9 +4,6 @@ window.onerror = function(error, url, lineNumber, column, errorObj) {
 	console.log('Error FECSS: ' + url + ':' + lineNumber + ':' + column + ': ' + JSON.stringify(error) + '\n' + JSON.stringify(errorObj));
 	return;
 }
-
-[[azbntple tpl="/src/common/bootstrap/js/bootstrap.js" ]]
-//[[azbntple tpl="/src/common/fancybox3/js/fancybox.js" ]]
 [[azbntple tpl="/src/_/concat.plugin.js" ]]
 
 
@@ -15,8 +12,7 @@ $(function() {
 	/*
 	Создание триггеров на элементы, в основном, на body
 	*/
-	[[azbntple tpl="/src/_/concat.body.on.js" ]]
-	
+	[[azbntple tpl="/src/_/concat.body.on.js" ]]	
 	
 	/*
 	Событие смены класса body

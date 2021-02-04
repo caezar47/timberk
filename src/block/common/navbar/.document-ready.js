@@ -1,4 +1,5 @@
-var catalog_btn = $("[data-btn-catalog]");
+
+/*var catalog_btn = $("[data-btn-catalog]");
 var menu_btn 	= $("[data-btn-humb]");
 var humb = $("[data-hamburger]");
 //var resize = $("[data-resize]");
@@ -17,7 +18,6 @@ $(document.body).on('click', function(event) {
 		$(collapse).removeClass("is--open");
 	}		
 });	
-/*
 $(".header__block .menucatalog__btn").click(function(e){
     e.preventDefault();
     $(".sitemenu__block").removeClass("show");

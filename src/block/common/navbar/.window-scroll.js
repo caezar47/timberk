@@ -1,4 +1,4 @@
-var topPos = $(document).scrollTop();		
+/*var topPos = $(document).scrollTop();		
 var snb = $('.navbar__block.is--scroll');	
 
 if(snb.hasClass('is--bg')) {
@@ -9,7 +9,7 @@ if(snb.hasClass('is--bg')) {
 	if(topPos > 200) {
 		snb.addClass('is--bg');
 	}
-}/*	
+}	
 if(snb.hasClass('fixed')) {
 	if(topPos <= 400) {
 		snb.removeClass('fixed');

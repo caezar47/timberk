@@ -11,10 +11,6 @@ var catalog_m 		= $('[data-slick-modal]');
 var catalog_m_nav 	= $('[data-slick-modal-nav]');
 var catalog_note 	= $('[data-slick-catalog-note]');
 
-
-var team_full  	= $('[data-slick-team-full]');
-var adv 		= $('[data-slick-adv]');
-
 index.slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -103,13 +99,6 @@ catalog.slick({
 	    }
 	]*/
 });
-
-// $("[data-product-color] form label").click(function(e){
-//     var Val = $(this).find("input").val();
-//     console.log(Val);
-//     catalog.slickGoTo(Val);
-//     e.stopPropagation();
-// });
 catalog_nav.slick({
 	slidesToShow: 3,
 	slidesToScroll: 1,
@@ -199,28 +188,3 @@ articles_lg.slick({
 	    }
 	]
 });
-
-
-adv.slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dots: false,
-	fade: true, 	
-	infinite: false,
-	prevArrow: prevArrow,
-	nextArrow: nextArrow,
-});
-team_full.slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	dots: false,
-	fade: true, 	
-	infinite: false,
-	prevArrow: prevArrow,
-	nextArrow: nextArrow,
-	autoplay: false,
-});
-if($(document).width() > 767) {
-	adv.slick('unslick');
-	team_full.slick('unslick');
-}
