@@ -1,5 +1,10 @@
 {% if view == "articles" %}
+	{% if content_block == "true" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+	{% else %}
 	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	{% endif %}
 		<div class="{{content_prefix}}inner  {{content_mod}}">
 			{% include "../common/page-header/elem.twig" with {
 				prefix:"page-header__", 
@@ -17,7 +22,12 @@
 				list: tabs_list,				
 			} %}
 		</div>
-</section>
+	{% if content_block == "true" %}
+		</div>
+	</section>
+	{% else %}
+	</section>
+	{% endif %}
 {% endif %}
 {% if view == "seo" %}
 	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>

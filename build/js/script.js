@@ -491,6 +491,7 @@ $(document).ready(function(){
 
     $(".print__window__btn").click(function(e){
         e.preventDefault();
+        //$('[data-slick-catalog]').slick('unslick');
         window.print();
         return false;
     });

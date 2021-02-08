@@ -14,7 +14,12 @@
 {% endif %}
 
 {% if view == "catalog" %}
+	{% if content_block == "true" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+	{% else %}
 	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	{% endif %}
 			{% include "../common/page-header/elem.twig" with {
 				prefix:"page-header__", 
 				mod:heading_mod,
@@ -29,12 +34,22 @@
 					mod:  card_mod, 
 					list: card_list
 				} %}
-			</div>
+			</div>	
+	{% if content_block == "true" %}
+		</div>
 	</section>
+	{% else %}
+	</section>
+	{% endif %}
 {% endif %}
 
 {% if view == "new" %}
+	{% if content_block == "true" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+	{% else %}
 	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	{% endif %}
 		{% include "../common/page-header/elem.twig" with {
 			prefix:"page-header__", 
 			mod:heading_mod,
@@ -51,11 +66,21 @@
 				list: card_list
 			} %}
 		</div>
+	{% if content_block == "true" %}
+		</div>
 	</section>
+	{% else %}
+	</section>
+	{% endif %}
 {% endif %}
 
 {% if view == "subs" %}
-	<section class="{{content_prefix}}section  {{content_mod}}  {{content_group}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	{% if content_block == "true" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+	{% else %}
+	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	{% endif %}
 		{% include "../common/page-header/elem.twig" with {
 			prefix:"page-header__", 
 			mod:heading_mod,
@@ -76,7 +101,12 @@
 				list: card_list
 			} %}
 		</div>
+	{% if content_block == "true" %}
+		</div>
 	</section>
+	{% else %}
+	</section>
+	{% endif %}
 {% endif %}
 
 {% if view == "articles" %}
