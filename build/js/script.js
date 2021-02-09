@@ -17,6 +17,9 @@ var menu_close      = $(".sitemenu__top__close");
 var filter_btn      = $("[data-filter-btn]");
 var filter_block    = $("[data-filter-block]");
 var filter_close    = $("[data-filter-close]");
+var search_btn      = $("[data-btn-search]");
+var search_block    = $("[data-search-block]");
+var search_close    = $("[data-search-close]");
 
 $(document).ready(function(){
     //timberk v.2
@@ -44,6 +47,13 @@ $(document).ready(function(){
     });
     menu_close.on('click',function(e) {
         menu_block.removeClass("show");
+    });
+    search_btn.click(function(){
+        search_block.addClass("show");
+    });
+
+    search_close.click(function(){
+        search_block.removeClass("show");
     });
 
     $('[data-magnify-src]').magnify();
@@ -413,6 +423,14 @@ $(document).ready(function(){
             dropdownCssClass: "catalog__sort__drop",
             minimumResultsForSearch: -1
         });
+
+        $(".search__btn").click(function(){
+            $(".header__search__block").addClass("show");
+        });
+
+        $(".header__search__close").click(function(){
+            $(".header__search__block").removeClass("show");
+        });
     */
 
     $(".buy__list__item__content a").click(function(){
@@ -522,13 +540,6 @@ $(document).ready(function(){
         $(this).parents("form.SortForm").submit();
     });
 
-    $(".search__btn").click(function(){
-        $(".header__search__block").addClass("show");
-    });
-
-    $(".header__search__close").click(function(){
-        $(".header__search__block").removeClass("show");
-    });
 
     $(".sectionmail").click(function(e){
         $(".catalog__filtermail").toggleClass("show");
@@ -906,6 +917,7 @@ var CompareCore = {
             var ID = $(this).find(".cmp__select").val();
             _this.AddToList(ID,"ADD_TO_COMPARE_LIST",$(this).find(".cmp__select"));
             $(".product__cmp__success").addClass("d-flex");
+            $(this).closest('.catalog__item__cmp').find('.catalog__item__cmp__icon').addClass("is--incmp");
             setTimeout(function(){
                 $(".product__cmp__success").removeClass("d-flex");
                 $(".catalog__item__cmp, .product__cmp__select").removeClass("show");

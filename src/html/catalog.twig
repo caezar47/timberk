@@ -10,7 +10,15 @@
         } %} 
         <main class="{{prefix.section}}wrap">     
             <section class="section__content  is--page-catalog" >
-                <div class="section__container container  is--page-catalog">        
+                <div class="section__container container  is--page-catalog">
+                    {% include "../block/page/block.twig" with {
+                        view:           "banner",
+
+                        content_prefix: prefix.section, 
+                        content_mod:    'is--block-banner', 
+                        img:            [path.img,"/default/banner-catalog-item1.jpg"].join(""),
+                        name:            'Чистый воздух моментально для вас',
+                    } %}         
                     {% include "../block/page/catalog.twig" with {
                         view:"catalog",
 

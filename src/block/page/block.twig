@@ -1,3 +1,24 @@
+{% if view == "banner" %}
+	{% if content_block == "true" %}
+	<section class="{{content_prefix}}content  {{content_mod}}" >
+		<div class="{{content_prefix}}container container  {{content_mod}}">
+	{% else %}
+	<section class="{{content_prefix}}section  {{content_mod}}" {% if bg %}style="background-image: url({{bg}})"{% endif %}>
+	{% endif %}
+		{% include "../common/card/card.twig" with {
+            view: 	view,
+			prefix:	"card__", 
+			mod:  	content_mod, 
+            img: 	img, 
+            name: 	name, 
+        } %}
+	{% if content_block == "true" %}
+		</div>
+	</section>
+	{% else %}
+	</section>
+	{% endif %}
+{% endif %}
 {% if view == "articles" %}
 	{% if content_block == "true" %}
 	<section class="{{content_prefix}}content  {{content_mod}}" >

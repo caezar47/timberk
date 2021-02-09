@@ -58,7 +58,7 @@
 					{% if value.adv %}
 						<div class="link__group  {{value.mod}}">
 						{% for adv in value.adv %}
-							<button type="button" class="link__item  {{value.mod}}  {{adv.id}}" data-toggle="popover" data-placement="top" data-container=".link__item.{{adv.id}}" data-html="true" data-content='{{adv.note}}'>
+							<button type="button" class="link__item  {{value.mod}}  {{adv.id}}" data-trigger="hover" data-toggle="popover" data-placement="top" data-container=".link__item.{{adv.id}}" data-html="true" data-content='{{adv.note}}'>
 								{% include "../svg-sprite/svg.twig" with {icon:adv.icon} %}
 							</button>	
 						{% endfor %}

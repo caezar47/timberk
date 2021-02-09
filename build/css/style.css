@@ -3197,6 +3197,7 @@ h1 + .content__search{
     height: 100%;
     top: 0;
     left: 0;
+    font-family: OpenSans;
     /* background: rgba(55,66,80,.8); */
 	background: rgba(14, 18, 25, 0.85);
     opacity: 0;
@@ -3251,7 +3252,8 @@ h1 + .content__search{
 .catalogmenu__btn{
     height: 52px;
     line-height: 52px;
-    font-size: 1.125em;
+    /*font-size: 1.125em;*/
+    font-size: 1rem;
     font-family: 'RoadRadio';
     font-weight: 300;
     text-transform: uppercase;
@@ -3260,7 +3262,8 @@ h1 + .content__search{
 }
 .catalogmenu__btn .icon-menucatalog_icon{
     margin: 0 20px 0 0;
-    font-size: 1.125rem;
+    /*font-size: 1.125rem;*/
+    font-size: 1rem;
     vertical-align: middle;
 }
 .catalogmenu__top{
@@ -3272,7 +3275,8 @@ h1 + .content__search{
 }
 .catalogmenu__top a span{
     color: #fff;
-    font-size: 1.25em;
+    /*font-size: 1.25em;*/
+    font-size: 1.11rem;
     position: relative;
 }
 .catalogmenu__list ul{
@@ -3285,7 +3289,8 @@ h1 + .content__search{
     position: relative;
 }
 .catalogmenu__list ul li a{
-    font-size: 1.125em;
+    /*font-size: 1.125em;*/
+    font-size: 1rem;
     padding: 17px 84px 17px 0;
     display: block;
     font-weight: 300;
@@ -3363,7 +3368,8 @@ h1 + .content__search{
 }
 .sitemenu__top a span{
     color: #fff;
-    font-size: 1.25em;
+    /*font-size: 1.25em;*/
+    font-size: 1.11rem;
 }
 .sitemenu__top .select2-container--default.select2-container--open{
     margin: 0 0 0 -4px;
@@ -3390,7 +3396,8 @@ h1 + .content__search{
 .sitemenu__top .select2-container .select2-selection--single .select2-selection__rendered{
     padding-left: 0;
     padding-right: 25px;
-    font-size: 1em;
+    /*font-size: 1em;*/
+    font-size: 0.899rem;
 }
 .sitemenu__top .select2-container.select2-container--open .select2-selection--single .select2-selection__rendered{
     padding-left: 4px;
@@ -3445,7 +3452,8 @@ h1 + .content__search{
     color: #fff;
 }
 .sitemenu__inner ul li a{
-    font-size: 1.125em;
+    /*font-size: 1.125em;*/
+    font-size: 1rem;
     padding: 17px 30px 17px 30px;
     display: block;
     font-weight: 300;
@@ -3869,7 +3877,8 @@ h1 + .content__search{
     display: block;
     width: 100%;
     background: transparent;
-    font-size: 2em;
+    /*font-size: 2em;*/
+    font-size: 1.778rem;
     line-height: 40px;
     border: none;
     box-shadow: none;
@@ -3902,11 +3911,17 @@ h1 + .content__search{
 }
 .header__search__close{
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 20px;
+    right: 20px;
     color: #fff;
-    font-size: 1em;
+    /*font-size: 1em;*/
+    font-size: 0.899rem;
     cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Header Search Form*/

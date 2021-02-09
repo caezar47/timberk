@@ -1,11 +1,11 @@
 {% if view == "catalog" %}
 	<section class="{{content_prefix}}section  {{content_mod}}" >
-		{% include "../common/card/card.twig" with {
+		{# {% include "../common/card/card.twig" with {
             view: 	banner_view,
 			prefix:	"card__", 
 			mod:  	banner_mod, 
             img: 	banner_img, 
-        } %}
+        } %} #}
         {% include "../common/breadcrumb/tpl.twig" with {
 			prefix:prefix.breadcrumb, 
 			mod:bread_mod, 
@@ -51,12 +51,12 @@
 {% endif %}
 {% if view == "category" %}
 	<section class="{{content_prefix}}section  {{content_group}}" >
-		{% include "../common/card/card.twig" with {
+		{# {% include "../common/card/card.twig" with {
             view: 	banner_view,
 			prefix:	"card__", 
 			mod:  	banner_mod, 
             img: 	banner_img, 
-        } %}
+        } %} #}
         {% include "../common/breadcrumb/tpl.twig" with {
 			prefix:prefix.breadcrumb, 
 			mod:bread_mod, 
@@ -215,7 +215,7 @@
 			<p class="{{card_prefix}}heading  {{card_mod}}">{{card_heading}}</p>
 			<div class="{{card_prefix}}btn  {{card_mod}}  is--soc">
 				{% for s in soc %}
-					<button type="button" class="{{soc_prefix}}item  {{soc_mod}}  {{s.id}}" data-toggle="popover" data-placement="bottom" data-container=".icon__item.{{s.id}}" data-content='{{s.note}}' data-trigger="hover">
+					<button type="button" class="{{soc_prefix}}item  {{soc_mod}}  {{s.id}}"  data-toggle="popover" data-placement="bottom" data-container=".icon__item.{{s.id}}" data-content='{{s.note}}' data-trigger="hover">
 						{% include "../common/svg-sprite/svg.twig" with {icon:s.icon} %}
 					</button>	
 				{% endfor %}						

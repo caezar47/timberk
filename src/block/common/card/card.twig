@@ -106,8 +106,9 @@
 				</div> #}
 			{% endif %}
 			<a href="{{value.link}}">
-				<picture class="{{prefix}}preview  {{mod}}">
-					<img src="{{value.img}}" class="img-fluid" alt="">
+				<picture class="{{prefix}}preview  {{mod}}  is--hover-photo">
+					<img src="{{value.img}}" class="img-fluid  is--base" alt="">
+					<img src="http://www.dev.timberk.ru/upload/resize_cache/iblock/397/700_700_0/39765947e02b5ce3520f75c2b995cbb2.png" class="img-fluid  is--hover" alt="">
 				</picture>
 			</a>
 			<div class="{{prefix}}group  {{mod}}">
@@ -203,6 +204,15 @@
 	{% endfor %}
 {% endif %}
 {% if view == "banner" %}
+	<div class="{{prefix}}item  {{mod}}">
+		<div class="{{prefix}}group  {{mod}}">
+			<div class="{{prefix}}preview  {{mod}}">{% include "../svg-sprite/svg.twig" with {icon:'banner-logo'} %}</div>
+			<p class="{{prefix}}heading  {{mod}}">{{name}}</p>
+		</div>
+		<div class="{{prefix}}bg  {{mod}}"><img src="{{img}}" class="img-fluid" alt="{{name}}"></div>
+	</div>
+{% endif %}
+{% if view == "banner_old" %}
 	<picture class="{{prefix}}item  {{mod}}">
 		<img src="{{img}}" class="img-fluid" alt="">
 	</picture>
