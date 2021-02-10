@@ -43,8 +43,6 @@
 			&:focus,	
 			&:hover{
 				color: @white;
-			}
-			&:hover{
 				background-color: @primary;
 			}
 		}
@@ -119,9 +117,11 @@
 			& > *{
 				margin: 5px 15px;
 			}
+			/*
 			.media-breakpoint-up(@xl; {
 				padding-top: 54px;
 			});
+			*/
 		}
 	}		
 	&item{		
@@ -281,5 +281,15 @@
 			width: 100%;
 			height: 100%;
 		}
+		&.is--catalog-item{
+			&.is--soc4{
+				position: relative;
+				z-index: 1004;
+			}
+			&.is--soc5{
+				position: relative;
+				z-index: 1006;
+			}
+		} 
 	}
 }

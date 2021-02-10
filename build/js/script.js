@@ -602,9 +602,9 @@ $(document).ready(function(){
         $("#form_dropdown_new_field_75265").find("option[value="+theme+"]").attr("selected",true).trigger('change');
     }
 
-    $(".product__characteristic").mCustomScrollbar({
+    /*$(".product__characteristic").mCustomScrollbar({
         axis: "x"
-    });
+    });*/
 
     $(".catalogmenu__list > ul > li[data-image]").hover(function(){
         var image = $(this).attr("data-image");

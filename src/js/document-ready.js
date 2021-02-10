@@ -1,9 +1,9 @@
 'use strict';
-
+/*
 window.onerror = function(error, url, lineNumber, column, errorObj) {
 	console.log('Error FECSS: ' + url + ':' + lineNumber + ':' + column + ': ' + JSON.stringify(error) + '\n' + JSON.stringify(errorObj));
 	return;
-}
+}*/
 [[azbntple tpl="/src/_/concat.plugin.js" ]]
 
 

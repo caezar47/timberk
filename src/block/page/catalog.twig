@@ -247,10 +247,11 @@
 				{% include "../common/button/btn.twig" with {
 					view:'tpl',
 					tag:'a',
-					href:'',
+					link:'#catalog-about',
+					attr:'data-scrollto-item data-scrollto-diff="-30"',
 					prefix:'btn__',
 					mod:'is--lg  is--second',
-					name: 'Узнать подробнее',
+					name: 'Узнать подробнее', 
 				} %}
 			</div>
 			{% if card_confirm %}
@@ -264,7 +265,7 @@
 	</div>
 {% endif %}
 {% if view == "card-about" %}
-	<div class="{{content_prefix}}inner  {{content_mod}}">
+	<div class="{{content_prefix}}inner  {{content_mod}}" id="catalog-about">
 		{% include "../common/page-header/elem.twig" with {
 			prefix:"page-header__", 
 			mod:heading_mod,
