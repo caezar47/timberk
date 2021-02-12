@@ -303,11 +303,12 @@
 				{% for n in note %}
 				<div class="is--full  card__item  {{note_mod}}">
 					<h3 class="card__heading  {{note_mod}}">{{n.name}}</h3>
-					<div class="row  card__row  {{note_mod}}">
+					<div class="card__note  {{note_mod}}">{{n.note}}</div>
+					{# <div class="row  card__row  {{note_mod}}">
 						{% for cols in n.cols %}
 						<div class="col-sm-6  card__note  {{note_mod}}">{{cols.name}}</div>
 						{% endfor %}
-					</div>
+					</div> #}
 				</div>
 				{% endfor %}
 			{% endif %}

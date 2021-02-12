@@ -308,7 +308,7 @@
 			}
 		}
 	}
-	&row{
+	/*&row{
 		&.is--catalog{			
 			&-item-desc{
 				.media-breakpoint-up(@xl; {
@@ -321,7 +321,7 @@
 				});
 			}
 		}
-	}
+	}*/
 	&wrap{
 	}
 	&label{		
@@ -970,6 +970,13 @@
 				color: @success2;
 				font-size: 0.833rem;
 				line-height: 147%;
+				.media-breakpoint-up(@md; {    
+					column-count: 2;
+					column-gap: 30px;
+				});
+				.media-breakpoint-up(@xl; {    
+					column-gap: 52px;
+				});
 				p, div{
 					margin-bottom: 22px;
 					&:last-child{

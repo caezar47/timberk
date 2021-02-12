@@ -3203,7 +3203,6 @@ h1 + .content__search{
     height: 100%;
     top: 0;
     left: 0;
-    font-family: OpenSans;
     /* background: rgba(55,66,80,.8); */
 	background: rgba(14, 18, 25, 0.85);
     opacity: 0;
