@@ -173,6 +173,9 @@
 			}
 			&-nav{
     			margin-bottom: 22px;
+    			&:last-child{
+    				margin-bottom: 0;
+    			}
 			}
 			&-item-slider{
 				position: relative;
@@ -275,6 +278,10 @@
 		&.is--aside-link{
 			background-color: @info;
 			padding-bottom: 15px;
+			margin-bottom: 40px;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 		&.is--contacts{
 			display: flex;
@@ -1055,6 +1062,16 @@
     					font-weight: 700;
     					color: @black;
 						margin-left: 0;
+						&.is--active{
+							color: @primary;
+						}
+					}
+					.card__nav.is--default &{
+						display: none;
+						&.is--title,
+						&.is--active{
+							display: block;
+						}
 					}
 				}				
 				&-cat{					

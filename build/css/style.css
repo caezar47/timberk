@@ -5,7 +5,7 @@ button,
 textarea{
     outline: none!important;
     font-size: 1em;
-    font-family: OpenSans;
+    /*font-family: OpenSans;*/
 }
 /*input:focus,
 textarea:focus{
@@ -37,7 +37,7 @@ html{
 }
 body{
     position: relative;
-    font-family: OpenSans;
+    /*font-family: OpenSans;*/
     overflow-x: hidden;
     min-width: 320px;
 }
@@ -81,7 +81,7 @@ body.show__filter{
 }
 .header__catalogmenu{
     width: 35%;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     text-transform: uppercase;
     color: #374250;
@@ -113,7 +113,7 @@ body.show__filter{
 .header__menu{
     width: 35%;
     text-align: right;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     text-transform: uppercase;
     color: #374250;
@@ -167,12 +167,12 @@ body.show__filter{
     font-size: 3em;
     line-height: 1;
     text-transform: uppercase;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
 	padding-bottom: 10px;
 }
 .banner__text{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.25em;
     color: #fff;
@@ -230,7 +230,7 @@ body.show__filter{
     line-height: 1;
     font-weight: 700;
     font-size: 6.25em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     text-transform: uppercase;
 }
 .mainbanner__block:hover .mainbanner__h1 span{
@@ -274,7 +274,7 @@ body.show__filter{
     line-height: 1;
     font-weight: 300;
     font-size: 2.5em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     text-transform: uppercase;
 }
 .mainbanner__text{
@@ -283,7 +283,7 @@ body.show__filter{
     line-height: 1.5;
     font-weight: 300;
     font-size: 1.25em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
 }
 .mainbanner__button__place{
     margin: 10px 0 0;
@@ -345,7 +345,7 @@ body.show__filter{
     text-align: center;
     color: #fff;
     font-size: 3.125em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 500;
     line-height: 1.3;
 
@@ -355,7 +355,7 @@ body.show__filter{
     text-align: center;
     color: #fff;
     font-size: 3.125em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 100;
     line-height: 1.3;
 }
@@ -368,7 +368,7 @@ body.show__filter{
     width: 100%;
 }
 .main__slider .owl-nav > div{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 4.5em;
     color: #fff;
@@ -450,7 +450,7 @@ body.show__filter{
 .main__product__slider__content .name{
     color: #00a79e;
     font-size: 2.5em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     line-height: 1;
     font-weight: 300;
     text-transform: uppercase;
@@ -458,7 +458,7 @@ body.show__filter{
 .main__product__slider__content .preview{
     font-size: 1.25em;
     color: #2f4050;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     text-transform: uppercase;
     margin: 10px 0 22px ;
@@ -487,7 +487,7 @@ body.show__filter{
     padding: 0 30px;
     display: inline-block;
     font-size: .9em;
-    font-family: 'HelveticaNeueCyr';
+    /*/*font-family: 'HelveticaNeueCyr';*/*/
     font-weight: 300;
     transition-duration: .3s;
     -webkit-transition-duration: .3s;
@@ -543,7 +543,7 @@ body.show__filter{
     box-sizing: border-box;
 }
 .shortnews__right .name{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     color: #fff;
     font-size: 2.5em;
@@ -553,7 +553,7 @@ body.show__filter{
 .shortnews__right .preview{
     font-size: 1.25em;
     color: #fff;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
 }
 .shortnews__right .text{
@@ -586,7 +586,7 @@ body.show__filter{
     font-size: 1.125em;
     text-transform: uppercase;
     color: #2fb7b0;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
 }
 .newspreviewlist__item{
@@ -663,7 +663,7 @@ body.show__filter{
     text-transform: uppercase;
     font-size: 1.875em;
     color: #fff;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 500;
     margin: 10px 0 0;
     line-height: 1;
@@ -691,7 +691,7 @@ body.show__filter{
 
 h1{
     color: #374250;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 1.5em;
     letter-spacing: 1px;
@@ -754,7 +754,7 @@ h1 + .content__search{
 }
 .content__main__btns a b{
     display: block;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 1.125em;
     letter-spacing: 1px;
@@ -859,7 +859,7 @@ h1 + .content__search{
 .eshop__main__desc{
     padding: 0 14px;
     border-left: 1px solid #00a69d;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: .9em;
     color: #3c4653;
@@ -983,7 +983,7 @@ h1 + .content__search{
 }
 .contacts__form__heading{
     color: #00a69d;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.5em;
 }
@@ -997,7 +997,7 @@ h1 + .content__search{
     line-height: 60px;
     color: #fff;
     font-size: 1.125em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     background: #374250;
     border: none;
@@ -1076,7 +1076,7 @@ h1 + .content__search{
 }
 .form__line__input input{
     font-size: .9em;
-    font-family: 'HelveticaNeueCyr';
+    /*font-family: 'HelveticaNeueCyr';*/
     font-weight: 300;
     border: 1px solid #374250;
     padding: 6px 11px;
@@ -1088,7 +1088,7 @@ h1 + .content__search{
     width: 100%;
     resize: none;
     font-size: .9em;
-    font-family: 'HelveticaNeueCyr';
+    /*font-family: 'HelveticaNeueCyr';*/
     height: 9em;
     display: block;
 }
@@ -1133,33 +1133,13 @@ h1 + .content__search{
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     display: block;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 30px;
 }
 .form__line__input .select2-container--default .select2-selection--single .select2-selection__arrow{
     height: 33px;
 }
-
-/*.catalog__sort__drop{
-
-}
-.select2-container--default .catalog__sort__drop.select2-dropdown{
-    border-radius: 0;
-    border: 1px solid #374250;
-    border-top: none;
-}
-.select2-container--default .catalog__sort__drop .select2-results__option{
-    font-size: .9em;
-    color: #36414f;
-    padding: 5px 8px;
-    box-sizing: border-box;
-}
-.select2-container--default .catalog__sort__drop .select2-results__option--highlighted[aria-selected]{
-    background: #36414f!important;
-    color: #fff!important;
-
-}*/
 
 .contacts__from__agree{
     font-size: .9em;
@@ -1287,7 +1267,7 @@ h1 + .content__search{
     margin: 0 0 45px;
 }
 .catalog__heading{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.5em;
     color: #374250;
@@ -1354,7 +1334,7 @@ h1 + .content__search{
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     display: block;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 30px;
 }
@@ -1590,7 +1570,7 @@ h1 + .content__search{
 }
 .catalog__filter__btn button{
     cursor: pointer;
-    font-family: 'HelveticaNeueCyr';
+    /*font-family: 'HelveticaNeueCyr';*/
     font-weight: 300;
     display: block;
     border-radius: 0;
@@ -1674,7 +1654,7 @@ h1 + .content__search{
 .catalog__filter__mobile{
     display: none;
 }
-
+/*
 .catalog__search{
 
     box-sizing: border-box;
@@ -1700,12 +1680,11 @@ h1 + .content__search{
     font-size: .9em;
     width: calc(100% - 30px);
     outline: none;
-
 }
 .catalog__search input:focus{
     border: none!important;
     box-shadow: none!important;
-}
+}*/
 .catalog__search + .catalog__list{
     margin: 35px 0 0;
 }
@@ -1737,7 +1716,7 @@ h1 + .content__search{
     background-position: center right;
     background-repeat: no-repeat;
     background-size: contain;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     color: #fff;
     padding: 22px 15px 14px 30px;
@@ -1826,7 +1805,7 @@ h1 + .content__search{
     background: #00a79e;
     text-align: center;
     line-height: 16px;
-    font-family: OpenSans;
+    /*font-family: OpenSans;*/
 }
 
 .product__cmp__select{
@@ -2060,7 +2039,7 @@ h1 + .content__search{
     font-weight: 500;
     color: #2fb7b0;
     font-size: 1.5em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     text-transform: uppercase;
 }
 .popular__products__list{
@@ -2100,7 +2079,7 @@ h1 + .content__search{
     font-size: 1.125em;
     color: #2f4050;
     font-weight: 300;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     text-transform: uppercase;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -2110,7 +2089,7 @@ h1 + .content__search{
     font-size: .9em;
     color: #2f4050;
 
-    font-family: OpenSans;
+    /*font-family: OpenSans;*/
 }
 .popular__products__list .owl-nav{
     position: absolute;
@@ -2267,7 +2246,7 @@ h1 + .content__search{
 }
 .product__topinfo__heading h1{
     display: block;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     line-height: 1;
     font-size: 1em;
@@ -2443,7 +2422,7 @@ h1 + .content__search{
     display: block!important;
 }
 .product__slider .owl-nav > div{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 4.5em;
     color: #374250;
@@ -2466,7 +2445,7 @@ h1 + .content__search{
     line-height: 38px;
     display: inline-block;
     padding: 0 40px 0 30px;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     color: #fff;
 }
@@ -2540,7 +2519,7 @@ h1 + .content__search{
     margin: 0 10px 0 0;
 }
 .product__info__props .price{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 1.125em;
 }
@@ -2561,7 +2540,7 @@ h1 + .content__search{
     height: 54px;
     text-align: center;
     display: inline-block;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     color: #374250;
     vertical-align: middle;
@@ -2692,7 +2671,7 @@ h1 + .content__search{
     max-height: 90px;
 }
 .productdetail__techicon .label{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: .9rem;
     text-transform: uppercase;
@@ -2977,9 +2956,9 @@ h1 + .content__search{
 .content__left__menu__list a:hover{
     color: rgba(55,66,80,1)!important;
 }
-.text__block{
+/*.text__block{
     padding-right: 100px;
-}
+}*/
 .text__block time{
     font-size: .75em;
     margin: 0 0 10px;
@@ -2988,6 +2967,7 @@ h1 + .content__search{
 .text__block img{
     max-width: 100%!important;
     height: auto!important;
+    margin: 10px 0;
 }
 .text__block > p{
     color: #2e4150;
@@ -3001,14 +2981,15 @@ h1 + .content__search{
 }
 .text__block h1{
     color: #00a69d;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.5em;
+    margin-bottom: 20px;
 }
 .text__block h2{
     color: #2e4150;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.125em;
     margin: 30px 0 30px;
 }
 .text__block h3{
@@ -3030,7 +3011,7 @@ h1 + .content__search{
     padding-bottom: 15px;
 }
 .text__block > blockquote{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.25em;
     color: #01a89e;
@@ -3114,7 +3095,7 @@ h1 + .content__search{
     -webkit-transform: translate(-50%,-50%);
 }
 .plate__text__col h4{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.25em;
     text-align: justify;
@@ -3150,7 +3131,7 @@ h1 + .content__search{
     font-size: .9em;
 }
 .col__text h4{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     font-size: 1.25em;
     color: #01a89e;
@@ -3179,7 +3160,7 @@ h1 + .content__search{
     width: 100%;
 }
 .text__block__gallery .owl-nav > div{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 4.5em;
     color: #fff;
@@ -3407,7 +3388,7 @@ h1 + .content__search{
 }
 .sitemenu__top .select2-container--default .select2-selection--single .select2-selection__rendered{
     color: #fff;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3441,7 +3422,7 @@ h1 + .content__search{
 }
 .select2-container--default .sitemenu__lang__drop .select2-results__option{
     font-size: .9em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 500;
     color: #36414f;
     letter-spacing: 1px;
@@ -3714,7 +3695,7 @@ h1 + .content__search{
     font-size: 1em;
     text-align: center;
     font-weight: 500;
-    font-family: OpenSans;
+    /*font-family: OpenSans;*/
 }
 .compare__row__item .preview{
     color: #374250;
@@ -3722,7 +3703,7 @@ h1 + .content__search{
     font-size: .9em;
     text-align: center;
     font-weight: 300;
-    font-family: OpenSans;
+    /*font-family: OpenSans;*/
 }
 .compare__row__item img{
     width: 100%;
@@ -3763,7 +3744,7 @@ h1 + .content__search{
     padding: 0 30px;
     display: inline-block;
     font-size: .9em;
-    font-family: 'HelveticaNeueCyr';
+    /*font-family: 'HelveticaNeueCyr';*/
     font-weight: 300;
     transition-duration: .3s;
     -webkit-transition-duration: .3s;
@@ -3836,7 +3817,7 @@ h1 + .content__search{
 }
 .dropdowncontent__item .label span:before{
     content:">";
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 300;
     display: block;
     width: 100%;
@@ -3960,7 +3941,7 @@ h1 + .content__search{
     font-weight: 500;
     color: #2fb7b0;
     font-size: 1.5em;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     text-transform: uppercase;
 }
 .video__item__content{
@@ -4135,7 +4116,7 @@ img.footer__logo{
     height: 55px;
     opacity: 0;
     visibility: hidden;
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 100;
     cursor: pointer;
 }
@@ -4427,7 +4408,7 @@ span.icon-360_view {
     display: block!important;
 }
 .view_360_slider .owl-nav > div{
-    font-family: 'RoadRadio';
+    /*font-family: 'RoadRadio';*/
     font-weight: 700;
     font-size: 4.5em;
     color: #374250;
