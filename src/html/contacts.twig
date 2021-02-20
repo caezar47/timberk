@@ -12,6 +12,14 @@
 			<section class="section__content  is--page-default" >
 				<div class="section__container container  is--page-default">
 					{% include "../block/page/block.twig" with {
+                        view:           "banner",
+
+                        content_prefix: prefix.section, 
+                        content_mod:    'is--block-banner', 
+                        img:            [path.img,"/default/banner-catalog-item1.jpg"].join(""),
+                        name:            'Чистый воздух моментально для вас',
+                    } %} 
+					{% include "../block/page/block.twig" with {
 						view:"contacts",
 
 						content_prefix: prefix.section, 
@@ -49,9 +57,10 @@
 						shop_mod:   'is--shop',
 						shop_list: [
 							{
-								name:"К покупкам", 
-								link:'shop.timberk.ru',  
-								img: [path.img,"/default/contacts-shop.svg"].join(""),
+								name:"Сервисные центры", 
+								link:'#',  
+								img: [path.img,"/default/contacts-services.svg"].join(""),
+								btn: 'Полный список',
 							},
 						],   
 					} %} 

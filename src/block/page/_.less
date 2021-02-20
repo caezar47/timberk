@@ -24,6 +24,9 @@
 			&-index{
 				&-slider{
 					max-width: 1470px;
+					max-width: 100%;
+					padding-left: 0;
+					padding-right: 0;
 					margin-bottom: 25px;
 				}
 				&-catalog{
@@ -258,7 +261,6 @@
 						}
 						&:nth-child(2){
 							grid-column: span 5;
-							grid-row: span 2;
 						}
 						&:nth-child(3){
 							grid-column: span 7;
@@ -283,6 +285,7 @@
 						}
 						&:nth-child(2){
 							grid-column: span 9;
+							grid-row: initial;
 						}
 						&:nth-child(3){
 							grid-column: span 12;
