@@ -215,6 +215,14 @@
 		[data-slick-articles] &{
 			top: 120px;
 		}	
+		[data-slick-index] &{
+			&.is--prev{
+				transform: translate(5px,-50%);
+			}
+			&.is--next{
+				transform: translate(-5px,-50%);
+			}
+		}
 		.media-breakpoint-down(@xl; {
 			background-size: 6px auto!important;
 		});
