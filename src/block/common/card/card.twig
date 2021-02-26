@@ -234,6 +234,14 @@
 			<p><a href="tel:{{value.tel}}">{{value.tel}}</a></p>
 			<p><a href="//{{value.link}}">{{value.link}}</a></p>
 		</div>
+		{% include "../button/btn.twig" with {
+			view:'tpl',
+			tag:'a',
+			href:value.link,
+			prefix:'btn__',
+			mod:'is--second  is--lg  is--white',
+			name: value.btn,
+		} %}
 		<picture class="{{prefix}}preview  {{mod}}">
 			<img src="{{value.img}}" class="img-fluid" alt="">
 		</picture>

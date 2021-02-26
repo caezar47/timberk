@@ -3413,6 +3413,9 @@ h1 + .content__search{
 .sitemenu__top .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
     border-color: transparent transparent #36414f transparent;
 }
+.sitemenu__top__lang{
+    width: 52px;
+}    
 .sitemenu__lang__drop{
 
 }

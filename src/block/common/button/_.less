@@ -276,12 +276,24 @@
 			width: 40px;
 			height: 40px;
 		}
-		span{
+		& > span{
 			display: block;
 			width: 100%;
 			height: 100%;
 		}
 		&.is--catalog-item{
+			& > .ya-share2{
+				position: absolute;
+				top: 0;
+				left: 0;
+				.ya-share2__link_more{
+					opacity: 0!important;
+				}
+				.ya-share2__popup{
+					left: 0;
+					right: inherit;
+				}
+			}
 			&.is--soc4{
 				position: relative;
 				z-index: 1004;

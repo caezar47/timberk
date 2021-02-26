@@ -58,7 +58,8 @@
 	</section>
 {% endif %}
 {% if view == "contacts" %}
-	<section class="{{content_prefix}}section  {{content_mod}}" >        {% include "../common/breadcrumb/tpl.twig" with {
+	<section class="{{content_prefix}}section  {{content_mod}}" >        
+		{% include "../common/breadcrumb/tpl.twig" with {
 			prefix:prefix.breadcrumb, 
 			mod:bread_mod, 
 			bread:bread

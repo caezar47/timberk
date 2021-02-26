@@ -147,7 +147,14 @@
 				&.select2-container--open{
 					box-shadow: @site_shadow;
 					border-radius: 4px 4px 0 0;
+					.select2-selection--single{
+						.select2-selection__arrow {
+							.icon-top();
+							background-size: 35px auto;
+						}
+					}
 				} 
+
 				//select2-results__option--highlighted
 			}
 			border: 0;
