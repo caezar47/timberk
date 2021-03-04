@@ -382,7 +382,7 @@
 				grid-template-columns: 100%;
 				padding-bottom: 25px;
 				& > *{
-					&:nth-child(1){
+					&:nth-child(2){
 						position: relative;
 					}
 				}
@@ -401,14 +401,15 @@
 					grid-gap: 54px;
 					padding-top: 30px;
 					& > *{
-						&:nth-child(1){
+						&:nth-child(2){
+							order: -1;
 							padding-left: 120px;
 						}
 					}
 				});
 				.media-breakpoint-up(@xl; {
 					& > *{
-						&:nth-child(1){
+						&:nth-child(2){
 							margin-left: -42px;
 							padding-left: 120px;
 						}

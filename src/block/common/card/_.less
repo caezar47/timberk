@@ -1293,7 +1293,12 @@
 		&.is--catalog{
 			&-item{
 				.text16(); 
+			    font-size: .789rem;
+			    font-weight: 700;
 				max-width: 457px;
+				margin: 0 0 15px 0;
+				padding: 0;
+				list-style: none;
 				& > div{
 					display: flex;
 					margin-bottom: 4px;
@@ -1312,9 +1317,33 @@
 						align-self: flex-end;
 						margin: 0 6px 6px;
 						min-width: 20px;
-
 					}
 					& > dd{
+						order: 2;
+						font-weight: 700;
+						margin-bottom: 0;
+					}
+				}
+				& > li{
+					display: flex;
+					margin: 0 0 4px 0;
+					&:last-child{
+						margin-bottom: 0;
+					}
+					span{						
+						order: -1;
+					}
+					&::before{
+						content: '';
+						order: 1;
+						flex: 1 1 auto;
+						background-color: @danger;
+						height: 1px;
+						align-self: flex-end;
+						margin: 0 6px 6px;
+						min-width: 20px;
+					}
+					b{
 						order: 2;
 						font-weight: 700;
 						margin-bottom: 0;

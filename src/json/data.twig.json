@@ -47,6 +47,10 @@
 		"card":"card__",
 		"btn-icon":"btn-icon__"
 	},
+	"tg":{
+		"prefix":"tg__",
+		"remove":"tg__remove"
+	},
 	"path":{		                  
 		"css":"./css",
 		"img":"./img",

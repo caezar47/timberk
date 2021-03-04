@@ -4,13 +4,12 @@
         {% include "../block/common/head/head.twig" with {title:"Каталог"}  %}
     </head>
     <body>
-
         {% include "../block/common/navbar/navbar.twig" with {
             prefix:"navbar__",
         } %} 
         <main class="{{prefix.section}}wrap">
-            <section class="section__content  is--page-default" >
-                <div class="section__container container  is--page-default"> 
+            <section class="section__content  is--page-default  {{tg.prefix}}body" >
+                <div class="section__container container  is--page-default">
                     {% include "../block/page/catalog.twig" with {
                         view:"card",
 
@@ -27,11 +26,12 @@
                             {name:"Ультразвуковые увлажнители воздуха"}
                         ],
 
+
                         heading_group:  '', 
                         heading_attr:   '',
                         heading_mod:    "is--h1  is--page-catalog-card", 
                         heading_level:  "h1", 
-                        heading:        "Серия Ritzy UL 21E",
+                        heading:        "Серия Limerence: RE1",
                         soc_prefix:     'icon__',
                         soc_mod:        'is--catalog-item',
                         soc: [
@@ -64,65 +64,76 @@
 
                         card_prefix:    "card__",
                         card_mod:       "is--catalog-item",
-                        card_heading:   "Ультразвуковой увлажнитель воздуха",
+                        card_heading:   "Электрический накопительный водонагреватель",
+                        card_preview:   "https://www.timberk.ru/upload/resize_cache/iblock/439/700_700_0/4399d438adf44c2e3d54f9e0d2fb478b.png",
                         card_decs: [
                             {
-                                name:"Производительность",
-                                value:"300 мл/ч",
+                                name:"Объём, л",
+                                value:"30",
                             },
                             {
-                                name:"Объем бака",
-                                value:"4 л",
+                                name:"Номинальная потребляемая мощность, Вт",
+                                value:"5000",
                             },
                             {
-                                name:"Часы работы",
-                                value:"24 ч",
+                                name:"Расположение",
+                                value:"Горизонтальное",
                             },
                             {
-                                name:"Обслуживаемая площадь",
-                                value:"23-30 м<sup>2</sup>",
-                            },
-                            {
-                                name:"Непрерывная работа",
-                                value:"16 ч",
+                                name:"Панель управления",
+                                value:"Сенсорная",
                             },
                         ], 
-                        card_note:      "<p>Автоматическая регулировка интенсивности выхода пара</p><p>Автоматическая регулировка интенсивности выхода пара<p>",
+                        card_note:      "<p>Водонагреватель Limerence – влюбиться с первого взгляда. Греет воду быстрее в 2,5 раза! Самообучающаяся программа подстраивается под индивидуальные предпочтения нагрева воды, ТЭН с эмалированным покрытием обеспечивает уникально долгий срок службы.<p>",
                         card_confirm:      "true",
 
                         slider_nav_view:   "catalog-slider",
                         slider_nav_mod:    "is--catalog-slider-nav",
                         slider_nav:[
                             {
-                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/61f/700_700_0/61f05d7df751d703e2ced0bcbedf971e.png",
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/439/700_700_0/4399d438adf44c2e3d54f9e0d2fb478b.png",
                             },
                             {
-                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/61f/700_700_0/61f05d7df751d703e2ced0bcbedf971e.png",
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/09e/700_700_0/09ec6b6be02022187f16115c6437c787.png",
                             },
                             {
-                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/61f/700_700_0/61f05d7df751d703e2ced0bcbedf971e.png",
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/4b6/700_700_0/4b6dc3dd59cd756ad1d803090df68544.png",
                             },
                             {
-                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/61f/700_700_0/61f05d7df751d703e2ced0bcbedf971e.png",
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/58b/700_700_0/58bba9657ae237df219d9b51ef7d9279.png",
+                            },
+                            {
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/2cb/700_700_0/2cbaab06dff6c8e3614abd86bd87362e.png",
+                            },
+                            {
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/36b/700_700_0/36b48bdcc479013a1a0dfa5228af2cb5.png",
                             },
                         ],
                         slider_view:        "catalog-slider",
                         slider_mod:         "is--catalog-slider",
-                        slider:[
+                        slider:[                            
                             {
-                                "img": [path.img,"/default/catalog-slider-item1.png"].join(""),
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/439/700_700_0/4399d438adf44c2e3d54f9e0d2fb478b.png",
                                 "zoom": "true",
                             },
                             {
-                                "img": [path.img,"/default/catalog-slider-item1.png"].join(""),
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/09e/700_700_0/09ec6b6be02022187f16115c6437c787.png",
                                 "zoom": "true",
                             },
                             {
-                                "img": [path.img,"/default/catalog-slider-item1.png"].join(""),
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/4b6/700_700_0/4b6dc3dd59cd756ad1d803090df68544.png",
                                 "zoom": "true",
                             },
                             {
-                                "img": [path.img,"/default/catalog-slider-item1.png"].join(""),
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/58b/700_700_0/58bba9657ae237df219d9b51ef7d9279.png",
+                                "zoom": "true",
+                            },
+                            {
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/2cb/700_700_0/2cbaab06dff6c8e3614abd86bd87362e.png",
+                                "zoom": "true",
+                            },
+                            {
+                                "img": "https://www.timberk.ru/upload/resize_cache/iblock/36b/700_700_0/36b48bdcc479013a1a0dfa5228af2cb5.png",
                                 "zoom": "true",
                             },
                         ],
@@ -179,10 +190,9 @@
                                     {
                                         'name':"Преимущества прибора",
                                         'ul':[
-                                            {name:'Производительность - 300 мл/ч'},
-                                            {name:'Объем резервуара - 4 л'},
-                                            {name:'Обслуживаемая площадь - 30 м2'},
-                                            {name:'Продолжительность работы при максимальной производительности без долива воды - до 16 часов'},
+                                            {name:'Сенсорная панель управления Hidden Touch, очень большой информационный LED-дисплей с индикацией всех режимов работы'},
+                                            {name:'Мощность ТЭНа составляет 5000 Вт! А это значит, что нагрев воды будет происходить в 2,5 раза быстрее! Так, время нагрева при Δ 30°С составляет всего 11 минут вместо получаса.'},
+                                            {name:'100% долговечности работы! ТЭН из нержавеющей стали с двойным защитным эмалированием, которое надежно защищает нагревательный элемент от коррозии'},
                                         ]
                                     },
                                     {
@@ -241,7 +251,11 @@
                         note: [
                             {
                                 'name':"Сфера применения",
-                                'note':'<p>Забота о&nbsp;своем здоровье и&nbsp;здоровье своих близких&nbsp;— важная часть нашей жизни. Одним из&nbsp;факторов, который напрямую оказывает влияние на&nbsp;здоровье человека&nbsp;— это качество вдыхаемого каждый день воздуха. Но&nbsp;если чистота воздуха напрямую зависит от&nbsp;географического района и&nbsp;близких фабрик и&nbsp;промышленных предприятий, то&nbsp;влажность, как неотъемлемая составляющая микроклимата офиса и&nbsp;дома, вполне подконтрольна современному человеку.</p><p>Оптимальная влажность в&nbsp;помещении, где находится взрослый человек, должна составлять минимум около 50%. Для комфортного и&nbsp;здорового дыхания маленького ребенка этот показатель выше&nbsp;— около <nobr>60-65%.</nobr></p><p>При нехватке влажности в&nbsp;воздухе начинает страдать слизистые оболочки и&nbsp;кожа человека. Следствием является снижение барьерных функций этих покровов, а&nbsp;значит, мы&nbsp;становимся особенно уязвимы для различных бактерий и&nbsp;вирусов. Следствием является снижение барьерных функций этих покровов, а&nbsp;значит, мы&nbsp;становимся особенно уязвимы для различных бактерий и&nbsp;вирусов.</p><p>Прекрасным помощником в&nbsp;поддержании необходимого уровня влажности воздуха станет ультразвуковой увлажнитель воздуха. Принцип работы этого прибора основан на&nbsp;превращении воды в&nbsp;пар при помощи ультразвуковой мембраны. Увлажнители Timberk представлены в&nbsp;множестве решений с&nbsp;точки зрения дизайна и&nbsp;функциональных возможностей.</p><p>В&nbsp;нашем ассортименте вы&nbsp;найдете приборы различных литражей, с&nbsp;механическим или электронным управлением, традиционных цветов и&nbsp;форм и&nbsp;яркие нестандартные дизайнерские модели. Объединяет их&nbsp;главное&nbsp;— эффективное увлажнение воздуха с&nbsp;заботой о&nbsp;вашем здоровье.</p>'
+                                'note':'<p style="text-align: justify;">
+     Электрические накопительные водонагреватели (бойлеры) - оборудование, предназначенное для использования в бытовых и коммерческих помещениях в случае постоянного или временного отсутствия центрального горячего водоснабжения. <br>
+ <br>
+     Накопительные водонагреватели идеально подходят для обеспечения горячей водой загородных домов, а так же городских квартир. Водонагреватели подключаются к стандартной сети электропитания дома и могут обеспечить подачу горячей воды в несколько точек потребления. Различаются между собой в основном по литражу (как правило, от 30 до 100 литров), мощностью нагревательного элемента, материалу внутреннего резервуара и производительностью по нагреву.
+</p>'
                             },
                         ],
                         articles_heading:"Рекомендуем почитать",

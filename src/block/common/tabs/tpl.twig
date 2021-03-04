@@ -1,5 +1,5 @@
 {% if view == "base" %}
-<div class="{{prefix}}panel  {{mod}}">
+<div class="{{prefix}}panel  {{mod}}  {{tg.remove}}">
 	<ul class="nav  {{prefix}}nav  {{mod}}">
 		{% for value in list %}
 			<li class="{{prefix}}item">
@@ -45,7 +45,7 @@
 		{% if value.type == "catalog-item-note" %}
 			<div class="{{content_prefix}}grid  grid__row  {{content_mod}}-note">
 				<div>
-					<div data-slick-catalog-note>
+					<div data-slick-catalog-note  class="{{tg.remove}}">
 						{% include "../card/card.twig" with {
 							view: value.slider_view,
 							prefix:"card__", 
