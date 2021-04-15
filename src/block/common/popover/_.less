@@ -23,6 +23,19 @@
 		a{
 			color: @primary;
 		}
+		.flex{
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: -6px;
+			margin-left: -3px;
+			margin-right: -3px;
+			& > *{
+				flex: 0 0 ~"calc(50% - 6px)";
+				margin-top: 6px;
+				margin-left: 3px;
+				margin-right: 3px;
+			}
+		}
 		&::before{
 	    	border: 0;
 	    	width: 10px;
@@ -55,6 +68,11 @@
 				left: 0%;
 				transform: translate(-80%,-50%) rotate(90deg);
 		    }
+	    }
+	    .btn__item.is-go-im &{
+			max-width: 250px;
+	    	min-width: 250px;
+			//transform: translate3d(0, 46px, 0)!important;
 	    }
 	}
 }

@@ -304,34 +304,25 @@
             custom: "true" 
         }%}
         <script>
-            $('[data-bay]').on("click", function (e) {
-                var data = $(this).data('bay');
-                var shops = data.shop;
-                for(var i = 0; i < shops.length; i++){
-                    var content = 
-                        '<p><a href="'+shops[i]['link']+'">'+shops[i]['logo']+'</p>';
-                    $('[data-bay-content]').setContent(content);
-                    //console.log(shops[i]['link']);
-                    //console.log(shops[i]['logo']);
-                    /*var coord = coords[i]['coord'];
-                    if (offices) {
-                        var popContent = 
-                            '<div class="map__popup-heading"><a href="'+coords[i]['link']+'">'+coords[i]['heading']+'</a></div><div class="map__popup-content">' +
-                        '<p class="map__popup-text  is--fw">'+coords[i]['tel']+'</p>' +
-                        '<p class="map__popup-text">'+coords[i]['addr']+'</p></div>';
-                    } else {
-                        var popContent = 
-                            '<div class="map__popup-heading">'+coords[i]['heading']+'</div>'; 
-                    }
-                    var obj_popup = DG.popup({
-                        className: 'map__popup',
-                    }).setContent(popContent);
-
-                    var marker = DG.marker([coord[0], coord[1]],{icon: myIcon});
-                    marker.bindPopup(obj_popup);
-                    markers.addLayer(marker); */                  
-                }
-            });
+            // var bay = $('[data-bay]');
+            // //$('[data-bay]').on("click", function (e) {
+            //     var data = bay.data('bay');
+            //     var shops = data.shop;
+            //     for(var i = 0; i < shops.length; i++){
+            //         var content = 
+            //             '<p><a href="'+shops[i]['link']+'">'+shops[i]['logo']+'</p>';
+            //         bay.data("content", content);
+            //         //var mass_all = mass + content;
+            //         $( content ).appendTo($('[data-bay-content]'));
+            //         //$(this).on('show.bs.popover', function () {
+            //            // $( content ).appendTo($('[data-bay-content]'));
+            //         //}); 
+            //         //console.log(shops[i]['link']);
+            //         //console.log(shops[i]['logo']);
+                                     
+            //     }
+            //     //console.log(mass_all);
+            // //});
         </script>
     </body>
 </html>
