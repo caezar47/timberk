@@ -176,17 +176,12 @@
 				<p>Водонагреватель Limerence – влюбиться с первого взгляда. Греет воду быстрее в 2,5 раза! Самообучающаяся программа подстраивается под индивидуальные предпочтения нагрева воды, ТЭН с эмалированным покрытием обеспечивает уникально долгий срок службы.<p>
 			</div>
 						<div class="card__btn  is--catalog-item  is--bay  tg__remove">
-				<a  href=""  class="btn__item  is--lg  is--bay"   >
-				<span>Купить</span>
-		
-</a>  
+				<button type="button" class="btn__item  is--lg  is--bay" data-bay='{"shop" : [{"logo" : "ozon.jpg", "link": "ozon.ru"},{"logo" : "dns.jpg", "link": "dns.ru"}]}'>
+					<span>Где купить?</span>
+				</button>
 
 
-
-
-
-
-
+				
 				<a  href="#catalog-about"  class="btn__item  is--lg  is--second" data-scrollto-item data-scrollto-diff="-30"  >
 				<span>Узнать подробнее</span>
 		
@@ -199,6 +194,7 @@
 
 
 			</div>
+			<div data-bay-content></div>
 						<p class="card__confirm  is--catalog-item">
 				<svg class="icon-svg icon-icon-confirm" role="img">
 	<use xlink:href="./img/svg/sprite.svg#icon-confirm"></use>
@@ -556,11 +552,7 @@
 			</div>
 														<div class="is--full  card__item  is--catalog-item-desc">
 					<h3 class="card__heading  is--catalog-item-desc">Сфера применения</h3>
-					<div class="card__note  is--catalog-item-desc"><p style="text-align: justify;">
-     Электрические накопительные водонагреватели (бойлеры) - оборудование, предназначенное для использования в бытовых и коммерческих помещениях в случае постоянного или временного отсутствия центрального горячего водоснабжения. <br>
- <br>
-     Накопительные водонагреватели идеально подходят для обеспечения горячей водой загородных домов, а так же городских квартир. Водонагреватели подключаются к стандартной сети электропитания дома и могут обеспечить подачу горячей воды в несколько точек потребления. Различаются между собой в основном по литражу (как правило, от 30 до 100 литров), мощностью нагревательного элемента, материалу внутреннего резервуара и производительностью по нагреву.
-</p></div>
+					<div class="card__note  is--catalog-item-desc"><p style="text-align: justify;">Электрические накопительные водонагреватели (бойлеры) - оборудование, предназначенное для использования в бытовых и коммерческих помещениях в случае постоянного или временного отсутствия центрального горячего водоснабжения. <br><br>Накопительные водонагреватели идеально подходят для обеспечения горячей водой загородных домов, а так же городских квартир. Водонагреватели подключаются к стандартной сети электропитания дома и могут обеспечить подачу горячей воды в несколько точек потребления. Различаются между собой в основном по литражу (как правило, от 30 до 100 литров), мощностью нагревательного элемента, материалу внутреннего резервуара и производительностью по нагреву.</p></div>
 					
 				</div>
 										<div class="is--full  is--articles  tg__remove">
@@ -1220,5 +1212,35 @@
         });
     });
 </script>
+        <script>
+            $('[data-bay]').on("click", function (e) {
+                var data = $(this).data('bay');
+                var shops = data.shop;
+                for(var i = 0; i < shops.length; i++){
+                    var content = 
+                        '<p><a href="'+shops[i]['link']+'">'+shops[i]['logo']+'</p>';
+                    $('[data-bay-content]').setContent(content);
+                    //console.log(shops[i]['link']);
+                    //console.log(shops[i]['logo']);
+                    /*var coord = coords[i]['coord'];
+                    if (offices) {
+                        var popContent = 
+                            '<div class="map__popup-heading"><a href="'+coords[i]['link']+'">'+coords[i]['heading']+'</a></div><div class="map__popup-content">' +
+                        '<p class="map__popup-text  is--fw">'+coords[i]['tel']+'</p>' +
+                        '<p class="map__popup-text">'+coords[i]['addr']+'</p></div>';
+                    } else {
+                        var popContent = 
+                            '<div class="map__popup-heading">'+coords[i]['heading']+'</div>'; 
+                    }
+                    var obj_popup = DG.popup({
+                        className: 'map__popup',
+                    }).setContent(popContent);
+
+                    var marker = DG.marker([coord[0], coord[1]],{icon: myIcon});
+                    marker.bindPopup(obj_popup);
+                    markers.addLayer(marker); */                  
+                }
+            });
+        </script>
     </body>
 </html>

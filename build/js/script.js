@@ -70,6 +70,12 @@ $(document).ready(function(){
     $("label.form__item").children().addClass('form__control');
     $("label.form__item").children('textarea').addClass('is--textarea');
 
+    $(".form__item option").each(function(){
+        val = $(this).text();
+        val = val.replace(/[<>](.*)+/,"");
+        $(this).text(val);
+    });
+
     $(".form__item select").select2({
         dropdownCssClass: "form__item",
         minimumResultsForSearch: -1
@@ -553,6 +559,12 @@ $(document).ready(function(){
         return false;
     });
 
+    $(".productshare").click(function(e){
+        $(".product__share").toggleClass("show");
+        e.stopPropagation();
+        return false;
+    });
+
     $(".filtermail__form").submit(function(e){
         e.preventDefault();
         $.ajax({
@@ -959,10 +971,10 @@ var CompareCore = {
             });
         });
 
-        $(window).resize(function(){
+        /*$(window).resize(function(){
             if(_this)
                 _this.CompareView();
-        });
+        });*/
 
         $(window).scroll(function(){
            _this.FixCompareHeader();

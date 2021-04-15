@@ -209,14 +209,19 @@
 			</div>
 			{% endif %}
 			<div class="{{card_prefix}}btn  {{card_mod}}  is--bay  {{tg.remove}}">
-				{% include "../common/button/btn.twig" with {
+				<button type="button" class="btn__item  is--lg  is--bay" data-bay='{"shop" : [{"logo" : "ozon.jpg", "link": "ozon.ru"},{"logo" : "dns.jpg", "link": "dns.ru"}]}'>
+					<span>Где купить?</span>
+				</button>
+
+
+				{# {% include "../common/button/btn.twig" with {
 					view:'tpl',
 					tag:'a',
 					href:'',
 					prefix:'btn__',
 					mod:'is--lg  is--bay',
 					name: 'Купить',
-				} %}
+				} %} #}
 				{% include "../common/button/btn.twig" with {
 					view:'tpl',
 					tag:'a',
@@ -227,6 +232,7 @@
 					name: 'Узнать подробнее', 
 				} %}
 			</div>
+			<div data-bay-content></div>
 			{% if card_confirm %}
 			<p class="{{card_prefix}}confirm  {{card_mod}}">
 				{% include "../common/svg-sprite/svg.twig" with {icon:'icon-confirm'} %}
