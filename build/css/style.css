@@ -4475,8 +4475,11 @@ body a[id^="sirvCR"] img{
     display: none;
 }
 .product-card__360-wrapper{
-    width: 100vw!important;
-    height: 100vh!important;
+    height: 100vh;
+    width: 100vw;
+    max-width: 500px!important;
+    max-height: 500px!important;
+    margin: 0 auto;
 }
 #photoView360 canvas{
     cursor: move;

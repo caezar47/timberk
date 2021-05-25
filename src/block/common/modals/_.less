@@ -54,6 +54,12 @@
 		&.is--modal-sale{
 			max-width: 600px;
 		}
+		&.is--modal-shop{
+			max-width: 450px;
+			.media-breakpoint-up(@lg; {
+				max-width: 800px;
+			});
+		}
 		/*#modal-360 &{
 			top: 0;
 			left: 0;
@@ -118,6 +124,13 @@
 	   	 	font-family: 'RoadRadio';
 			font-size: 17px;
 			line-height: 17px;
+			color: #00afab;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		&.is--modal-shop{
+	   	 	font-family: 'RoadRadio';
+			.heading3();
 			color: #00afab;
 			text-align: center;
 			margin-bottom: 20px;

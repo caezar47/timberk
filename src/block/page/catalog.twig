@@ -166,6 +166,52 @@
 	} %}
 	<div class="{{content_prefix}}grid  grid__row  {{content_mod}}">
 		<div>
+			<div class="{{card_prefix}}group  {{card_mod}}">
+				{% if label %}
+				<p class="{{card_prefix}}label  {{card_mod}}  {{tg.remove}}" style="background-color: {{label_color}}">
+					{{label}}
+				</p>
+				{% endif %}
+				{% if color %}
+				<div class="{{card_prefix}}color-group  {{card_mod}}  {{tg.remove}}">
+					<p class="{{card_prefix}}color-name  {{card_mod}}">Цвет</p>
+					{% for c in color %}
+						<button type="button" class="{{card_prefix}}color-btn  {{card_mod}}" style="background-color: {{c.color}}; border-color: {{c.color}}"></button>
+					{% endfor %}
+				</div>
+				{% endif %}
+				<div data-slick-catalog>
+					{% include "../common/card/card.twig" with {
+						view: slider_view,
+						prefix:"card__", 
+						mod:  slider_mod, 
+						list: slider
+					} %}
+				</div>
+			</div>
+			<div class="card__group  {{slider_nav_mod}}  {{tg.remove}}">
+				<div data-slick-catalog-nav>
+					{% include "../common/card/card.twig" with {
+						view: slider_nav_view,
+						prefix:"card__", 
+						mod:  slider_nav_mod, 
+						list: slider_nav
+					} %}
+				</div>
+				<button type="button" class="icon__item  is--360" data-toggle="modal" data-target="#modal-360">
+					<span data-toggle="popover" data-placement="right" data-container=".icon__item.is--360 span" data-content='Съемка&nbsp;360' data-trigger="hover">
+						{% include "../common/svg-sprite/svg.twig" with {icon:'icon-360'} %}
+					</span>
+				</button>
+
+				<button type="button" class="icon__item  is--play" data-toggle="modal" data-target="#exampleModal">
+					<span data-toggle="popover" data-placement="right" data-container=".icon__item.is--play span" data-content='Смотреть&nbsp;видео' data-trigger="hover">
+					{% include "../common/svg-sprite/svg.twig" with {icon:'icon-play'} %}
+					</span>
+				</button>
+			</div>
+		</div>
+		<div>
 			<div class="{{tg.remove}}">
 				{% include "../common/page-header/elem.twig" with {
 					prefix:"page-header__", 
@@ -234,52 +280,6 @@
 				Подтверждено лабораторией качества
 			</p>
 			{% endif %}
-		</div>
-		<div>
-			<div class="{{card_prefix}}group  {{card_mod}}">
-				{% if label %}
-				<p class="{{card_prefix}}label  {{card_mod}}  {{tg.remove}}" style="background-color: {{label_color}}">
-					{{label}}
-				</p>
-				{% endif %}
-				{% if color %}
-				<div class="{{card_prefix}}color-group  {{card_mod}}  {{tg.remove}}">
-					<p class="{{card_prefix}}color-name  {{card_mod}}">Цвет</p>
-					{% for c in color %}
-						<button type="button" class="{{card_prefix}}color-btn  {{card_mod}}" style="background-color: {{c.color}}; border-color: {{c.color}}"></button>
-					{% endfor %}
-				</div>
-				{% endif %}
-				<div data-slick-catalog>
-					{% include "../common/card/card.twig" with {
-						view: slider_view,
-						prefix:"card__", 
-						mod:  slider_mod, 
-						list: slider
-					} %}
-				</div>
-			</div>
-			<div class="card__group  {{slider_nav_mod}}  {{tg.remove}}">
-				<div data-slick-catalog-nav>
-					{% include "../common/card/card.twig" with {
-						view: slider_nav_view,
-						prefix:"card__", 
-						mod:  slider_nav_mod, 
-						list: slider_nav
-					} %}
-				</div>
-				<button type="button" class="icon__item  is--360" data-toggle="modal" data-target="#modal-360">
-					<span data-toggle="popover" data-placement="right" data-container=".icon__item.is--360 span" data-content='Съемка&nbsp;360' data-trigger="hover">
-						{% include "../common/svg-sprite/svg.twig" with {icon:'icon-360'} %}
-					</span>
-				</button>
-
-				<button type="button" class="icon__item  is--play" data-toggle="modal" data-target="#exampleModal">
-					<span data-toggle="popover" data-placement="right" data-container=".icon__item.is--play span" data-content='Смотреть&nbsp;видео' data-trigger="hover">
-					{% include "../common/svg-sprite/svg.twig" with {icon:'icon-play'} %}
-					</span>
-				</button>
-			</div>
 		</div>
 	</div>
 {% endif %}

@@ -124,5 +124,18 @@ document.createElement("picture");
             }
         });
     });
+
+    var shop = $('[data-btn-shop]');
+    var shop_container = $('[data-shop]');
+    var modal_btn_show = $('[data-toggle="modal"]');
+    modal_btn_show.on('click', function(e) {
+        shop_container.empty();
+        var modal_data = JSON.parse($(this).attr('data-btn-shop') || '{}');
+        var shops = modal_data.shop;
+        for(var i = 0; i < shops.length; i++){
+            var content = '<divv><a href="'+shops[i]['link']+'"><img src="'+shops[i]['logo']+'" alt=""></div>';
+            $( content ).appendTo(shop_container);
+        }
+    });
 </script>
 {% endif %}
