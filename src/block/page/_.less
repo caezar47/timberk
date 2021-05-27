@@ -177,8 +177,41 @@
 		&.is--page{
 			&-index{
 				&-catalog{
-					grid-gap: 25px;
+					grid-gap: 25px;				
 					& > *{
+						height: 245px;
+						&.is--row2{
+							//max-height: 350px;
+						}  
+						&.is--row3{
+							//max-height: 450px;
+						} 
+					} 
+					.media-breakpoint-up(@sm; {
+						grid-template-columns: 0.9fr 1.1fr;
+						& > *{
+							&.is--col2{
+								grid-column: span 2;
+							}
+							&.is--row2{
+								grid-row: span 2;
+							}  
+						}  
+					});
+					.media-breakpoint-up(@xl; {
+						grid-template-columns:1.04fr 1.1fr .77fr;
+						& > *{
+							&.is--row2{
+								height: 400px;
+							} 
+							&.is--row3{
+								grid-row: span 3;
+								height: 670px;
+							} 
+						}
+					});
+				
+					/*& > *{
 						min-height: 245px;
 						&.is--row2{
 							max-height: 350px;
@@ -189,7 +222,6 @@
 					} 
 					.media-breakpoint-up(@sm; {
 						grid-template-columns: 0.9fr 1.1fr;
-						//grid-template-columns: repeat(2, 1fr);
 						& > *{
 							&.is--col2{
 								grid-column: span 2;
@@ -197,47 +229,26 @@
 							&.is--row2{
 								grid-row: span 2;
 							}  
-						}  						
-						/*&.is--v1{
-							& > *{
-								&:nth-child(1){
-									grid-column: span 2;
-								}
-								&:nth-child(2){
-									grid-row: span 2;
-								} 
-							}
-						}&.is--v2{
-							& > *{
-								&:nth-child(1){
-									grid-row: span 2;
-								}
-								&:nth-child(4){
-									grid-column: span 2;
-								} 
-							}
-						}*/
+						}  
 					});
 					.media-breakpoint-up(@xl; {
-						grid-template-columns:1.04fr 1.1fr .77fr;
-						& > *{
-							//grid-column: span 4;
+						grid-template-columns:repeat(12, 1fr);
+						& > *{	
+							grid-column: span 4;					
+							&.is--col2{
+								grid-column: span 9;
+							}
 							&.is--row2{
 								max-height: 520px;
 							} 
 							&.is--row3{
+								grid-column: span 3;
 								grid-row: span 3;
 								max-height: 670px;
 							} 
 						}
-						//grid-template-columns: 1.1fr 1.04fr .77fr;
-						/*&.is--v1{
-							grid-template-columns: 1.1fr 1.04fr .77fr ;
-						}
-						&.is--v2{
-							grid-template-columns: .77fr 1.04fr 1.1fr;
-						}*/
 					});
+					*/
 				}
 			}
 			&-catalog{
