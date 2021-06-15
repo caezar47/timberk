@@ -78,6 +78,9 @@ articles.slick({
 	    }
 	]
 });
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+	articles.slick('setPosition');
+})
 catalog.slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
