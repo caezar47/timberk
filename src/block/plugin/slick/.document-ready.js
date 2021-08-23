@@ -11,6 +11,9 @@ var catalog_m 		= $('[data-slick-modal]');
 var catalog_m_nav 	= $('[data-slick-modal-nav]');
 var catalog_note 	= $('[data-slick-catalog-note]');
 
+var team 			= $('[data-slick-team]');
+var history 		= $('[data-slick-history]');
+
 index.slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -191,3 +194,64 @@ articles_lg.slick({
 	    }
 	]
 });
+
+
+	team.slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		infinite: true,
+		centerMode: true,
+		variableWidth: true,
+		prevArrow: prevArrow,
+		nextArrow: nextArrow,
+		responsive: [	
+		  
+		    {
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2, 
+				}
+		    },
+		  
+		    {
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2, 
+				}
+		    }, 
+		    {
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+					arrows: false,
+				}
+		    }
+		]
+	});
+    history.slick({
+        responsive: [   
+            {
+                breakpoint: 99999,
+                settings: "unslick"
+            },          
+            {
+                breakpoint: 767,
+                settings: {                    
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    infinite: false,
+                    centerMode: true,
+                    variableWidth: true,
+                    //adaptiveHeight: true,
+                }
+            }, 
+        ]
+    });

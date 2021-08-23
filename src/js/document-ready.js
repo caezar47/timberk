@@ -5,7 +5,7 @@ window.onerror = function(error, url, lineNumber, column, errorObj) {
 	return;
 }*/
 [[azbntple tpl="/src/_/concat.plugin.js" ]]
-
+[[azbntple tpl="/src/common/js/hr.js" ]]
 
 $(function() {
 	
