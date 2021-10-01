@@ -312,6 +312,9 @@
 	.media-breakpoint-between(@md; @xl; {
 		max-width: 350px;
 	});
+	.media-breakpoint-down(@md; {
+		overflow: auto;
+	});
 }
 
 .menucatalog__{
@@ -335,3 +338,22 @@
 		}
 	}
 }
+.media-breakpoint-down(@md; {
+	.catalogmenu__list > ul > li > ul{
+		display: none;
+		position: static;
+		background: none;
+	}
+	.catalogmenu__list > ul > li:hover > ul{
+		display: block;
+	}
+	.catalogmenu__list > ul > li a span{
+		transform: translateY(-50%) rotate(90deg);
+	}
+	.catalogmenu__list > ul > li:hover a span{
+		transform: translateY(-50%) rotate(-90deg);
+	}
+	.catalogmenu__list > ul > li > ul .valve{
+		display: none!important;
+	}
+});

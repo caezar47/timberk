@@ -30,7 +30,8 @@
 	<a href="{{value.link}}" class="{{prefix}}item  {{mod}}  {{value.mod}}">
 		<p class="{{prefix}}heading  {{mod}}" {% if value.color %}style="color: {{value.color}}"{% endif %}>{{value.name}}</p>
 		<picture class="{{prefix}}preview  {{mod}}">
-			<img src="{{value.img}}" class="img-fluid" alt="">
+			<source media="(max-width: 500px)" srcset="{{value.img_xs}}">
+			<img src="{{value.img}}" alt="" class="img-fluid">
 		</picture>
 	</a>
 	{% endfor %}

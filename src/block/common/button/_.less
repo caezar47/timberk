@@ -11,7 +11,7 @@
 		align-items: center; 
 		justify-content: center;
 		border-radius: @btn_radius;	
-		background-color: @btn_bg; 
+		background: @btn_bg; 
 		text-align: center;	
 		color: @btn_color;
 		padding: 8px 15px;
@@ -22,12 +22,12 @@
 			color: @btn_hover_color;		
 		}	
 		&:hover{	
-			background-color: @btn_hover_bg; 
+			background: @btn_hover_bg; 
 			border-color: @btn_hover_border; 
 		}
 		&:active{	
 			color: @btn_active_color;		
-			background-color: @btn_active_bg; 
+			background: @btn_active_bg; 
 			border-color: @btn_active_border; 
 		}
 		&.is--lg{
@@ -38,7 +38,7 @@
 			}
 		}
 		&.is--second{
-			background-color: @white;
+			background: @white;
 			color: @primary;
 			&:focus,	
 			&:hover{
@@ -47,7 +47,7 @@
 			}
 		}
 		&.is--opacity{
-			background-color: fadeout(@primary, 100%);
+			background: fadeout(@primary, 100%);
 			border-color: fadeout(@primary, 100%);
 			color: @success2;
 			&:focus,	
@@ -59,7 +59,7 @@
 			}
 		}
 		&.is--white{
-			background-color: @white;
+			background: @white;
 			border-color: @white;
 			color: @primary;
 			&:focus,	
@@ -68,7 +68,7 @@
 			}
 			&:hover{
 				border-color: @primary;
-				background-color: @primary;
+				background: @primary;
 			}
 		}
 		&.is--disabled,

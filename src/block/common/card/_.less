@@ -1237,7 +1237,7 @@
 			flex-wrap: wrap;
 			max-width: 1120px;
 			margin: 0 auto;
-			background-color: fadeout(@info, 0%);
+			background-color: fadeout(@info, 50%);
 			& > *{
 				flex: 1 1 100%;
 				padding: 5px;
@@ -1301,12 +1301,15 @@
 				list-style: none;
 				& > div{
 					display: flex;
+					align-items: flex-end;
 					margin-bottom: 4px;
 					&:last-child{
 						margin-bottom: 0;
 					}
 					& > dt{
 						order: -1;
+						white-space: initial;
+						text-overflow: initial;
 					}
 					&::before{
 						content: '';
@@ -1322,10 +1325,22 @@
 						order: 2;
 						font-weight: 700;
 						margin-bottom: 0;
+						white-space: initial;
+						text-overflow: initial;
 					}
+					.media-breakpoint-down(@lg; {
+						& > dt{
+							max-width: 60%;
+						}
+						& > dd{
+							max-width: 40%;
+							text-align: right;
+						}
+					});
 				}
 				& > li{
 					display: flex;
+					align-items: flex-end;
 					margin: 0 0 4px 0;
 					&:last-child{
 						margin-bottom: 0;

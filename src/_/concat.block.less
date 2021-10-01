@@ -629,6 +629,7 @@
 	&list{
 		list-style: none;
 		display: flex;
+		flex-wrap: wrap;
 		padding: 0;
 		margin-top: -@bread_gutter;		
 		margin-left: -@bread_gutter;
@@ -636,12 +637,13 @@
 		white-space: nowrap;	
 		margin-bottom: 18px;
 		font-size: 0.74rem;
-		line-height: 215%;
-		overflow: hidden;
+		//line-height: 215%;
+		line-height: 120%;
+		//overflow: hidden;
 	} 
 	&item{
 		position: relative;	
-		padding-top: @bread_gutter;
+		margin-top: @bread_gutter;
 		padding-left: @bread_gutter;
 		padding-right: @bread_gutter;	
 		color: @bread_color;
@@ -651,7 +653,7 @@
 			top: 50%;
 			right: 0;
 			line-height: 100%;
-			transform: translate(50%, 0%);
+			transform: translate(50%, -50%);
 			color: @bread_color_active;		
 		}	
 		&.is--active{
@@ -661,6 +663,7 @@
 		}
 	}
 	&link{
+		display: block;
 		&, &:focus{color: @bread_color;}
 		&:hover{color: @bread_color_active}
 	}
@@ -678,7 +681,7 @@
 		align-items: center; 
 		justify-content: center;
 		border-radius: @btn_radius;	
-		background-color: @btn_bg; 
+		background: @btn_bg; 
 		text-align: center;	
 		color: @btn_color;
 		padding: 8px 15px;
@@ -689,12 +692,12 @@
 			color: @btn_hover_color;		
 		}	
 		&:hover{	
-			background-color: @btn_hover_bg; 
+			background: @btn_hover_bg; 
 			border-color: @btn_hover_border; 
 		}
 		&:active{	
 			color: @btn_active_color;		
-			background-color: @btn_active_bg; 
+			background: @btn_active_bg; 
 			border-color: @btn_active_border; 
 		}
 		&.is--lg{
@@ -705,7 +708,7 @@
 			}
 		}
 		&.is--second{
-			background-color: @white;
+			background: @white;
 			color: @primary;
 			&:focus,	
 			&:hover{
@@ -714,7 +717,7 @@
 			}
 		}
 		&.is--opacity{
-			background-color: fadeout(@primary, 100%);
+			background: fadeout(@primary, 100%);
 			border-color: fadeout(@primary, 100%);
 			color: @success2;
 			&:focus,	
@@ -726,7 +729,7 @@
 			}
 		}
 		&.is--white{
-			background-color: @white;
+			background: @white;
 			border-color: @white;
 			color: @primary;
 			&:focus,	
@@ -735,7 +738,7 @@
 			}
 			&:hover{
 				border-color: @primary;
-				background-color: @primary;
+				background: @primary;
 			}
 		}
 		&.is--disabled,
@@ -2211,7 +2214,7 @@
 			flex-wrap: wrap;
 			max-width: 1120px;
 			margin: 0 auto;
-			background-color: fadeout(@info, 0%);
+			background-color: fadeout(@info, 50%);
 			& > *{
 				flex: 1 1 100%;
 				padding: 5px;
@@ -2275,12 +2278,15 @@
 				list-style: none;
 				& > div{
 					display: flex;
+					align-items: flex-end;
 					margin-bottom: 4px;
 					&:last-child{
 						margin-bottom: 0;
 					}
 					& > dt{
 						order: -1;
+						white-space: initial;
+						text-overflow: initial;
 					}
 					&::before{
 						content: '';
@@ -2296,10 +2302,22 @@
 						order: 2;
 						font-weight: 700;
 						margin-bottom: 0;
+						white-space: initial;
+						text-overflow: initial;
 					}
+					.media-breakpoint-down(@lg; {
+						& > dt{
+							max-width: 60%;
+						}
+						& > dd{
+							max-width: 40%;
+							text-align: right;
+						}
+					});
 				}
 				& > li{
 					display: flex;
+					align-items: flex-end;
 					margin: 0 0 4px 0;
 					&:last-child{
 						margin-bottom: 0;
@@ -2831,7 +2849,7 @@
 						height: 47px;
 						.icon-down();
 						//background-position: center;
-						background-size: 35px auto;
+						//background-size: 35px auto;
 						//b{display: none;}
 					}
 				}
@@ -2841,7 +2859,7 @@
 					.select2-selection--single{
 						.select2-selection__arrow {
 							.icon-top();
-							background-size: 35px auto;
+							//background-size: 35px auto;
 						}
 					}
 				} 
@@ -3787,6 +3805,9 @@
 	.media-breakpoint-between(@md; @xl; {
 		max-width: 350px;
 	});
+	.media-breakpoint-down(@md; {
+		overflow: auto;
+	});
 }
 
 .menucatalog__{
@@ -3810,6 +3831,26 @@
 		}
 	}
 }
+.media-breakpoint-down(@md; {
+	.catalogmenu__list > ul > li > ul{
+		display: none;
+		position: static;
+		background: none;
+	}
+	.catalogmenu__list > ul > li:hover > ul{
+		display: block;
+	}
+	.catalogmenu__list > ul > li a span{
+		transform: translateY(-50%) rotate(90deg);
+	}
+	.catalogmenu__list > ul > li:hover a span{
+		transform: translateY(-50%) rotate(-90deg);
+	}
+	.catalogmenu__list > ul > li > ul .valve{
+		display: none!important;
+	}
+});
+
 .page-header__{
 	&panel{
 		display: flex;

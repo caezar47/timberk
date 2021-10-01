@@ -2,6 +2,7 @@
 	&list{
 		list-style: none;
 		display: flex;
+		flex-wrap: wrap;
 		padding: 0;
 		margin-top: -@bread_gutter;		
 		margin-left: -@bread_gutter;
@@ -9,12 +10,13 @@
 		white-space: nowrap;	
 		margin-bottom: 18px;
 		font-size: 0.74rem;
-		line-height: 215%;
-		overflow: hidden;
+		//line-height: 215%;
+		line-height: 120%;
+		//overflow: hidden;
 	} 
 	&item{
 		position: relative;	
-		padding-top: @bread_gutter;
+		margin-top: @bread_gutter;
 		padding-left: @bread_gutter;
 		padding-right: @bread_gutter;	
 		color: @bread_color;
@@ -24,7 +26,7 @@
 			top: 50%;
 			right: 0;
 			line-height: 100%;
-			transform: translate(50%, 0%);
+			transform: translate(50%, -50%);
 			color: @bread_color_active;		
 		}	
 		&.is--active{
@@ -34,6 +36,7 @@
 		}
 	}
 	&link{
+		display: block;
 		&, &:focus{color: @bread_color;}
 		&:hover{color: @bread_color_active}
 	}
