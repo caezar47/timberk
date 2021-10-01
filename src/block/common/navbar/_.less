@@ -342,6 +342,9 @@
 	display: none;
 }
 .media-breakpoint-down(@md; {
+	.catalogmenu__inner {
+	    overflow: auto;
+	}
 	.catalogmenu__list > ul > li > ul{
 		display: none;
 		position: static;
@@ -356,6 +359,7 @@
 	.catalogmenu__list ul li span {
 		display: block;
 	    position: absolute;
+	    z-index: 5;
 	    top: 0%;
 	    right: 44px;
 	    font-size: 5px;
